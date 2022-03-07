@@ -52,6 +52,7 @@ defaults:
       is_post: false
       layout: default
 
+include: [_pages]
 
 # Exclude from processing.
 # The following items will not be processed, by default.
