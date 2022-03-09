@@ -1,5 +1,5 @@
 ---
-#layout: post
+layout: post
 title:  "Password protection in python scripts"
 date:   2022-03-08 19:50
 author: Arun
