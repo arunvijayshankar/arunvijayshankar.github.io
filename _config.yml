@@ -43,8 +43,7 @@ defaults:
       path: _posts
     values:
       is_post: true
-      layout: post
-      author: arun
+      layout: default
       permalink: /archive/:categories/:title/
   -
     scope:
