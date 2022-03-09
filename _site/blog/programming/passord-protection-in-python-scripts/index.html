@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Password protection in python scripts - Arktos kai Mennos</title>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Password protection in python scripts | Arktos kai Mennos</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Password protection in python scripts" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I came across an interesting problem recently. I was running a python script that would periodically update a remote database. It would connect to the database with a shared login credential and update a table. The script would run locally on multiple machines. Initially, the hashed db password was stored in the script, and extracted before being used to connect to the database." />
+<meta property="og:description" content="I came across an interesting problem recently. I was running a python script that would periodically update a remote database. It would connect to the database with a shared login credential and update a table. The script would run locally on multiple machines. Initially, the hashed db password was stored in the script, and extracted before being used to connect to the database." />
+<link rel="canonical" href="http://localhost:4000/blog/programming/passord-protection-in-python-scripts/" />
+<meta property="og:url" content="http://localhost:4000/blog/programming/passord-protection-in-python-scripts/" />
+<meta property="og:site_name" content="Arktos kai Mennos" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-03-08T19:50:00-08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Password protection in python scripts" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-03-08T19:50:00-08:00","datePublished":"2022-03-08T19:50:00-08:00","description":"I came across an interesting problem recently. I was running a python script that would periodically update a remote database. It would connect to the database with a shared login credential and update a table. The script would run locally on multiple machines. Initially, the hashed db password was stored in the script, and extracted before being used to connect to the database.","headline":"Password protection in python scripts","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/programming/passord-protection-in-python-scripts/"},"url":"http://localhost:4000/blog/programming/passord-protection-in-python-scripts/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=3ee1afa4acc935c76f7b8cd88be2a6ea427b0c2f">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">Arktos kai Mennos</a></h1>
+        <nav>
+          <ul class="nav-links">
+          <li><a href="/" >Home</a></li>  | <li><a href="/about" >About</a></li> | <li><a href="/archive" >Archive</a></li>  | <li><a href="/contact" >Contact</a></li>
+          </ul>
+        </nav>
+        
+
+        <p>Arun Vijayshankar's blog</p>
+
+        
+        <p class="view"><a href="https://github.com/arunvijayshankar/arunvijayshankar.github.io">View the Project on GitHub <small>arunvijayshankar/arunvijayshankar.github.io</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <small>8 March 2022</small>
+<h1>Password protection in python scripts</h1>
+
+<p class="view">by </p>
+
+<p>I came across an interesting problem recently. I was running a python script that would periodically update a remote database. It would connect to the database with a shared login credential and update a table. The script would run locally on multiple machines. Initially, the hashed db password was stored in the script, and extracted before being used to connect to the database.</p>
+
+<p>It was not too long before I realized that anyone with access to the script can straight up read the password without so much as a how do you do. I looked up password protection on the internet, and there are some good approaches out there, like using hashing with hashlib, storing the password in env values, or using Keyring to store and fetch the password. You can find a good tutorial on using them <a href="https://martinheinz.dev/blog/59">here</a></p>
+
+<p>However, these approaches face the same issue. Anyone with access to the machine the script is running on, can recover the password quite easily. I think only some form of secure handshake/authentication protocol can provide user authentication without storing the password in the script. The problem is, I do not know the first thing about setting up such a system. Especially with a DBMS with which I am unfamiliar. Also, I’m pretty sure the shared login is pretty much an immutable object (pun intended), and I cannot avoid using it. So I thought about it some more, and it occurred to me, that the only reason to keep the password in the script in the first place was because it used a connect_to_db module in the same script to connect to the database.</p>
+
+<p>!(/_assets/_images/db_conn_mod)</p>
+
+<p>I realized that if I moved the entire connection module to a different file, and imported that file as a library in my script, my script would still have the db connection, but would not need the password in the script in any form. I could then use Keyring in the special connection library to retrieve a password that I store on the system separately, again using Keyring. But this just moves the problem to a different python file. To ensure that the password cannot be extracted from the connection lib file either, I hit upon the idea of compiling the lib file, and including only the byte file along with the main script. And that did it! The script works, and has at least somewhat better security than earlier.</p>
+
+<p>!(/_assets/_images/conn)</p>
+
+<p>Now, this is still not very secure. It is very easy to de-compile the pyc file and extract the password from it. Still, some security is better than no security.</p>
+
+
+
+  <small>tags: <em>programming</em></small>
+
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/arunvijayshankar">arunvijayshankar</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>

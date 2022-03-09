@@ -52,8 +52,10 @@
 
       </section>
       
-      {% assign sortedPosts = site.posts | sort: "date" %}
-      {{ sortedPosts.last }}
+
+      {% for post in site.posts limit:3 %}
+        {{ post }}
+      {% endfor %}
 
       <footer>
         {% if site.github.is_project_page %}
