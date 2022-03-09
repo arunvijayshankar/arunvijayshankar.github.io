@@ -44,7 +44,8 @@ defaults:
     values:
       is_post: true
       layout: post
-      permalink: /blog/:categories/:title/
+      author: arun
+      permalink: /archive/:categories/:title/
   -
     scope:
       type: pages

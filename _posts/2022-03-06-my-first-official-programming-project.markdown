@@ -2,6 +2,7 @@
 layout: post
 title:  "My first “official” programming project"
 date:   2022-03-06 15:30:05 -0800
+author: Arun
 categories: programming
 tags: [programming]
 ---
