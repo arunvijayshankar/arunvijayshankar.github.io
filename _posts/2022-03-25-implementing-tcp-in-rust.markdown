@@ -3,7 +3,7 @@ layout: post
 title:  "Implementing TCP in Rust"
 date:   2022-03-25 22:19:50
 author: Arun
-categories: programming, rust, networking
+tags: [programming, rust, networking]
 ---
 
 
