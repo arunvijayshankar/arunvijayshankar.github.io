@@ -6,6 +6,9 @@ permalink: /contact
 
 ## Contact
 
-<form>
-
-</form>
+- Twitter:
+    - [@UnseenAsterisk](https://twitter.com/UnseenAsterisk)
+- Github:
+    - [arunvijayshankar](https://github.com/arunvijayshankar/)
+- Email:
+    - arunvijayshankar@gmail.com
