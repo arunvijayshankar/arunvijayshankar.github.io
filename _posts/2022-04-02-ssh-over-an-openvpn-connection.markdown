@@ -8,7 +8,9 @@ tags: [networking, ssh, openvpn]
 ---
 
 *TL;DR*
-If you have an active OpenVPN connection to a remote linux machine, and are finding that you cannot ssh to it, try the setting up port forwarding on your router config page to forward traffic from the OpenVPN port to the ssh port on your box. Configure the device IP on the config page to point to the local ip address of the linux machine. Connect over ssh with: *ssh host@local_ip_address*
+
+If you have an active OpenVPN connection to a remote linux machine, and are finding that you cannot ssh to it, try setting up port forwarding on your router config page to forward traffic from the OpenVPN port to the ssh port on your box. Configure the device IP on the config page to point to the local ip address of the linux machine. Connect over ssh with: *ssh host@local_ip_address*
+
 */TL;DR*
 
 
@@ -25,4 +27,5 @@ I did find one post that specified allowing ssh over the OpenVPN port (which was
 It seems a little unbelievable that I have finally managed to solve something that I have been unsuccessful at on so many attempts in the past two years. I guess the lesson is, if a problem is being difficult, set it aside and try again at a different time. You might have learned something that turns to be the key to solving it.
 
 *PS*
+
 An interesting aside: I can ssh over the VPN if I use the IP address on my home subnet, but not when I use the IP address provided to the box by OpenVPN. I'm guessing that this is because I provided the home subnet IP address when I configured port forwarding on the router. But if I try and configure the OpenVPN IP address for port forwarding, the router rejects it, saying that it should have the same netmask as the router. Not sure if I can get around this. If anyone knows any way to ssh over OpenVPN with the IP address assigned by OpenVPN, please let me know!
