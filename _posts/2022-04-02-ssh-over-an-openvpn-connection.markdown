@@ -4,7 +4,6 @@ title:  "SSH over an OpenVPN connection"
 date:   2022-04-02 17:45:16 
 author: Arun
 categories: networking, ssh, openvpn
-tags: [networking, ssh, openvpn]
 ---
 
 *TL;DR*
