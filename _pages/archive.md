@@ -1,5 +1,5 @@
 ---
-layout: home 
+layout: basic 
 title: Archive
 permalink: /archive
 ---
