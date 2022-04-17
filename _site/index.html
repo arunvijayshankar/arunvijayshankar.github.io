@@ -22,7 +22,7 @@
 {"@context":"https://schema.org","@type":"WebSite","description":"Arun Vijayshankar’s blog","headline":"Arktos:","name":"Arktos kai Mennos","url":"http://localhost:4000/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=6d5bca000794b52c1d0fc9988709051053e339ed">
+    <link rel="stylesheet" href="/assets/css/style.css?v=d30b9dc2e42353ce48176df24b29557e5ccb1807">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -66,6 +66,35 @@
         <p class="view"><a href="https://github.com/arunvijayshankar/arunvijayshankar.github.io">View the Project on GitHub <small>arunvijayshankar/arunvijayshankar.github.io</small></a></p>
         
 
+        <h2>Archive</h2>
+
+
+
+  
+  
+  <a href="/tag/programming"><nobr>programming</nobr></a>
+
+  
+  
+  <a href="/tag/networking"><nobr>networking</nobr></a>
+
+  
+  
+  <a href="/tag/rust"><nobr>rust</nobr></a>
+
+  
+  
+  <a href="/tag/python"><nobr>python</nobr></a>
+
+  
+  
+  <a href="/tag/vpn"><nobr>vpn</nobr></a>
+
+  
+  
+  <a href="/tag/ssh"><nobr>ssh</nobr></a>
+
+
         
 
         
@@ -85,6 +114,166 @@
       </section>
       
 
+      
+        <!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Implementing TCP in Rust - Part 2 - Arktos kai Mennos</title>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Implementing TCP in Rust - Part 2 | Arktos kai Mennos</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Implementing TCP in Rust - Part 2" />
+<meta name="author" content="Arun" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Part1" />
+<meta property="og:description" content="Part1" />
+<link rel="canonical" href="http://localhost:4000/archive/implementing-tcp-in-rust-part2/" />
+<meta property="og:url" content="http://localhost:4000/archive/implementing-tcp-in-rust-part2/" />
+<meta property="og:site_name" content="Arktos kai Mennos" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-04-16T00:00:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Implementing TCP in Rust - Part 2" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2022-04-16T00:00:00-07:00","datePublished":"2022-04-16T00:00:00-07:00","description":"Part1","headline":"Implementing TCP in Rust - Part 2","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/archive/implementing-tcp-in-rust-part2/"},"url":"http://localhost:4000/archive/implementing-tcp-in-rust-part2/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=d30b9dc2e42353ce48176df24b29557e5ccb1807">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">Arktos kai Mennos</a></h1>
+        <nav>
+          <ul class="nav-links">
+          <li><a href="/" >Home</a></li>  | <li><a href="/about" >About</a></li> | <li><a href="/archive" >Archive</a></li>  | <li><a href="/contact" >Contact</a></li>
+          </ul>
+        </nav>
+        
+
+        <p>Arun Vijayshankar's blog</p>
+
+        
+        <p class="view"><a href="https://github.com/arunvijayshankar/arunvijayshankar.github.io">View the Project on GitHub <small>arunvijayshankar/arunvijayshankar.github.io</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      
+<div class="post">
+
+  <h1 class="post-title">Implementing TCP in Rust - Part 2</h1>
+  Published on <span class="post-date">16 Apr 2022</span>, under: 
+  <span class="post-tags">
+    &nbsp;|
+    
+      
+      <a class="no-underline" href="/tag/programming"><nobr> programming |</nobr>&nbsp;</a>    
+    
+      
+      <a class="no-underline" href="/tag/rust"><nobr> rust |</nobr>&nbsp;</a>    
+    
+      
+      <a class="no-underline" href="/tag/networking"><nobr> networking |</nobr>&nbsp;</a>    
+    
+    &nbsp;
+  </span>
+  <p></p>
+  <p><a href="https://arunvijayshankar.github.io/archive/implementing-tcp-in-rust/">Part1</a></p>
+
+<p>In my last <a href="https://arunvijayshankar.github.io/archive/implementing-tcp-in-rust/">post</a> on @jonhoo’s live stream on implementing TCP in Rust, I covered everything upto the point where we parsed the source IP address, destination IP address, and payload length from the packet we received from a remote host. We emulated a remote host using a virtual interface, tun0, which we created using the TUN/TAP universal device driver. Picking up where we left off, in this post we explore the packet we received further, parse the TCP segment, and respond to the packet in a particular way, as is specified in <a href="https://datatracker.ietf.org/doc/html/rfc793">RFC 793</a>, the TCP functional specification document.</p>
+
+<p>As we are trying to implement TCP, we can try to make a TCP connection using netcat to any port:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nc 198.168.0.2 80
+</code></pre></div></div>
+
+<p>We see that 40 bytes are received of protocol 6, which is TCP.</p>
+
+<p><img src="/assets/images/post3/formatted_packet_tcp.png" alt="" /></p>
+
+<p>Now that we have TCP packets, we can dive deeper into it, and go about actually implementing TCP. A good place to start that is RFC 793, which specifies the protocol in great detail. As an aside, it had never occurred to me to ask what it means to implement something like TCP. It simply means implement the expected behavior and rules as specified in the Standards document. For example, if the document says that a host (let’s say a server) that receives a SYN packet (which is a type of TCP segment, something we will go into detail in the next couple of posts) from a remote host (client), the server has to respond in a way that is specified in RFC 793. In the case of the SYN packet, the server can respond to the packet by either sending an ACK plus a SYN of it’s own, or choose to close the connection.</p>
+
+<p>To parse the TCP packets, we can use etherparse again. Another option is to write methods to parse the packets as well, but since most of the implementation of TCP has to do with bit manipulation, and not parsing, it is more convenient to let etherparse do all the heavy lifting here. With that out of the way, we can start with the actual details of the implementation. To begin with, there are two key objects we have to keep track of: the connection, which is identified by the source ip address, the source port, the destination ip address, and the destination port; and the state of the connection which can be either Listening, Closed, or Established, among others. The entire list of states can be found in RFC 793. We can store the the quad of values in the connection, and the state of the connection in structs, and have a hashmap from the quad to the state to hold all the connections.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+#[derive(Clone, Copy, Debug, Hash, Eq, PartialEq)]
+struct Quad { // This struct identifies each connection
+    src: (Ipv4Addr, u16), // (&lt;ip_addr&gt;, &lt;port&gt;)
+    dst: (Ipv4Addr, u16),
+}
+
+enum State { // enum to hold connection state value
+    // Listen,
+    SynRcvd,
+    Estab,
+    FinWait1,
+    FinWait2,
+    TimeWait,
+}
+
+pub struct Connection { // struct to hold the state of a particular connection [src ip, src port, dest ip, dest src]
+    state: State,
+    send: SendSequenceSpace,
+    recv: RecvSequenceSpace,
+    ip: etherparse::Ipv4Header,
+    tcp: etherparse::TcpHeader,
+}
+
+</code></pre></div></div>
+
+<p>The first thing to do when we receive a TCP segment is to make a connections entry for it. We store the src ip, src port, dest ip, and dest port in an instance of the Quad struct above, and check the hashmap if an entry exists for the connection. If one exists already, we have to deal with the packet. We implement this in a function called on_packet(). If there isn’t an entry in the hashmap for the connection, it is a new connection, and we will implement this functionality in a function called accept(). For now, we just print the quad values. When we run it now, we see all the data, and 0b of payload which indicates that it’s header only.</p>
+
+<p><img src="/assets/images/post4/formatted_packets_tcp_3.png" alt="" /></p>
+
+<p>To see exactly what the the packet we received looks like, we can run tshark again and then start a TCP connection.</p>
+
+<p><img src="/assets/images/post4/tshark_screen_shot.png" alt="" /></p>
+
+<p>We can see that the first packet we received was a SYN packet. Having received it, we have to decide how we should respond. To do this, we can refer to RFC 793 and see what is to be done next. The entire process flow can be summarized in the following diagram:</p>
+
+<p><img src="/assets/images/post4/proc_flow.png" alt="" /></p>
+
+<p>A connection can be in CLOSED: meaning we do not reply if we are sent a packet, or LISTEN, meaning if someone we are not speaking to atm, sends a packet we are always going to deal with that packet. In our implementation we are going to assume that every port is listening. Exploring the diagram a bit, we see that if someone sends us a SYN, we can either close the connection, or we can send an ACK and a SYN ourself. I.e., we acknowledge the SYN that was sent, and send a SYN of our own asking if the remote machine wants to establish a connection. If we receive an ACK for our SYN, the connection is then established. If we wish to establish a connection, we start of at CLOSED, from where we go to OPEN, and then send a SYN. If the remote machine sends a SYN and ACK, we send an ACK and the connection is established. In our implementation, we implement the server part first, and the client part later. Since we are in server mode, we never send out any packets first.</p>
+
+<p>If a SYN packet is received, we need to handle that and start establishing a connection. Basically we have to write a TCP header. We can use etherparse again for this, which has a new() method to create a TCP segment. it takes a source port, destination port, sequence number and window size. We already know that source port for our TCP header is the destination port from the received SYN packet, and the destination port is the source port from the same packet. Sequence number and window size are something we have to figure out. As we are now responding to the SYN received from remote host, we have to send SYN and ACK, so we have to set those two bits in the header. This will have to be wrapped in an ipv4 header to send it back to the remote host. Again we can use etherparse to create the header for us (with new), and this takes payload length which is equal to length of the SYN/ACK msg, the timeout set to 64, the protocol, in this case TCP, source and destination addresses. Once done, this packet will now have to be sent out.</p>
+
+<p>I will stop here for this post. In my next post I will cover the part of the live stream that talks about writing TCP segments and IP packets, what fields are to be written, how they are calculated, and finally how to send them out to the “remote host” (the client, in this implementation).</p>
+
+</div>
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/arunvijayshankar">arunvijayshankar</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>
       
         <!DOCTYPE html>
 <html lang="en-US">
@@ -112,7 +301,7 @@
 {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2022-04-02T10:45:16-07:00","datePublished":"2022-04-02T10:45:16-07:00","description":"TL;DR","headline":"SSH over an OpenVPN connection","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/archive/ssh-over-an-openvpn-connection/"},"url":"http://localhost:4000/archive/ssh-over-an-openvpn-connection/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=6d5bca000794b52c1d0fc9988709051053e339ed">
+    <link rel="stylesheet" href="/assets/css/style.css?v=d30b9dc2e42353ce48176df24b29557e5ccb1807">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -160,13 +349,13 @@
     &nbsp;|
     
       
-      <a class="no-underline" href="/tag/networking"><code class="highligher-rouge"><nobr> networking |</nobr></code>&nbsp;</a>    
+      <a class="no-underline" href="/tag/networking"><nobr> networking |</nobr>&nbsp;</a>    
     
       
-      <a class="no-underline" href="/tag/ssh"><code class="highligher-rouge"><nobr> ssh |</nobr></code>&nbsp;</a>    
+      <a class="no-underline" href="/tag/ssh"><nobr> ssh |</nobr>&nbsp;</a>    
     
       
-      <a class="no-underline" href="/tag/vpn"><code class="highligher-rouge"><nobr> vpn |</nobr></code>&nbsp;</a>    
+      <a class="no-underline" href="/tag/vpn"><nobr> vpn |</nobr>&nbsp;</a>    
     
     &nbsp;
   </span>
@@ -233,7 +422,7 @@
 {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2022-03-25T15:19:50-07:00","datePublished":"2022-03-25T15:19:50-07:00","description":"One good thing about TwitterTM is that once in a while I come across a tweet that voices out load the exact thing I was looking for. In this instance, I found this tweet from @b0rk, looking for networking courses. There were a lot of good suggestions, but this one caught my eye: Implementing TCP, by @jonhoo. It is an implementation of TCP using Rust. It drew my eye immediately as learning Rust has been on my mind for a while now. Now, I do not know the first thing about Rust, and not very much more about networking, but I have found that I learn best by doing, so I drove right into it. Jon mentions RFC 1180 as a good tutorial to TCP/IP which I started reading in parallel to the video series. I’m about 45 minutes into Part 1, and there are already a bunch of concepts with which I am completely unfamiliar. Nevertheless, just by following along, I was able to write a “virtual” NIC in rust. The only thing it does is read an IP packet as a bunch of bytes. Still, pretty cool. It wasn’t without hicups though. The setcap command did not work until I provided the entire path to the compiled binary, and for some reason $CARGO_TARGET_DIR, which I assumed was set during the setup, was not really set to anything. But barring these minor setbacks, the code compiled and ran pretty well.","headline":"Implementing TCP in Rust","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/archive/implementing-tcp-in-rust/"},"url":"http://localhost:4000/archive/implementing-tcp-in-rust/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=6d5bca000794b52c1d0fc9988709051053e339ed">
+    <link rel="stylesheet" href="/assets/css/style.css?v=d30b9dc2e42353ce48176df24b29557e5ccb1807">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -281,13 +470,13 @@
     &nbsp;|
     
       
-      <a class="no-underline" href="/tag/programming"><code class="highligher-rouge"><nobr> programming |</nobr></code>&nbsp;</a>    
+      <a class="no-underline" href="/tag/programming"><nobr> programming |</nobr>&nbsp;</a>    
     
       
-      <a class="no-underline" href="/tag/rust"><code class="highligher-rouge"><nobr> rust |</nobr></code>&nbsp;</a>    
+      <a class="no-underline" href="/tag/rust"><nobr> rust |</nobr>&nbsp;</a>    
     
       
-      <a class="no-underline" href="/tag/networking"><code class="highligher-rouge"><nobr> networking |</nobr></code>&nbsp;</a>    
+      <a class="no-underline" href="/tag/networking"><nobr> networking |</nobr>&nbsp;</a>    
     
     &nbsp;
   </span>
@@ -395,116 +584,6 @@ match etherparse::Ipv4HeaderSlice::from_slice(&amp;buf[4..nbytes]) {
 
 <p>This brings us to the end of the first 45 minutes of the tutorial. I will cover the rest of the tutorial in roughly one hour chunks, I think. Along with actually coding and ironing out issues, it takes me around an hour or so to get through 45 minutes of video, so it seems like a good duration. The tutorial is 13 hours in total, and I expect to complete it in a month or so. Ideally, I would like to finish it a lot sooner, but needs must, so 45 minutes at a time it will have to be.</p>
 
-
-</div>
-
-      </section>
-      <footer>
-        
-        <p>This project is maintained by <a href="https://github.com/arunvijayshankar">arunvijayshankar</a></p>
-        
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="/assets/js/scale.fix.js"></script>
-  </body>
-</html>
-      
-        <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Password protection in python scripts - Arktos kai Mennos</title>
-<!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Password protection in python scripts | Arktos kai Mennos</title>
-<meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Password protection in python scripts" />
-<meta name="author" content="Arun" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="I came across an interesting problem recently. I was running a python script that would periodically update a remote database. It would connect to the database with a shared login credential and update a table. The script would run locally on multiple machines. Initially, the hashed db password was stored in the script, and extracted before being used to connect to the database." />
-<meta property="og:description" content="I came across an interesting problem recently. I was running a python script that would periodically update a remote database. It would connect to the database with a shared login credential and update a table. The script would run locally on multiple machines. Initially, the hashed db password was stored in the script, and extracted before being used to connect to the database." />
-<link rel="canonical" href="http://localhost:4000/archive/password-protection-in-python-scripts/" />
-<meta property="og:url" content="http://localhost:4000/archive/password-protection-in-python-scripts/" />
-<meta property="og:site_name" content="Arktos kai Mennos" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-03-08T19:50:00-08:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Password protection in python scripts" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2022-03-08T19:50:00-08:00","datePublished":"2022-03-08T19:50:00-08:00","description":"I came across an interesting problem recently. I was running a python script that would periodically update a remote database. It would connect to the database with a shared login credential and update a table. The script would run locally on multiple machines. Initially, the hashed db password was stored in the script, and extracted before being used to connect to the database.","headline":"Password protection in python scripts","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/archive/password-protection-in-python-scripts/"},"url":"http://localhost:4000/archive/password-protection-in-python-scripts/"}</script>
-<!-- End Jekyll SEO tag -->
-
-    <link rel="stylesheet" href="/assets/css/style.css?v=6d5bca000794b52c1d0fc9988709051053e339ed">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
-    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
-
-<!-- Setup Google Analytics -->
-
-
-
-<!-- You can set your favicon here -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
-
-<!-- end custom head snippets -->
-
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1><a href="http://localhost:4000/">Arktos kai Mennos</a></h1>
-        <nav>
-          <ul class="nav-links">
-          <li><a href="/" >Home</a></li>  | <li><a href="/about" >About</a></li> | <li><a href="/archive" >Archive</a></li>  | <li><a href="/contact" >Contact</a></li>
-          </ul>
-        </nav>
-        
-
-        <p>Arun Vijayshankar's blog</p>
-
-        
-        <p class="view"><a href="https://github.com/arunvijayshankar/arunvijayshankar.github.io">View the Project on GitHub <small>arunvijayshankar/arunvijayshankar.github.io</small></a></p>
-        
-
-        
-
-        
-      </header>
-      <section>
-
-      
-<div class="post">
-
-  <h1 class="post-title">Password protection in python scripts</h1>
-  Published on <span class="post-date">08 Mar 2022</span>, under: 
-  <span class="post-tags">
-    &nbsp;|
-    
-      
-      <a class="no-underline" href="/tag/programming"><code class="highligher-rouge"><nobr> programming |</nobr></code>&nbsp;</a>    
-    
-      
-      <a class="no-underline" href="/tag/python"><code class="highligher-rouge"><nobr> python |</nobr></code>&nbsp;</a>    
-    
-    &nbsp;
-  </span>
-  <p></p>
-  <p>I came across an interesting problem recently. I was running a python script that would periodically update a remote database. It would connect to the database with a shared login credential and update a table. The script would run locally on multiple machines. Initially, the hashed db password was stored in the script, and extracted before being used to connect to the database.</p>
-
-<p>It was not too long before I realized that anyone with access to the script can straight up read the password without so much as a how do you do. I looked up password protection on the internet, and there are some good approaches out there, like using hashing with hashlib, storing the password in env values, or using Keyring to store and fetch the password. You can find a good tutorial on using them <a href="https://martinheinz.dev/blog/59">here</a></p>
-
-<p>However, these approaches face the same issue. Anyone with access to the machine the script is running on, can recover the password quite easily. I think only some form of secure handshake/authentication protocol can provide user authentication without storing the password in the script. The problem is, I do not know the first thing about setting up such a system. Especially with a DBMS with which I am unfamiliar. Also, I’m pretty sure the shared login is pretty much an immutable object (pun intended), and I cannot avoid using it. So I thought about it some more, and it occurred to me, that the only reason to keep the password in the script in the first place was because it used a connect_to_db module in the same script to connect to the database.</p>
-
-<p><img src="/assets/images/db_conn_mod.png" alt="" /></p>
-
-<p>I realized that if I moved the entire connection module to a different file, and imported that file as a library in my script, my script would still have the db connection, but would not need the password in the script in any form. I could then use Keyring in the special connection library to retrieve a password that I store on the system separately, again using Keyring. But this just moves the problem to a different python file. To ensure that the password cannot be extracted from the connection lib file either, I hit upon the idea of compiling the lib file, and including only the byte file along with the main script. And that did it! The script works, and has at least somewhat better security than earlier.</p>
-
-<p><img src="/assets/images/conn.png" alt="" /></p>
-
-<p>Now, this is still not very secure. It is very easy to de-compile the pyc file and extract the password from it. Still, some security is better than no security.</p>
 
 </div>
 
