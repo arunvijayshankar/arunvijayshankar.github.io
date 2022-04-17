@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 layout: basic 
+=======
+layout: default
+>>>>>>> 89cac4252da40361031961c4249d5c88c87b7b1f
 title: Archive
 permalink: /archive
 ---
