@@ -1,4 +1,89 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-04-19T10:11:17-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Arktos kai Mennos</title><subtitle>Arun Vijayshankar's blog</subtitle><entry><title type="html">Implementing TCP in Rust - Part 2</title><link href="http://localhost:4000/archive/implementing-tcp-in-rust-part2/" rel="alternate" type="text/html" title="Implementing TCP in Rust - Part 2" /><published>2022-04-16T00:00:00-07:00</published><updated>2022-04-16T00:00:00-07:00</updated><id>http://localhost:4000/archive/implementing-tcp-in-rust-part2</id><content type="html" xml:base="http://localhost:4000/archive/implementing-tcp-in-rust-part2/">&lt;p&gt;&lt;a href=&quot;https://arunvijayshankar.github.io/archive/implementing-tcp-in-rust/&quot;&gt;Part1&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-30T15:51:18-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Arktos kai Mennos</title><subtitle>Arun Vijayshankar's blog</subtitle><entry><title type="html">Cross Compiling for BeagleBoard targets, and benchmarks</title><link href="http://localhost:4000/archive/cross-compiling-for-beagleboard-and-benchmarks/" rel="alternate" type="text/html" title="Cross Compiling for BeagleBoard targets, and benchmarks" /><published>2022-06-30T00:00:00-07:00</published><updated>2022-06-30T00:00:00-07:00</updated><id>http://localhost:4000/archive/cross-compiling-for-beagleboard-and-benchmarks</id><content type="html" xml:base="http://localhost:4000/archive/cross-compiling-for-beagleboard-and-benchmarks/">&lt;p&gt;I have been using a BeagleBoard-xM as a target for the recepies in the book Embedded Programming with Modern C++ Cookbook, and here are a few of the interesting things I’ve come across:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;h2 id=&quot;cross-compiler&quot;&gt;Cross Compiler&lt;/h2&gt;
+    &lt;p&gt;The book uses a Raspberry Pi emulator on QEMU as a target, and uses the gcc/g++ arm cross compiler (arm-linux-gnueabi-gcc/g++) to build the binaries. As the RPi and BeagleBoard both run arm processors, I assumed that a binary that runs on Raspberry Pi would work on BeagleBoard as well. Spoiler alert: a binary compiled to run on an RPi, will not run on BeagleBoard. Google-fu helped me understand that the BeagleBoard needs a slightly different cross-compiler: arm-linux-gnueabi&lt;strong&gt;hf&lt;/strong&gt;-gcc/g++. Once I changed the Cmake file accordingly, I could run the program on BeagleBoard.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h2 id=&quot;uninitialized-pointers&quot;&gt;Uninitialized Pointers&lt;/h2&gt;
+    &lt;p&gt;A small program that would create a shared memory region and then have two processes read from, and write to it, gave me unexpected results (and sometimes hit segmentation faults on the last read) on the beagleboard and RPi, whereas on the build system it crashed immediately. It turned out that I was derefencing an uninitialized pointer. On the build system the offending pointer was set to 0x0, but on the bbxm and raspberry pi, it was set to a random pointer. I’m not sure if this is something to do with the architecture or the compiler.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h2 id=&quot;system-timer&quot;&gt;System Timer&lt;/h2&gt;
+    &lt;p&gt;One of the exercises involved writing a program to read the system timer on the rpi. This was a little bit of a challenge to port to the BBxM as the beagleboard’s system timer was structured a little differently. I wrote about this in more detail &lt;a href=&quot;https://arunvijayshankar.github.io/archive/reading-sync-timer-beagleboard-xm/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h2 id=&quot;benchmarks&quot;&gt;Benchmarks&lt;/h2&gt;
+    &lt;p&gt;Finally I ran lmbench on the build system, an x86_64 machine running ubuntu, and on the beagleboard, which is armv7 running debian:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;BeagleBoard-xM benchmarks&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/post7/bbxm_bench.png&quot; alt=&quot;BeagleBoard-xM Benchmarks&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Build system benchmarks&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/post7/x86_bench.png&quot; alt=&quot;Build system (x86_64) Benchmarks&quot; /&gt;&lt;/p&gt;</content><author><name>Arun</name></author><category term="programming" /><category term="c" /><category term="cpp" /><category term="embedded" /><summary type="html">I have been using a BeagleBoard-xM as a target for the recepies in the book Embedded Programming with Modern C++ Cookbook, and here are a few of the interesting things I’ve come across:</summary></entry><entry><title type="html">Reading the System Timer on Beagleboard XM</title><link href="http://localhost:4000/archive/reading-sync-timer-beagleboard-xm/" rel="alternate" type="text/html" title="Reading the System Timer on Beagleboard XM" /><published>2022-06-10T00:00:00-07:00</published><updated>2022-06-10T00:00:00-07:00</updated><id>http://localhost:4000/archive/reading-sync-timer-beagleboard-xm</id><content type="html" xml:base="http://localhost:4000/archive/reading-sync-timer-beagleboard-xm/">&lt;p&gt;One of the exercises in the book ‘Embedded Programming with Modern C++ Cookbook’ is to read the System Timer on a RaspberryPi. The system timer peripheral on a raspberry pi provides a 64 bit free running counter that increments with every clock tick. Although the book uses QEMU to run a rPi emulator as the target for the programs, I have been using a Beagleboard XM as the target. So far, there have been some changes, but no significant differences in code for the raspberry pi vs the beagleboard. I assumed that reading the system timer would be no different. This was of course, not the case. For a beginner like myself, it was quite challenging to get it working on the bbxm.&lt;/p&gt;
+
+&lt;p&gt;The book starts off by hard coding the base address of the rPi system timer, and a struct to store the two 32 bit sections of the timer:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;constexpr uint32_t kTimerBase = 0x3F003000;
+
+struct SystemTimer {
+  uint32_t CS;
+  uint32_t counter_lo;
+  uint32_t counter_hi;
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The sync timer address is then mapped using mmap as a shared map and cast as a struct pointer to read the value into counter_lo and counter_hi, which are added together to get the actual timer value.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int memfd = open(&quot;/dev/mem&quot;, O_RDWR | O_SYNC);
+
+SystemTimer *timer = (SystemTimer*)mmap(NULL, sizeof(SystemTimer),
+PROT_READ|PROT_WRITE, MAP_SHARED,
+memfd, kTimerBase);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I knew that it was unlikely that the timer base address will be the same on the bbxm, so the first challenge was to find the right address. I looked for the AM37 manual online, and it turns out that Texas Instruments will let you download it if you register an account with them. So now I have a TI developer account. Oh, and the manual. The manual listed the Sync Timer base address of the 32 kHz clock as 0x48320000, and that the register was 32 bits long. I made the changes, and compiled the build. But when I ran it, the program would only print out one value&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;System timer: 64
+System timer: 64
+System timer: 64
+System timer: 64
+System timer: 64
+System timer: 64
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It looked as if the timer was not updating with every clock tick. My first suspicion was that address was wrong somehow, or that the mapping was not correct. I spent a considerable amount of time trying to get to the bottom of that, all to no avail. The address was as noted in the manual, and there did not seem to be anything wrong with the mapping. So I did the only thing I could think of, and reached out to the good folks on the internet. One person suggested that maybe the timer was not enabled. This seemed like a plausible root cause, so I went back to the manual and started digging to find out how to check if the timer is disabled. I did find the timer controls, but I honestly did not really understand it. But what I did accidentally discover was that even though the base address for the sync timer on the bbxm is 0x48320000, the actual value of the timer is stored at a 0x0010 offset!&lt;/p&gt;
+
+&lt;p&gt;So I dutifully changed the address to 0x48320010, re-compiled, and ran it. I hit a Bus Error. What is a bus error now? I asked my browser, which said that it was a hardware error, letting the OS know that CPU cannot access the memory that the process is trying to access. So I was back to some issue with the address. I was convinced that the physical address was correct this time, so maybe there was something wrong with the virtual address? After some more scouring of the internet, I found this &lt;a href=&quot;https://bakhi.github.io/devmem/&quot;&gt;post&lt;/a&gt;. Reading through it, I finally understood that mmap was creating a new mapping in the virtual address space starting at the physical address we specify in the mmap call. For some reason that I don’t still understand, providing the physical address + the offset to mmap was returning a bad virtual address. But maybe mapping the timer base address first, and then adding the offset might fix it? I tried this, and it worked! The value updated by ~400 units everytime I ran the binary. I also understood why the program was not updating when I ran it with just the base address. The first 4 bytes of the Sync Timer stored just the timer version. I was just reading this constant over and over again. But after first mapping the base physical address and adding the offset, the program read the actual timer value everytime. Here is the entire program (minus error checking):&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;constexpr uint32_t kTimerBase = 0x48320000;
+constexpr uint32_t timer_offset = 0x0010; 
+
+
+int main() {
+    int memfd = open(&quot;/dev/mem&quot;, O_RDWR | O_SYNC);
+
+    void *map_base = mmap(NULL, sizeof(uint32_t),
+    PROT_READ | PROT_WRITE, MAP_SHARED,
+    memfd, kTimerBase);
+
+    uint32_t *timer = (uint32_t *)((char *)map_base + timer_offset);
+
+    for (int i = 0; i &amp;lt; 10; i++) {
+        std::cout &amp;lt;&amp;lt; &quot;System timer: &quot; &amp;lt;&amp;lt; *timer;
+        std::cout &amp;lt;&amp;lt; std::endl;
+        std::this_thread::sleep_for(std::chrono::milliseconds(10));
+    }
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;As an aside, the program as specified in the book, did not run correctly on the rPi emulator either. But once I made the offset changes above to the code, it read the timer value correctly on every run.&lt;/p&gt;</content><author><name>Arun</name></author><category term="programming" /><category term="cpp" /><category term="embedded" /><summary type="html">One of the exercises in the book ‘Embedded Programming with Modern C++ Cookbook’ is to read the System Timer on a RaspberryPi. The system timer peripheral on a raspberry pi provides a 64 bit free running counter that increments with every clock tick. Although the book uses QEMU to run a rPi emulator as the target for the programs, I have been using a Beagleboard XM as the target. So far, there have been some changes, but no significant differences in code for the raspberry pi vs the beagleboard. I assumed that reading the system timer would be no different. This was of course, not the case. For a beginner like myself, it was quite challenging to get it working on the bbxm.</summary></entry><entry><title type="html">Implementing TCP in Rust - Part 2</title><link href="http://localhost:4000/archive/implementing-tcp-in-rust-part2/" rel="alternate" type="text/html" title="Implementing TCP in Rust - Part 2" /><published>2022-04-16T00:00:00-07:00</published><updated>2022-04-16T00:00:00-07:00</updated><id>http://localhost:4000/archive/implementing-tcp-in-rust-part2</id><content type="html" xml:base="http://localhost:4000/archive/implementing-tcp-in-rust-part2/">&lt;p&gt;&lt;a href=&quot;https://arunvijayshankar.github.io/archive/implementing-tcp-in-rust/&quot;&gt;Part1&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;In my last &lt;a href=&quot;https://arunvijayshankar.github.io/archive/implementing-tcp-in-rust/&quot;&gt;post&lt;/a&gt; on @jonhoo’s live stream on implementing TCP in Rust, I covered everything upto the point where we parsed the source IP address, destination IP address, and payload length from the packet we received from a remote host. We emulated a remote host using a virtual interface, tun0, which we created using the TUN/TAP universal device driver. Picking up where we left off, in this post we explore the packet we received further, parse the TCP segment, and respond to the packet in a particular way, as is specified in &lt;a href=&quot;https://datatracker.ietf.org/doc/html/rfc793&quot;&gt;RFC 793&lt;/a&gt;, the TCP functional specification document.&lt;/p&gt;
 
