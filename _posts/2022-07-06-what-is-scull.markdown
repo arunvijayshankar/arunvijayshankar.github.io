@@ -107,7 +107,7 @@ function implemented in scull is called. The user can of course, write their own
 
 To gain a better understanding of scull and char drivers in general, I implemented a minimalistic version that supports only basic open/close, read/write operations, and only supports the global, persistant scull device type (scull0 - scull3). It can be found [here](https://github.com/arunvijayshankar/vichy). The other major difference is the memory layout. In scull, each device is a linked list of structures, each of which points to a memory area of 4MB at most, though an array of a 1000 pointers, each pointing to a memory area of 4000 bytes. In vichy, each structure in the linked list making up the device points to just one memory area of 4000 bytes. These changes necessitated a few changes in the actual code, but they are small and cosmetic. Which is ok, I think. As a learner, it is a good confidence boost to make small changes to a project and learn by debugging all the issues you run into. This way you can learn the technology, and gain some actual coding experience. 
 
-<sup>*</sup>Note: On newer kernels (I'm running 5.19.0-rc3), scull hits compilations errors, mostly due to a depracated method. The errors can be fixed with these patches
+<sup>*</sup>Note: On newer kernels (I'm running 5.19.0-rc3), scull hits compilations errors, mostly due to a deprecated method. The errors can be fixed with these patches
 - main.c: https://gist.github.com/arunvijayshankar/213e4dc0442ad3f4cd2b9785abc878a7
 - pipe.c: https://gist.github.com/arunvijayshankar/1cd5a2672fe540e196e9c27d163b0407
 - access.c: https://gist.github.com/arunvijayshankar/ae12566ac20707eb43afdf3e3d05a570 
