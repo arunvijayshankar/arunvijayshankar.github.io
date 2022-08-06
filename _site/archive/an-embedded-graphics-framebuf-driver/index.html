@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KLNXCRJB2P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KLNXCRJB2P');
+</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>An embedded graphics framebuf driver for mnemOS - Arktos kai Mennos</title>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>An embedded graphics framebuf driver for mnemOS | Arktos kai Mennos</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="An embedded graphics framebuf driver for mnemOS" />
+<meta name="author" content="Arun" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Recently, I wrote a graphics framebuffer driver using the embedded-graphics crate. The driver was written for mnemOS, an operating system written in Rust. This contributions marks many firsts for me; first contribution to an OSS project, first piece of embedded software written, first driver written. The driver it self is quite simple. We use embedded-graphics-simulator to create a GUI window to display objects/text on. The driver then gives the user a chunk of heap memory onto which an object is drawn. ‘Draw’ is a trait in embedded-graphics where, given a collection of pixels each with a color and coordinate (the object), each pixel’s colour and coordinate (for 8bpp images) is stored in one byte of memory. The entire object can then be stored in a heap array." />
+<meta property="og:description" content="Recently, I wrote a graphics framebuffer driver using the embedded-graphics crate. The driver was written for mnemOS, an operating system written in Rust. This contributions marks many firsts for me; first contribution to an OSS project, first piece of embedded software written, first driver written. The driver it self is quite simple. We use embedded-graphics-simulator to create a GUI window to display objects/text on. The driver then gives the user a chunk of heap memory onto which an object is drawn. ‘Draw’ is a trait in embedded-graphics where, given a collection of pixels each with a color and coordinate (the object), each pixel’s colour and coordinate (for 8bpp images) is stored in one byte of memory. The entire object can then be stored in a heap array." />
+<link rel="canonical" href="http://localhost:4000/archive/an-embedded-graphics-framebuf-driver/" />
+<meta property="og:url" content="http://localhost:4000/archive/an-embedded-graphics-framebuf-driver/" />
+<meta property="og:site_name" content="Arktos kai Mennos" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-08-05T00:00:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="An embedded graphics framebuf driver for mnemOS" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2022-08-05T00:00:00-07:00","datePublished":"2022-08-05T00:00:00-07:00","description":"Recently, I wrote a graphics framebuffer driver using the embedded-graphics crate. The driver was written for mnemOS, an operating system written in Rust. This contributions marks many firsts for me; first contribution to an OSS project, first piece of embedded software written, first driver written. The driver it self is quite simple. We use embedded-graphics-simulator to create a GUI window to display objects/text on. The driver then gives the user a chunk of heap memory onto which an object is drawn. ‘Draw’ is a trait in embedded-graphics where, given a collection of pixels each with a color and coordinate (the object), each pixel’s colour and coordinate (for 8bpp images) is stored in one byte of memory. The entire object can then be stored in a heap array.","headline":"An embedded graphics framebuf driver for mnemOS","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/archive/an-embedded-graphics-framebuf-driver/"},"url":"http://localhost:4000/archive/an-embedded-graphics-framebuf-driver/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=5a80f7a58d66b88974f207a1ae11710397f49c7d">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">Arktos kai Mennos</a></h1>
+        <nav>
+          <ul class="nav-links">
+          <li><a href="/" >Home</a></li>  | <li><a href="/about" >About</a></li> | <li><a href="/archive" >Archive</a></li>  | <li><a href="/contact" >Contact</a></li>
+          </ul>
+        </nav>
+        
+
+        <p>Arun Vijayshankar's blog</p>
+
+        
+        <p class="view"><a href="https://github.com/arunvijayshankar/arunvijayshankar.github.io">View the Project on GitHub <small>arunvijayshankar/arunvijayshankar.github.io</small></a></p>
+        
+
+        
+
+        <h2>Tags</h2>
+
+
+
+  
+  
+  <a href="/tag/programming"><nobr>programming</nobr></a>
+
+  
+  
+  <a href="/tag/rust"><nobr>rust</nobr></a>
+
+  
+  
+  <a href="/tag/networking"><nobr>networking</nobr></a>
+
+  
+  
+  <a href="/tag/embedded"><nobr>embedded</nobr></a>
+
+  
+  
+  <a href="/tag/python"><nobr>python</nobr></a>
+
+  
+  
+  <a href="/tag/device-drivers"><nobr>device-drivers</nobr></a>
+
+  
+  
+  <a href="/tag/cpp"><nobr>cpp</nobr></a>
+
+  
+  
+  <a href="/tag/c"><nobr>c</nobr></a>
+
+  
+  
+  <a href="/tag/vpn"><nobr>vpn</nobr></a>
+
+  
+  
+  <a href="/tag/ssh"><nobr>ssh</nobr></a>
+
+  
+  
+  <a href="/tag/linux"><nobr>linux</nobr></a>
+
+
+        
+        
+        
+      </header>
+      <section>
+
+      
+<div class="post">
+
+  <h1 class="post-title">An embedded graphics framebuf driver for mnemOS</h1>
+  Published on <span class="post-date">05 Aug 2022</span>, under: 
+  <span class="post-tags">
+    &nbsp;|
+    
+      
+      <a class="no-underline" href="/tag/programming"><nobr> programming |</nobr>&nbsp;</a>    
+    
+      
+      <a class="no-underline" href="/tag/embedded"><nobr> embedded |</nobr>&nbsp;</a>    
+    
+      
+      <a class="no-underline" href="/tag/device-drivers"><nobr> device-drivers |</nobr>&nbsp;</a>    
+    
+      
+      <a class="no-underline" href="/tag/rust"><nobr> rust |</nobr>&nbsp;</a>    
+    
+    &nbsp;
+  </span>
+  <p></p>
+  <p>Recently, I wrote a graphics framebuffer driver using the <a href="https://docs.rs/embedded-graphics/latest/embedded_graphics/">embedded-graphics crate</a>. The driver was written for <a href="https://mnemos-dev.jamesmunns.com/book/intro.html">mnemOS</a>, an operating system written in Rust. This contributions marks many firsts for me; first contribution to an OSS project, first piece of embedded software written, first driver written. The driver it self is quite simple. We use <a href="https://docs.rs/embedded-graphics-simulator/latest/embedded_graphics_simulator/">embedded-graphics-simulator</a> to create a GUI window to display objects/text on. The driver then gives the user a chunk of heap memory onto which an object is drawn. ‘Draw’ is a trait in embedded-graphics where, given a collection of pixels each with a color and coordinate (the object), each pixel’s colour and coordinate (for 8bpp images) is stored in one byte of memory. The entire object can then be stored in a heap array.</p>
+
+<p><img src="/assets/images/post9/2022-08-05-21-40-33.png" alt="" /></p>
+
+<p>Once the object has been drawn onto the chunk of memory, it can then be passed to the e-g-simulator window where it is displayed. However, as the e-g-simulator window only takes a ‘SimulatorDisplay’ object as an argument, the driver converts the raw bytes into an ‘image’, which can be passed back to user space and displayed on the window. If we are using a physical display, like a simple OLED display, the raw bytes can be sent over a suitable interface like SPI or I2C. Here is a sample what it looks like on the e-g-simulator:</p>
+
+<p><img src="/assets/gifs/Screencast_from_07-27-2022_11_23_56_AM_AdobeExpress.gif" alt="" /></p>
+
+<p>Contributing to an open source project (or any project, really) has been a goal of mine ever since I started learning programming in earnest. It was really rewarding to go from dreaming about making a contribution, to actually doing it. A small part of me still cannot believe I did it. I owe a huge shoutout to James Munn <a href="https://twitter.com/bitshiftmask">(@bitshiftmask)</a> for encouraging me to just give it try when I expressed my desire to help out with this issue, but confessed that I wasn’t sure if I knew enough to do it. With this under my belt, I feel a lot more confident about my skills, and I am rearing to take on more projects and tasks. Next up is writing a networking driver for mnemOS using smoltcp, a TCP/IP stack for embedded/bare-metal rust projects. I plan to work on this in conjunction with continuing my learning journey in embedded systems.</p>
+
+</div>
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/arunvijayshankar">arunvijayshankar</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>

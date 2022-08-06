@@ -31,7 +31,7 @@
 {"@context":"https://schema.org","@type":"WebSite","description":"Arun Vijayshankar’s blog","headline":"Arktos:","name":"Arktos kai Mennos","url":"http://localhost:4000/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=e175cf2cc7de7cf31d60056b73775779ae8b25c7">
+    <link rel="stylesheet" href="/assets/css/style.css?v=5a80f7a58d66b88974f207a1ae11710397f49c7d">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -88,11 +88,15 @@
 
   
   
+  <a href="/tag/rust"><nobr>rust</nobr></a>
+
+  
+  
   <a href="/tag/networking"><nobr>networking</nobr></a>
 
   
   
-  <a href="/tag/rust"><nobr>rust</nobr></a>
+  <a href="/tag/embedded"><nobr>embedded</nobr></a>
 
   
   
@@ -100,7 +104,7 @@
 
   
   
-  <a href="/tag/embedded"><nobr>embedded</nobr></a>
+  <a href="/tag/device-drivers"><nobr>device-drivers</nobr></a>
 
   
   
@@ -121,10 +125,6 @@
   
   
   <a href="/tag/linux"><nobr>linux</nobr></a>
-
-  
-  
-  <a href="/tag/device-drivers"><nobr>device-drivers</nobr></a>
 
 
 
@@ -161,27 +161,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>What is scull - Arktos kai Mennos</title>
+    <title>An embedded graphics framebuf driver for mnemOS - Arktos kai Mennos</title>
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>What is scull | Arktos kai Mennos</title>
+<title>An embedded graphics framebuf driver for mnemOS | Arktos kai Mennos</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="What is scull" />
+<meta property="og:title" content="An embedded graphics framebuf driver for mnemOS" />
 <meta name="author" content="Arun" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Scull: Simple Character Utility for Loading Localities" />
-<meta property="og:description" content="Scull: Simple Character Utility for Loading Localities" />
-<link rel="canonical" href="http://localhost:4000/archive/what-is-scull/" />
-<meta property="og:url" content="http://localhost:4000/archive/what-is-scull/" />
+<meta name="description" content="Recently, I wrote a graphics framebuffer driver using the embedded-graphics crate. The driver was written for mnemOS, an operating system written in Rust. This contributions marks many firsts for me; first contribution to an OSS project, first piece of embedded software written, first driver written. The driver it self is quite simple. We use embedded-graphics-simulator to create a GUI window to display objects/text on. The driver then gives the user a chunk of heap memory onto which an object is drawn. ‘Draw’ is a trait in embedded-graphics where, given a collection of pixels each with a color and coordinate (the object), each pixel’s colour and coordinate (for 8bpp images) is stored in one byte of memory. The entire object can then be stored in a heap array." />
+<meta property="og:description" content="Recently, I wrote a graphics framebuffer driver using the embedded-graphics crate. The driver was written for mnemOS, an operating system written in Rust. This contributions marks many firsts for me; first contribution to an OSS project, first piece of embedded software written, first driver written. The driver it self is quite simple. We use embedded-graphics-simulator to create a GUI window to display objects/text on. The driver then gives the user a chunk of heap memory onto which an object is drawn. ‘Draw’ is a trait in embedded-graphics where, given a collection of pixels each with a color and coordinate (the object), each pixel’s colour and coordinate (for 8bpp images) is stored in one byte of memory. The entire object can then be stored in a heap array." />
+<link rel="canonical" href="http://localhost:4000/archive/an-embedded-graphics-framebuf-driver/" />
+<meta property="og:url" content="http://localhost:4000/archive/an-embedded-graphics-framebuf-driver/" />
 <meta property="og:site_name" content="Arktos kai Mennos" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-07-06T00:00:00-07:00" />
+<meta property="article:published_time" content="2022-08-05T00:00:00-07:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="What is scull" />
+<meta property="twitter:title" content="An embedded graphics framebuf driver for mnemOS" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2022-07-06T00:00:00-07:00","datePublished":"2022-07-06T00:00:00-07:00","description":"Scull: Simple Character Utility for Loading Localities","headline":"What is scull","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/archive/what-is-scull/"},"url":"http://localhost:4000/archive/what-is-scull/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2022-08-05T00:00:00-07:00","datePublished":"2022-08-05T00:00:00-07:00","description":"Recently, I wrote a graphics framebuffer driver using the embedded-graphics crate. The driver was written for mnemOS, an operating system written in Rust. This contributions marks many firsts for me; first contribution to an OSS project, first piece of embedded software written, first driver written. The driver it self is quite simple. We use embedded-graphics-simulator to create a GUI window to display objects/text on. The driver then gives the user a chunk of heap memory onto which an object is drawn. ‘Draw’ is a trait in embedded-graphics where, given a collection of pixels each with a color and coordinate (the object), each pixel’s colour and coordinate (for 8bpp images) is stored in one byte of memory. The entire object can then be stored in a heap array.","headline":"An embedded graphics framebuf driver for mnemOS","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/archive/an-embedded-graphics-framebuf-driver/"},"url":"http://localhost:4000/archive/an-embedded-graphics-framebuf-driver/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=e175cf2cc7de7cf31d60056b73775779ae8b25c7">
+    <link rel="stylesheet" href="/assets/css/style.css?v=5a80f7a58d66b88974f207a1ae11710397f49c7d">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -226,11 +226,15 @@
 
   
   
+  <a href="/tag/rust"><nobr>rust</nobr></a>
+
+  
+  
   <a href="/tag/networking"><nobr>networking</nobr></a>
 
   
   
-  <a href="/tag/rust"><nobr>rust</nobr></a>
+  <a href="/tag/embedded"><nobr>embedded</nobr></a>
 
   
   
@@ -238,7 +242,7 @@
 
   
   
-  <a href="/tag/embedded"><nobr>embedded</nobr></a>
+  <a href="/tag/device-drivers"><nobr>device-drivers</nobr></a>
 
   
   
@@ -260,9 +264,178 @@
   
   <a href="/tag/linux"><nobr>linux</nobr></a>
 
+
+        
+        
+        
+      </header>
+      <section>
+
+      
+<div class="post">
+
+  <h1 class="post-title">An embedded graphics framebuf driver for mnemOS</h1>
+  Published on <span class="post-date">05 Aug 2022</span>, under: 
+  <span class="post-tags">
+    &nbsp;|
+    
+      
+      <a class="no-underline" href="/tag/programming"><nobr> programming |</nobr>&nbsp;</a>    
+    
+      
+      <a class="no-underline" href="/tag/embedded"><nobr> embedded |</nobr>&nbsp;</a>    
+    
+      
+      <a class="no-underline" href="/tag/device-drivers"><nobr> device-drivers |</nobr>&nbsp;</a>    
+    
+      
+      <a class="no-underline" href="/tag/rust"><nobr> rust |</nobr>&nbsp;</a>    
+    
+    &nbsp;
+  </span>
+  <p></p>
+  <p>Recently, I wrote a graphics framebuffer driver using the <a href="https://docs.rs/embedded-graphics/latest/embedded_graphics/">embedded-graphics crate</a>. The driver was written for <a href="https://mnemos-dev.jamesmunns.com/book/intro.html">mnemOS</a>, an operating system written in Rust. This contributions marks many firsts for me; first contribution to an OSS project, first piece of embedded software written, first driver written. The driver it self is quite simple. We use <a href="https://docs.rs/embedded-graphics-simulator/latest/embedded_graphics_simulator/">embedded-graphics-simulator</a> to create a GUI window to display objects/text on. The driver then gives the user a chunk of heap memory onto which an object is drawn. ‘Draw’ is a trait in embedded-graphics where, given a collection of pixels each with a color and coordinate (the object), each pixel’s colour and coordinate (for 8bpp images) is stored in one byte of memory. The entire object can then be stored in a heap array.</p>
+
+<p><img src="/assets/images/post9/2022-08-05-21-40-33.png" alt="" /></p>
+
+<p>Once the object has been drawn onto the chunk of memory, it can then be passed to the e-g-simulator window where it is displayed. However, as the e-g-simulator window only takes a ‘SimulatorDisplay’ object as an argument, the driver converts the raw bytes into an ‘image’, which can be passed back to user space and displayed on the window. If we are using a physical display, like a simple OLED display, the raw bytes can be sent over a suitable interface like SPI or I2C. Here is a sample what it looks like on the e-g-simulator:</p>
+
+<p><img src="/assets/gifs/Screencast_from_07-27-2022_11_23_56_AM_AdobeExpress.gif" alt="" /></p>
+
+<p>Contributing to an open source project (or any project, really) has been a goal of mine ever since I started learning programming in earnest. It was really rewarding to go from dreaming about making a contribution, to actually doing it. A small part of me still cannot believe I did it. I owe a huge shoutout to James Munn <a href="https://twitter.com/bitshiftmask">(@bitshiftmask)</a> for encouraging me to just give it try when I expressed my desire to help out with this issue, but confessed that I wasn’t sure if I knew enough to do it. With this under my belt, I feel a lot more confident about my skills, and I am rearing to take on more projects and tasks. Next up is writing a networking driver for mnemOS using smoltcp, a TCP/IP stack for embedded/bare-metal rust projects. I plan to work on this in conjunction with continuing my learning journey in embedded systems.</p>
+
+</div>
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/arunvijayshankar">arunvijayshankar</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>
+
+      
+        <!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KLNXCRJB2P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KLNXCRJB2P');
+</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>What is scull - Arktos kai Mennos</title>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>What is scull | Arktos kai Mennos</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="What is scull" />
+<meta name="author" content="Arun" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Scull: Simple Character Utility for Loading Localities" />
+<meta property="og:description" content="Scull: Simple Character Utility for Loading Localities" />
+<link rel="canonical" href="http://localhost:4000/archive/what-is-scull/" />
+<meta property="og:url" content="http://localhost:4000/archive/what-is-scull/" />
+<meta property="og:site_name" content="Arktos kai Mennos" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-07-06T00:00:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="What is scull" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2022-07-06T00:00:00-07:00","datePublished":"2022-07-06T00:00:00-07:00","description":"Scull: Simple Character Utility for Loading Localities","headline":"What is scull","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/archive/what-is-scull/"},"url":"http://localhost:4000/archive/what-is-scull/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=5a80f7a58d66b88974f207a1ae11710397f49c7d">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">Arktos kai Mennos</a></h1>
+        <nav>
+          <ul class="nav-links">
+          <li><a href="/" >Home</a></li>  | <li><a href="/about" >About</a></li> | <li><a href="/archive" >Archive</a></li>  | <li><a href="/contact" >Contact</a></li>
+          </ul>
+        </nav>
+        
+
+        <p>Arun Vijayshankar's blog</p>
+
+        
+        <p class="view"><a href="https://github.com/arunvijayshankar/arunvijayshankar.github.io">View the Project on GitHub <small>arunvijayshankar/arunvijayshankar.github.io</small></a></p>
+        
+
+        
+
+        <h2>Tags</h2>
+
+
+
+  
+  
+  <a href="/tag/programming"><nobr>programming</nobr></a>
+
+  
+  
+  <a href="/tag/rust"><nobr>rust</nobr></a>
+
+  
+  
+  <a href="/tag/networking"><nobr>networking</nobr></a>
+
+  
+  
+  <a href="/tag/embedded"><nobr>embedded</nobr></a>
+
+  
+  
+  <a href="/tag/python"><nobr>python</nobr></a>
+
   
   
   <a href="/tag/device-drivers"><nobr>device-drivers</nobr></a>
+
+  
+  
+  <a href="/tag/cpp"><nobr>cpp</nobr></a>
+
+  
+  
+  <a href="/tag/c"><nobr>c</nobr></a>
+
+  
+  
+  <a href="/tag/vpn"><nobr>vpn</nobr></a>
+
+  
+  
+  <a href="/tag/ssh"><nobr>ssh</nobr></a>
+
+  
+  
+  <a href="/tag/linux"><nobr>linux</nobr></a>
 
 
         
@@ -462,7 +635,7 @@ function implemented in scull is called. The user can of course, write their own
 {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2022-06-30T00:00:00-07:00","datePublished":"2022-06-30T00:00:00-07:00","description":"I have been using a BeagleBoard-xM as a target for the recepies in the book Embedded Programming with Modern C++ Cookbook, and here are a few of the interesting things I’ve come across:","headline":"Cross Compiling for BeagleBoard targets, and benchmarks","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/archive/cross-compiling-for-beagleboard-and-benchmarks/"},"url":"http://localhost:4000/archive/cross-compiling-for-beagleboard-and-benchmarks/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=e175cf2cc7de7cf31d60056b73775779ae8b25c7">
+    <link rel="stylesheet" href="/assets/css/style.css?v=5a80f7a58d66b88974f207a1ae11710397f49c7d">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -507,11 +680,15 @@ function implemented in scull is called. The user can of course, write their own
 
   
   
+  <a href="/tag/rust"><nobr>rust</nobr></a>
+
+  
+  
   <a href="/tag/networking"><nobr>networking</nobr></a>
 
   
   
-  <a href="/tag/rust"><nobr>rust</nobr></a>
+  <a href="/tag/embedded"><nobr>embedded</nobr></a>
 
   
   
@@ -519,7 +696,7 @@ function implemented in scull is called. The user can of course, write their own
 
   
   
-  <a href="/tag/embedded"><nobr>embedded</nobr></a>
+  <a href="/tag/device-drivers"><nobr>device-drivers</nobr></a>
 
   
   
@@ -540,10 +717,6 @@ function implemented in scull is called. The user can of course, write their own
   
   
   <a href="/tag/linux"><nobr>linux</nobr></a>
-
-  
-  
-  <a href="/tag/device-drivers"><nobr>device-drivers</nobr></a>
 
 
         
@@ -603,226 +776,6 @@ function implemented in scull is called. The user can of course, write their own
 <p>Build system benchmarks</p>
 
 <p><img src="/assets/images/post7/x86_bench.png" alt="Build system (x86_64) Benchmarks" /></p>
-
-</div>
-
-      </section>
-      <footer>
-        
-        <p>This project is maintained by <a href="https://github.com/arunvijayshankar">arunvijayshankar</a></p>
-        
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="/assets/js/scale.fix.js"></script>
-  </body>
-</html>
-
-      
-        <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KLNXCRJB2P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KLNXCRJB2P');
-</script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Reading the System Timer on Beagleboard XM - Arktos kai Mennos</title>
-<!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Reading the System Timer on Beagleboard XM | Arktos kai Mennos</title>
-<meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Reading the System Timer on Beagleboard XM" />
-<meta name="author" content="Arun" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="One of the exercises in the book ‘Embedded Programming with Modern C++ Cookbook’ is to read the System Timer on a RaspberryPi. The system timer peripheral on a raspberry pi provides a 64 bit free running counter that increments with every clock tick. Although the book uses QEMU to run a rPi emulator as the target for the programs, I have been using a Beagleboard XM as the target. So far, there have been some changes, but no significant differences in code for the raspberry pi vs the beagleboard. I assumed that reading the system timer would be no different. This was of course, not the case. For a beginner like myself, it was quite challenging to get it working on the bbxm." />
-<meta property="og:description" content="One of the exercises in the book ‘Embedded Programming with Modern C++ Cookbook’ is to read the System Timer on a RaspberryPi. The system timer peripheral on a raspberry pi provides a 64 bit free running counter that increments with every clock tick. Although the book uses QEMU to run a rPi emulator as the target for the programs, I have been using a Beagleboard XM as the target. So far, there have been some changes, but no significant differences in code for the raspberry pi vs the beagleboard. I assumed that reading the system timer would be no different. This was of course, not the case. For a beginner like myself, it was quite challenging to get it working on the bbxm." />
-<link rel="canonical" href="http://localhost:4000/archive/reading-sync-timer-beagleboard-xm/" />
-<meta property="og:url" content="http://localhost:4000/archive/reading-sync-timer-beagleboard-xm/" />
-<meta property="og:site_name" content="Arktos kai Mennos" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-06-10T00:00:00-07:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Reading the System Timer on Beagleboard XM" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2022-06-10T00:00:00-07:00","datePublished":"2022-06-10T00:00:00-07:00","description":"One of the exercises in the book ‘Embedded Programming with Modern C++ Cookbook’ is to read the System Timer on a RaspberryPi. The system timer peripheral on a raspberry pi provides a 64 bit free running counter that increments with every clock tick. Although the book uses QEMU to run a rPi emulator as the target for the programs, I have been using a Beagleboard XM as the target. So far, there have been some changes, but no significant differences in code for the raspberry pi vs the beagleboard. I assumed that reading the system timer would be no different. This was of course, not the case. For a beginner like myself, it was quite challenging to get it working on the bbxm.","headline":"Reading the System Timer on Beagleboard XM","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/archive/reading-sync-timer-beagleboard-xm/"},"url":"http://localhost:4000/archive/reading-sync-timer-beagleboard-xm/"}</script>
-<!-- End Jekyll SEO tag -->
-
-    <link rel="stylesheet" href="/assets/css/style.css?v=e175cf2cc7de7cf31d60056b73775779ae8b25c7">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
-    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
-
-<!-- Setup Google Analytics -->
-
-
-
-<!-- You can set your favicon here -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
-
-<!-- end custom head snippets -->
-
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1><a href="http://localhost:4000/">Arktos kai Mennos</a></h1>
-        <nav>
-          <ul class="nav-links">
-          <li><a href="/" >Home</a></li>  | <li><a href="/about" >About</a></li> | <li><a href="/archive" >Archive</a></li>  | <li><a href="/contact" >Contact</a></li>
-          </ul>
-        </nav>
-        
-
-        <p>Arun Vijayshankar's blog</p>
-
-        
-        <p class="view"><a href="https://github.com/arunvijayshankar/arunvijayshankar.github.io">View the Project on GitHub <small>arunvijayshankar/arunvijayshankar.github.io</small></a></p>
-        
-
-        
-
-        <h2>Tags</h2>
-
-
-
-  
-  
-  <a href="/tag/programming"><nobr>programming</nobr></a>
-
-  
-  
-  <a href="/tag/networking"><nobr>networking</nobr></a>
-
-  
-  
-  <a href="/tag/rust"><nobr>rust</nobr></a>
-
-  
-  
-  <a href="/tag/python"><nobr>python</nobr></a>
-
-  
-  
-  <a href="/tag/embedded"><nobr>embedded</nobr></a>
-
-  
-  
-  <a href="/tag/cpp"><nobr>cpp</nobr></a>
-
-  
-  
-  <a href="/tag/c"><nobr>c</nobr></a>
-
-  
-  
-  <a href="/tag/vpn"><nobr>vpn</nobr></a>
-
-  
-  
-  <a href="/tag/ssh"><nobr>ssh</nobr></a>
-
-  
-  
-  <a href="/tag/linux"><nobr>linux</nobr></a>
-
-  
-  
-  <a href="/tag/device-drivers"><nobr>device-drivers</nobr></a>
-
-
-        
-        
-        
-      </header>
-      <section>
-
-      
-<div class="post">
-
-  <h1 class="post-title">Reading the System Timer on Beagleboard XM</h1>
-  Published on <span class="post-date">10 Jun 2022</span>, under: 
-  <span class="post-tags">
-    &nbsp;|
-    
-      
-      <a class="no-underline" href="/tag/programming"><nobr> programming |</nobr>&nbsp;</a>    
-    
-      
-      <a class="no-underline" href="/tag/cpp"><nobr> cpp |</nobr>&nbsp;</a>    
-    
-      
-      <a class="no-underline" href="/tag/embedded"><nobr> embedded |</nobr>&nbsp;</a>    
-    
-    &nbsp;
-  </span>
-  <p></p>
-  <p>One of the exercises in the book ‘Embedded Programming with Modern C++ Cookbook’ is to read the System Timer on a RaspberryPi. The system timer peripheral on a raspberry pi provides a 64 bit free running counter that increments with every clock tick. Although the book uses QEMU to run a rPi emulator as the target for the programs, I have been using a Beagleboard XM as the target. So far, there have been some changes, but no significant differences in code for the raspberry pi vs the beagleboard. I assumed that reading the system timer would be no different. This was of course, not the case. For a beginner like myself, it was quite challenging to get it working on the bbxm.</p>
-
-<p>The book starts off by hard coding the base address of the rPi system timer, and a struct to store the two 32 bit sections of the timer:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>constexpr uint32_t kTimerBase = 0x3F003000;
-
-struct SystemTimer {
-  uint32_t CS;
-  uint32_t counter_lo;
-  uint32_t counter_hi;
-};
-</code></pre></div></div>
-
-<p>The sync timer address is then mapped using mmap as a shared map and cast as a struct pointer to read the value into counter_lo and counter_hi, which are added together to get the actual timer value.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int memfd = open("/dev/mem", O_RDWR | O_SYNC);
-
-SystemTimer *timer = (SystemTimer*)mmap(NULL, sizeof(SystemTimer),
-PROT_READ|PROT_WRITE, MAP_SHARED,
-memfd, kTimerBase);
-</code></pre></div></div>
-
-<p>I knew that it was unlikely that the timer base address will be the same on the bbxm, so the first challenge was to find the right address. I looked for the AM37 manual online, and it turns out that Texas Instruments will let you download it if you register an account with them. So now I have a TI developer account. Oh, and the manual. The manual listed the Sync Timer base address of the 32 kHz clock as 0x48320000, and that the register was 32 bits long. I made the changes, and compiled the build. But when I ran it, the program would only print out one value</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>System timer: 64
-System timer: 64
-System timer: 64
-System timer: 64
-System timer: 64
-System timer: 64
-</code></pre></div></div>
-
-<p>It looked as if the timer was not updating with every clock tick. My first suspicion was that address was wrong somehow, or that the mapping was not correct. I spent a considerable amount of time trying to get to the bottom of that, all to no avail. The address was as noted in the manual, and there did not seem to be anything wrong with the mapping. So I did the only thing I could think of, and reached out to the good folks on the internet. One person suggested that maybe the timer was not enabled. This seemed like a plausible root cause, so I went back to the manual and started digging to find out how to check if the timer is disabled. I did find the timer controls, but I honestly did not really understand it. But what I did accidentally discover was that even though the base address for the sync timer on the bbxm is 0x48320000, the actual value of the timer is stored at a 0x0010 offset!</p>
-
-<p>So I dutifully changed the address to 0x48320010, re-compiled, and ran it. I hit a Bus Error. What is a bus error now? I asked my browser, which said that it was a hardware error, letting the OS know that CPU cannot access the memory that the process is trying to access. So I was back to some issue with the address. I was convinced that the physical address was correct this time, so maybe there was something wrong with the virtual address? After some more scouring of the internet, I found this <a href="https://bakhi.github.io/devmem/">post</a>. Reading through it, I finally understood that mmap was creating a new mapping in the virtual address space starting at the physical address we specify in the mmap call. For some reason that I don’t still understand, providing the physical address + the offset to mmap was returning a bad virtual address. But maybe mapping the timer base address first, and then adding the offset might fix it? I tried this, and it worked! The value updated by ~400 units everytime I ran the binary. I also understood why the program was not updating when I ran it with just the base address. The first 4 bytes of the Sync Timer stored just the timer version. I was just reading this constant over and over again. But after first mapping the base physical address and adding the offset, the program read the actual timer value everytime. Here is the entire program (minus error checking):</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>constexpr uint32_t kTimerBase = 0x48320000;
-constexpr uint32_t timer_offset = 0x0010; 
-
-
-int main() {
-    int memfd = open("/dev/mem", O_RDWR | O_SYNC);
-
-    void *map_base = mmap(NULL, sizeof(uint32_t),
-    PROT_READ | PROT_WRITE, MAP_SHARED,
-    memfd, kTimerBase);
-
-    uint32_t *timer = (uint32_t *)((char *)map_base + timer_offset);
-
-    for (int i = 0; i &lt; 10; i++) {
-        std::cout &lt;&lt; "System timer: " &lt;&lt; *timer;
-        std::cout &lt;&lt; std::endl;
-        std::this_thread::sleep_for(std::chrono::milliseconds(10));
-    }
-    return 0;
-}
-</code></pre></div></div>
-
-<p>As an aside, the program as specified in the book, did not run correctly on the rPi emulator either. But once I made the offset changes above to the code, it read the timer value correctly on every run.</p>
 
 </div>
 
