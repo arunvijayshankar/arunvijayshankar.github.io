@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KLNXCRJB2P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KLNXCRJB2P');
+</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A simple two channel multiplexer - Arktos kai Mennos</title>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>A simple two channel multiplexer | Arktos kai Mennos</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="A simple two channel multiplexer" />
+<meta name="author" content="Arun" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A couple of weeks ago, I came across this equation for a two channel multiplexer in a book on x86 Assembly" />
+<meta property="og:description" content="A couple of weeks ago, I came across this equation for a two channel multiplexer in a book on x86 Assembly" />
+<link rel="canonical" href="http://localhost:4000/archive/a-simple-two-channel-multiplexer/" />
+<meta property="og:url" content="http://localhost:4000/archive/a-simple-two-channel-multiplexer/" />
+<meta property="og:site_name" content="Arktos kai Mennos" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-11-29T00:00:00-08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A simple two channel multiplexer" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2022-11-29T00:00:00-08:00","datePublished":"2022-11-29T00:00:00-08:00","description":"A couple of weeks ago, I came across this equation for a two channel multiplexer in a book on x86 Assembly","headline":"A simple two channel multiplexer","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/archive/a-simple-two-channel-multiplexer/"},"url":"http://localhost:4000/archive/a-simple-two-channel-multiplexer/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=95f59cddfd5a834c6f40a88969ae0e9a19718c76">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">Arktos kai Mennos</a></h1>
+        <nav>
+          <ul class="nav-links">
+          <li><a href="/" >Home</a></li>  | <li><a href="/about" >About</a></li> | <li><a href="/archive" >Archive</a></li>  | <li><a href="/contact" >Contact</a></li>
+          </ul>
+        </nav>
+        
+
+        <p>Arun Vijayshankar's blog</p>
+
+        
+        <p class="view"><a href="https://github.com/arunvijayshankar/arunvijayshankar.github.io">View the Project on GitHub <small>arunvijayshankar/arunvijayshankar.github.io</small></a></p>
+        
+
+        
+
+        <h2>Tags</h2>
+
+
+
+  
+  
+  <a href="/tag/programming"><nobr>programming</nobr></a>
+
+  
+  
+  <a href="/tag/rust"><nobr>rust</nobr></a>
+
+  
+  
+  <a href="/tag/networking"><nobr>networking</nobr></a>
+
+  
+  
+  <a href="/tag/embedded"><nobr>embedded</nobr></a>
+
+  
+  
+  <a href="/tag/python"><nobr>python</nobr></a>
+
+  
+  
+  <a href="/tag/device-drivers"><nobr>device-drivers</nobr></a>
+
+  
+  
+  <a href="/tag/cpp"><nobr>cpp</nobr></a>
+
+  
+  
+  <a href="/tag/c"><nobr>c</nobr></a>
+
+  
+  
+  <a href="/tag/vpn"><nobr>vpn</nobr></a>
+
+  
+  
+  <a href="/tag/ssh"><nobr>ssh</nobr></a>
+
+  
+  
+  <a href="/tag/linux"><nobr>linux</nobr></a>
+
+  
+  
+  <a href="/tag/digital-circuits"><nobr>digital-circuits</nobr></a>
+
+
+        
+        
+        
+      </header>
+      <section>
+
+      
+<div class="post">
+
+  <h1 class="post-title">A simple two channel multiplexer</h1>
+  Published on <span class="post-date">29 Nov 2022</span>, under: 
+  <span class="post-tags">
+    &nbsp;|
+    
+      
+      <a class="no-underline" href="/tag/programming"><nobr> programming |</nobr>&nbsp;</a>    
+    
+      
+      <a class="no-underline" href="/tag/digital-circuits"><nobr> digital-circuits |</nobr>&nbsp;</a>    
+    
+    &nbsp;
+  </span>
+  <p></p>
+  <p>A couple of weeks ago, I came across this equation for a two channel multiplexer in a book on x86 Assembly</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Z = ( Y &amp; S ) | ( X &amp; ~S )
+</code></pre></div></div>
+
+<p>I was a little surprised at how simple the equation was and, out of curiosity, I drew a quick schematic of it</p>
+
+<p><img src="/assets/images/post10/mplexer_schem.png" alt="" /></p>
+
+<p>It occured to me that I could build this for a simple and fun project. I had never really built any circuits before, and this seemed like a good first attempt. So I ordered the logic gates, and put it together once they were delivered, a few days later. It’s a very simple circuit and it was really easy to build.</p>
+
+<p><img src="/assets/images/post10/mplexer_pic.png" alt="" /></p>
+
+<p>I used my beaglebone board to power the circuit, and for the input data streams for the two channels on the multiplexer. For the inputs I chose two pwm signals of 2Hz and 5Hz respectively and forwarded them from GPIO header pins on the beaglebone black. I kept the pwm signal frequency low to make the channel selection easier to observe. The circuit uses a push-button to flip the selection channel to choose between the two input channels. Here is a small demo of the circuit in action.</p>
+
+<p><img src="/assets/images/post10/demo_final_gif.gif" alt="" /></p>
+
+
+</div>
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/arunvijayshankar">arunvijayshankar</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>

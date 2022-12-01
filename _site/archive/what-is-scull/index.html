@@ -33,7 +33,7 @@
 {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2022-07-06T00:00:00-07:00","datePublished":"2022-07-06T00:00:00-07:00","description":"Scull: Simple Character Utility for Loading Localities","headline":"What is scull","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/archive/what-is-scull/"},"url":"http://localhost:4000/archive/what-is-scull/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=5a80f7a58d66b88974f207a1ae11710397f49c7d">
+    <link rel="stylesheet" href="/assets/css/style.css?v=95f59cddfd5a834c6f40a88969ae0e9a19718c76">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -115,6 +115,10 @@
   
   
   <a href="/tag/linux"><nobr>linux</nobr></a>
+
+  
+  
+  <a href="/tag/digital-circuits"><nobr>digital-circuits</nobr></a>
 
 
         
@@ -257,7 +261,7 @@ function implemented in scull is called. The user can of course, write their own
 
 <p>To gain a better understanding of scull and char drivers in general, I implemented a minimalistic version that supports only basic open/close, read/write operations, and only supports the global, persistant scull device type (scull0 - scull3). It can be found <a href="https://github.com/arunvijayshankar/vichy">here</a>. The other major difference is the memory layout. In scull, each device is a linked list of structures, each of which points to a memory area of 4MB at most, though an array of a 1000 pointers, each pointing to a memory area of 4000 bytes. In vichy, each structure in the linked list making up the device points to just one memory area of 4000 bytes. These changes necessitated a few changes in the actual code, but they are small and cosmetic. Which is ok, I think. As a learner, it is a good confidence boost to make small changes to a project and learn by debugging all the issues you run into. This way you can learn the technology, and gain some actual coding experience.</p>
 
-<p><sup>*</sup>Note: On newer kernels (I’m running 5.19.0-rc3), scull hits compilations errors, mostly due to a depracated method. The errors can be fixed with these patches</p>
+<p><sup>*</sup>Note: On newer kernels (I’m running 5.19.0-rc3), scull hits compilations errors, mostly due to a deprecated method. The errors can be fixed with these patches</p>
 <ul>
   <li>main.c: https://gist.github.com/arunvijayshankar/213e4dc0442ad3f4cd2b9785abc878a7</li>
   <li>pipe.c: https://gist.github.com/arunvijayshankar/1cd5a2672fe540e196e9c27d163b0407</li>
