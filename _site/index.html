@@ -31,7 +31,7 @@
 {"@context":"https://schema.org","@type":"WebSite","description":"Arun Vijayshankar’s blog","headline":"Arktos:","name":"Arktos kai Mennos","url":"http://localhost:4000/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=95f59cddfd5a834c6f40a88969ae0e9a19718c76">
+    <link rel="stylesheet" href="/assets/css/style.css?v=057c1177987ca65a10dcd059a502c059bebfde77">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -92,6 +92,10 @@
 
   
   
+  <a href="/tag/python"><nobr>python</nobr></a>
+
+  
+  
   <a href="/tag/networking"><nobr>networking</nobr></a>
 
   
@@ -100,7 +104,7 @@
 
   
   
-  <a href="/tag/python"><nobr>python</nobr></a>
+  <a href="/tag/linux"><nobr>linux</nobr></a>
 
   
   
@@ -121,10 +125,6 @@
   
   
   <a href="/tag/ssh"><nobr>ssh</nobr></a>
-
-  
-  
-  <a href="/tag/linux"><nobr>linux</nobr></a>
 
   
   
@@ -165,27 +165,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>A simple two channel multiplexer - Arktos kai Mennos</title>
+    <title>Run a command recursively in all subdirectories - Arktos kai Mennos</title>
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>A simple two channel multiplexer | Arktos kai Mennos</title>
+<title>Run a command recursively in all subdirectories | Arktos kai Mennos</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="A simple two channel multiplexer" />
+<meta property="og:title" content="Run a command recursively in all subdirectories" />
 <meta name="author" content="Arun" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="A couple of weeks ago, I came across this equation for a two channel multiplexer in a book on x86 Assembly" />
-<meta property="og:description" content="A couple of weeks ago, I came across this equation for a two channel multiplexer in a book on x86 Assembly" />
-<link rel="canonical" href="http://localhost:4000/archive/a-simple-two-channel-multiplexer/" />
-<meta property="og:url" content="http://localhost:4000/archive/a-simple-two-channel-multiplexer/" />
+<meta name="description" content="Suppose you wish to run a linux command in the current working directory, and in all of its subdirectories recursively. For example, I discovered that sometimes, running ‘make modules_install’ compresses all the modules as a .xz file in the various subdirectories. I read that the kernel does not care if a module is compressed, it can load the module in any case, but I did not know that at the time. I initially considered running “xz –decompress “ on every .xz file, but there are simply too many subsystem and driver directories, and it would extremely tedious. So I wrote a little script to do it:" />
+<meta property="og:description" content="Suppose you wish to run a linux command in the current working directory, and in all of its subdirectories recursively. For example, I discovered that sometimes, running ‘make modules_install’ compresses all the modules as a .xz file in the various subdirectories. I read that the kernel does not care if a module is compressed, it can load the module in any case, but I did not know that at the time. I initially considered running “xz –decompress “ on every .xz file, but there are simply too many subsystem and driver directories, and it would extremely tedious. So I wrote a little script to do it:" />
+<link rel="canonical" href="http://localhost:4000/archive/run-a-command-recursively-in-all-subdirectories/" />
+<meta property="og:url" content="http://localhost:4000/archive/run-a-command-recursively-in-all-subdirectories/" />
 <meta property="og:site_name" content="Arktos kai Mennos" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-11-29T00:00:00-08:00" />
+<meta property="article:published_time" content="2022-12-23T00:00:00-08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="A simple two channel multiplexer" />
+<meta property="twitter:title" content="Run a command recursively in all subdirectories" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2022-11-29T00:00:00-08:00","datePublished":"2022-11-29T00:00:00-08:00","description":"A couple of weeks ago, I came across this equation for a two channel multiplexer in a book on x86 Assembly","headline":"A simple two channel multiplexer","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/archive/a-simple-two-channel-multiplexer/"},"url":"http://localhost:4000/archive/a-simple-two-channel-multiplexer/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2022-12-23T00:00:00-08:00","datePublished":"2022-12-23T00:00:00-08:00","description":"Suppose you wish to run a linux command in the current working directory, and in all of its subdirectories recursively. For example, I discovered that sometimes, running ‘make modules_install’ compresses all the modules as a .xz file in the various subdirectories. I read that the kernel does not care if a module is compressed, it can load the module in any case, but I did not know that at the time. I initially considered running “xz –decompress “ on every .xz file, but there are simply too many subsystem and driver directories, and it would extremely tedious. So I wrote a little script to do it:","headline":"Run a command recursively in all subdirectories","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/archive/run-a-command-recursively-in-all-subdirectories/"},"url":"http://localhost:4000/archive/run-a-command-recursively-in-all-subdirectories/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=95f59cddfd5a834c6f40a88969ae0e9a19718c76">
+    <link rel="stylesheet" href="/assets/css/style.css?v=057c1177987ca65a10dcd059a502c059bebfde77">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -234,6 +234,10 @@
 
   
   
+  <a href="/tag/python"><nobr>python</nobr></a>
+
+  
+  
   <a href="/tag/networking"><nobr>networking</nobr></a>
 
   
@@ -242,7 +246,7 @@
 
   
   
-  <a href="/tag/python"><nobr>python</nobr></a>
+  <a href="/tag/linux"><nobr>linux</nobr></a>
 
   
   
@@ -266,7 +270,248 @@
 
   
   
+  <a href="/tag/digital-circuits"><nobr>digital-circuits</nobr></a>
+
+
+        
+        
+        
+      </header>
+      <section>
+
+      
+<div class="post">
+
+  <h1 class="post-title">Run a command recursively in all subdirectories</h1>
+  Published on <span class="post-date">23 Dec 2022</span>, under: 
+  <span class="post-tags">
+    &nbsp;|
+    
+      
+      <a class="no-underline" href="/tag/programming"><nobr> programming |</nobr>&nbsp;</a>    
+    
+      
+      <a class="no-underline" href="/tag/python"><nobr> python |</nobr>&nbsp;</a>    
+    
+      
+      <a class="no-underline" href="/tag/linux"><nobr> linux |</nobr>&nbsp;</a>    
+    
+    &nbsp;
+  </span>
+  <p></p>
+  <p>Suppose you wish to run a linux command in the current working directory, and in all of its subdirectories recursively. For example, I discovered that sometimes, running ‘make modules_install’ compresses all the modules as a .xz file in the various subdirectories. I read that the kernel does not care if a module is compressed, it can load the module in any case, but I did not know that at the time. I initially considered running “xz –decompress “ on every .xz file, but there are simply too many subsystem and driver directories, and it would extremely tedious. So I wrote a little script to do it:</p>
+
+<p><a href="https://gist.github.com/arunvijayshankar/a61fb0cd840f86e5f9ad4d4132497bf9">run_cmd.py</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+"""
+* Script to run a system command recursively in every subdirectory 
+* in a directory, including the current working directory
+* Usage: run_cmd.py -[si] -c &lt;command-to-run&gt;
+*
+* Options:
+*   -i 
+*       Interactive mode. Prompts user to choose whether or not to 
+*       run the command in a directory
+*   -s
+*       Skips the command for the working directory
+*   -c
+*       Command to be run
+*
+* Example: $python run_cmd.py -s -c &lt;command-to-run&gt;
+* This will run 'ls -l &gt; contents.txt' in every subdirectory in the tree
+* recursively, but will not run it in the working directory
+*
+* Author: Arun Vijayshankar
+"""
+
+import getopt
+import os
+import sys
+
+def recursive_run_cmd_inter(root, cmd):
+    for file in os.listdir(root):
+        d = os.path.join(root, file)
+        if os.path.isdir(d):
+            os.chdir(d)
+            run = input("Do you want to run " + cmd + " in: \n" + os.getcwd() + " [Y/No]")
+            if str(run).upper() in ['Y', 'YES']:
+                print("running " + cmd + " in: " + os.getcwd())
+                os.system(cmd)
+            recursive_run_cmd_inter(d, cmd)
+
+def recursive_run_cmd(root, cmd):
+    for file in os.listdir(root):
+        d = os.path.join(root, file)
+        if os.path.isdir(d):
+            os.chdir(d)
+            print("running " + cmd + " in: " + os.getcwd())
+            os.system(cmd)
+            recursive_run_cmd(d, cmd)
+            
+def entry():
+    argv = sys.argv[1:]
+    try:
+        options, args = getopt.getopt(argv, "s:i:c", [])
+    except:
+        print("Usage: run_cmd.py -[si] -c '&lt;command-to-be-run&gt;'")
+
+    root = os.getcwd()
+    cmd = args[0]
+    print(cmd)
+
+    if '-i' in options[0]:
+        recursive_run_cmd_inter(root, cmd)
+    if '-s' in options[0]:
+        if '-i' in options[0]:
+            recursive_run_cmd_inter(root, cmd)
+        else:
+            recursive_run_cmd(root, cmd)
+    else:
+        os.chdir(root)
+        print("running " + cmd + " in: " + os.getcwd())
+        os.system(cmd)
+        recursive_run_cmd(root, cmd)
+
+if __name__ == "__main__":
+    entry()
+
+</code></pre></div></div>
+
+<p>I tested it out on Ubuntu 20.04, and it seems to work. An addition that could be made is maybe the script can take a list of directory in which to run the command and run it in those only. I mightget around to doing this someday very soon.</p>
+
+</div>
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/arunvijayshankar">arunvijayshankar</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>
+
+      
+        <!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KLNXCRJB2P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KLNXCRJB2P');
+</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A simple two channel multiplexer - Arktos kai Mennos</title>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>A simple two channel multiplexer | Arktos kai Mennos</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="A simple two channel multiplexer" />
+<meta name="author" content="Arun" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A couple of weeks ago, I came across this equation for a two channel multiplexer in a book on x86 Assembly" />
+<meta property="og:description" content="A couple of weeks ago, I came across this equation for a two channel multiplexer in a book on x86 Assembly" />
+<link rel="canonical" href="http://localhost:4000/archive/a-simple-two-channel-multiplexer/" />
+<meta property="og:url" content="http://localhost:4000/archive/a-simple-two-channel-multiplexer/" />
+<meta property="og:site_name" content="Arktos kai Mennos" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-11-29T00:00:00-08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A simple two channel multiplexer" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2022-11-29T00:00:00-08:00","datePublished":"2022-11-29T00:00:00-08:00","description":"A couple of weeks ago, I came across this equation for a two channel multiplexer in a book on x86 Assembly","headline":"A simple two channel multiplexer","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/archive/a-simple-two-channel-multiplexer/"},"url":"http://localhost:4000/archive/a-simple-two-channel-multiplexer/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=057c1177987ca65a10dcd059a502c059bebfde77">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">Arktos kai Mennos</a></h1>
+        <nav>
+          <ul class="nav-links">
+          <li><a href="/" >Home</a></li>  | <li><a href="/about" >About</a></li> | <li><a href="/archive" >Archive</a></li>  | <li><a href="/contact" >Contact</a></li>
+          </ul>
+        </nav>
+        
+
+        <p>Arun Vijayshankar's blog</p>
+
+        
+        <p class="view"><a href="https://github.com/arunvijayshankar/arunvijayshankar.github.io">View the Project on GitHub <small>arunvijayshankar/arunvijayshankar.github.io</small></a></p>
+        
+
+        
+
+        <h2>Tags</h2>
+
+
+
+  
+  
+  <a href="/tag/programming"><nobr>programming</nobr></a>
+
+  
+  
+  <a href="/tag/rust"><nobr>rust</nobr></a>
+
+  
+  
+  <a href="/tag/python"><nobr>python</nobr></a>
+
+  
+  
+  <a href="/tag/networking"><nobr>networking</nobr></a>
+
+  
+  
+  <a href="/tag/embedded"><nobr>embedded</nobr></a>
+
+  
+  
   <a href="/tag/linux"><nobr>linux</nobr></a>
+
+  
+  
+  <a href="/tag/device-drivers"><nobr>device-drivers</nobr></a>
+
+  
+  
+  <a href="/tag/cpp"><nobr>cpp</nobr></a>
+
+  
+  
+  <a href="/tag/c"><nobr>c</nobr></a>
+
+  
+  
+  <a href="/tag/vpn"><nobr>vpn</nobr></a>
+
+  
+  
+  <a href="/tag/ssh"><nobr>ssh</nobr></a>
 
   
   
@@ -364,7 +609,7 @@
 {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2022-08-05T00:00:00-07:00","datePublished":"2022-08-05T00:00:00-07:00","description":"Recently, I wrote a graphics framebuffer driver using the embedded-graphics crate. The driver was written for mnemOS, an operating system written in Rust. This contributions marks many firsts for me; first contribution to an OSS project, first piece of embedded software written, first driver written. The driver it self is quite simple. We use embedded-graphics-simulator to create a GUI window to display objects/text on. The driver then gives the user a chunk of heap memory onto which an object is drawn. ‘Draw’ is a trait in embedded-graphics where, given a collection of pixels each with a color and coordinate (the object), each pixel’s colour and coordinate (for 8bpp images) is stored in one byte of memory. The entire object can then be stored in a heap array.","headline":"An embedded graphics framebuf driver for mnemOS","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/archive/an-embedded-graphics-framebuf-driver/"},"url":"http://localhost:4000/archive/an-embedded-graphics-framebuf-driver/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=95f59cddfd5a834c6f40a88969ae0e9a19718c76">
+    <link rel="stylesheet" href="/assets/css/style.css?v=057c1177987ca65a10dcd059a502c059bebfde77">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -413,6 +658,10 @@
 
   
   
+  <a href="/tag/python"><nobr>python</nobr></a>
+
+  
+  
   <a href="/tag/networking"><nobr>networking</nobr></a>
 
   
@@ -421,7 +670,7 @@
 
   
   
-  <a href="/tag/python"><nobr>python</nobr></a>
+  <a href="/tag/linux"><nobr>linux</nobr></a>
 
   
   
@@ -442,10 +691,6 @@
   
   
   <a href="/tag/ssh"><nobr>ssh</nobr></a>
-
-  
-  
-  <a href="/tag/linux"><nobr>linux</nobr></a>
 
   
   
@@ -489,292 +734,7 @@
 
 <p><img src="/assets/gifs/Screencast_from_07-27-2022_11_23_56_AM_AdobeExpress.gif" alt="" /></p>
 
-<p>Contributing to an open source project (or any project, really) has been a goal of mine ever since I started learning programming in earnest. It was really rewarding to go from dreaming about making a contribution, to actually doing it. A small part of me still cannot believe I did it. I owe a huge shoutout to James Munn <a href="https://twitter.com/bitshiftmask">(@bitshiftmask)</a> for encouraging me to just give it try when I expressed my desire to help out with this issue, but confessed that I wasn’t sure if I knew enough to do it. With this under my belt, I feel a lot more confident about my skills, and I am rearing to take on more projects and tasks. Next up is writing a networking driver for mnemOS using smoltcp, a TCP/IP stack for embedded/bare-metal rust projects. I plan to work on this in conjunction with continuing my learning journey in embedded systems.</p>
-
-</div>
-
-      </section>
-      <footer>
-        
-        <p>This project is maintained by <a href="https://github.com/arunvijayshankar">arunvijayshankar</a></p>
-        
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="/assets/js/scale.fix.js"></script>
-  </body>
-</html>
-
-      
-        <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KLNXCRJB2P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KLNXCRJB2P');
-</script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>What is scull - Arktos kai Mennos</title>
-<!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>What is scull | Arktos kai Mennos</title>
-<meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="What is scull" />
-<meta name="author" content="Arun" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Scull: Simple Character Utility for Loading Localities" />
-<meta property="og:description" content="Scull: Simple Character Utility for Loading Localities" />
-<link rel="canonical" href="http://localhost:4000/archive/what-is-scull/" />
-<meta property="og:url" content="http://localhost:4000/archive/what-is-scull/" />
-<meta property="og:site_name" content="Arktos kai Mennos" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-07-06T00:00:00-07:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="What is scull" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2022-07-06T00:00:00-07:00","datePublished":"2022-07-06T00:00:00-07:00","description":"Scull: Simple Character Utility for Loading Localities","headline":"What is scull","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/archive/what-is-scull/"},"url":"http://localhost:4000/archive/what-is-scull/"}</script>
-<!-- End Jekyll SEO tag -->
-
-    <link rel="stylesheet" href="/assets/css/style.css?v=95f59cddfd5a834c6f40a88969ae0e9a19718c76">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
-    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
-
-<!-- Setup Google Analytics -->
-
-
-
-<!-- You can set your favicon here -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
-
-<!-- end custom head snippets -->
-
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1><a href="http://localhost:4000/">Arktos kai Mennos</a></h1>
-        <nav>
-          <ul class="nav-links">
-          <li><a href="/" >Home</a></li>  | <li><a href="/about" >About</a></li> | <li><a href="/archive" >Archive</a></li>  | <li><a href="/contact" >Contact</a></li>
-          </ul>
-        </nav>
-        
-
-        <p>Arun Vijayshankar's blog</p>
-
-        
-        <p class="view"><a href="https://github.com/arunvijayshankar/arunvijayshankar.github.io">View the Project on GitHub <small>arunvijayshankar/arunvijayshankar.github.io</small></a></p>
-        
-
-        
-
-        <h2>Tags</h2>
-
-
-
-  
-  
-  <a href="/tag/programming"><nobr>programming</nobr></a>
-
-  
-  
-  <a href="/tag/rust"><nobr>rust</nobr></a>
-
-  
-  
-  <a href="/tag/networking"><nobr>networking</nobr></a>
-
-  
-  
-  <a href="/tag/embedded"><nobr>embedded</nobr></a>
-
-  
-  
-  <a href="/tag/python"><nobr>python</nobr></a>
-
-  
-  
-  <a href="/tag/device-drivers"><nobr>device-drivers</nobr></a>
-
-  
-  
-  <a href="/tag/cpp"><nobr>cpp</nobr></a>
-
-  
-  
-  <a href="/tag/c"><nobr>c</nobr></a>
-
-  
-  
-  <a href="/tag/vpn"><nobr>vpn</nobr></a>
-
-  
-  
-  <a href="/tag/ssh"><nobr>ssh</nobr></a>
-
-  
-  
-  <a href="/tag/linux"><nobr>linux</nobr></a>
-
-  
-  
-  <a href="/tag/digital-circuits"><nobr>digital-circuits</nobr></a>
-
-
-        
-        
-        
-      </header>
-      <section>
-
-      
-<div class="post">
-
-  <h1 class="post-title">What is scull</h1>
-  Published on <span class="post-date">06 Jul 2022</span>, under: 
-  <span class="post-tags">
-    &nbsp;|
-    
-      
-      <a class="no-underline" href="/tag/programming"><nobr> programming |</nobr>&nbsp;</a>    
-    
-      
-      <a class="no-underline" href="/tag/c"><nobr> c |</nobr>&nbsp;</a>    
-    
-      
-      <a class="no-underline" href="/tag/linux"><nobr> linux |</nobr>&nbsp;</a>    
-    
-      
-      <a class="no-underline" href="/tag/device-drivers"><nobr> device-drivers |</nobr>&nbsp;</a>    
-    
-    &nbsp;
-  </span>
-  <p></p>
-  <h2 id="scull-simple-character-utility-for-loading-localities">Scull: Simple Character Utility for Loading Localities</h2>
-
-<p>“scull is char driver that acts on a memory area as though it were a device.”, is how scull is described in chapter 3 of 
-<a href="https://lwn.net/Kernel/LDD3/">Linux Device Drivers</a>. That seemed straightforward enough. Scull’s capabilities and allowed operations are described
-in detail in the rest of the chapter. Once I finished the chapter, I wanted to learn more about what exactly scull was, and how I could go about
-using it. But there seems to be surprisingly little information about it online. I thought I’d write a little something about what I have learned about 
-it so far.</p>
-
-<p>Scull, if I understand it correctly, is fundamentally a kernel module. When the module is loaded, using insmod or modprobe, the kernel allocates some 
-memory for scull, which then treats that memory region like a character device. Once loaded, scull will show up in /proc/devices:</p>
-
-<p><img src="/assets/images/post8/proc_devices.png" alt="" /></p>
-
-<p>A user can then use it as they would a regular character device. One can open and close it, read from it, or write to it.</p>
-
-<p>The source code for scull can be found <a href="http://gauss.ececs.uc.edu/Courses/c4029/code/drivers/Scull/scull.html">here</a>. It can be compiled as a module 
-by extracting the files from that archive and running <code class="language-plaintext highlighter-rouge">make</code> at the source directory. Loading and Unloading of the module can be done using scull.load 
-and scull.unload respectively. The shell scripts also clean up stale filesystem nodes, and setup new ones after loading the module. The newly created 
-nodes will now show up under /dev:</p>
-
-<p><img src="/assets/images/post8/ls_dev.png" alt="" /></p>
-
-<h2 id="device-types-and-supported-operations">Device types and supported operations</h2>
-
-<p>Scull supports different types of devices:</p>
-<ul>
-  <li>scull0 - scull3
-    <ul>
-      <li>These are global and persistant, meaning the data stored in them is shared between all the open file descriptors associated with it, and that the data is not lost if a file descriptor is closed.</li>
-    </ul>
-  </li>
-  <li>scullpipe0 - scullpipe3
-    <ul>
-      <li>These are FIFO devices which act as pipes.</li>
-    </ul>
-  </li>
-  <li>scullsingle, scullpriv, sculluid, scullwuid
-    <ul>
-      <li>These are similar to scull0, with limitations on when open can be called on them.</li>
-    </ul>
-  </li>
-</ul>
-
-<p>Scull implements the following basic device methods:</p>
-<ul>
-  <li>llseek():     Change current read/write position in a file.</li>
-  <li>read():       Retrieve data from the device.</li>
-  <li>write():      Write data to the device.</li>
-  <li>open():       First operation performed on the file.</li>
-  <li>ioctl():      Issue device specific commands, which are neither reading or writing.</li>
-  <li>release():    Invoked when file structure is released.</li>
-</ul>
-
-<h2 id="using-scull">Using scull</h2>
-
-<p>To use scull, we have have to first compile it to create scull module. The Makefile in the distribution comes configured, so all that needs to be done
-is to run <code class="language-plaintext highlighter-rouge">sudo make</code> from the source directory<sup>*</sup>. You would need a machine running a linux kernel to compile it successfully, I’m pretty sure. Once the module is compiled and ready to be loaded, run the scull.load bash script to load the module, and create the filesystem nodes.</p>
-
-<p>The scull device is now ready to be written to, and read from. The scull distribution comes with a test file: sculltest.c</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* sculltest.c
- * A simple example of a C program to test some of the
- * operations of the "/dev/scull" device (a.k.a "scull0"),
- * and the 
- * ($Id: sculltest.c,v 1.1 2010/05/19 20:40:00 baker Exp baker $)
- */
-#include &lt;unistd.h&gt;
-#include &lt;string.h&gt;
-#include &lt;stdio.h&gt;
-#include &lt;fcntl.h&gt;
-
-int main() {
-   int fd, result, len;
-   char buf[10];
-   const char *str;
-   if ((fd = open("/dev/scull", O_WRONLY)) == -1) {
-      perror("1. open failed");
-      return -1;
-   }
-
-   str = "abcde"; 
-   len = strlen(str);
-   if ((result = write(fd, str, len)) != len) {
-      perror("1. write failed");
-      return -1;
-   }
-   close(fd);
-
-   if ((fd = open("/dev/scull", O_RDONLY)) == -1) {
-      perror("2. open failed");
-      return -1;
-   }
-   if ((result = read(fd, &amp;buf, sizeof(buf))) != len) {
-      fprintf(stdout, "1. read failed, buf=%s",buf);
-      return -1;
-   } 
-   buf[result] = '\0';
-   if (strncmp (buf, str, len)) {
-      fprintf (stdout, "failed: read back \"%s\"\n", buf);
-   } else {
-      fprintf (stdout, "passed\n");
-   }
-   close(fd);
-
-   ---SNIP---
-</code></pre></div></div>
-<p>Once the module is loaded, sculltest.c can be compiled and run to test out open, read, and write. Upon a read or write syscall, the corresponding 
-function implemented in scull is called. The user can of course, write their own tests to test out supported operations.</p>
-
-<p>To gain a better understanding of scull and char drivers in general, I implemented a minimalistic version that supports only basic open/close, read/write operations, and only supports the global, persistant scull device type (scull0 - scull3). It can be found <a href="https://github.com/arunvijayshankar/vichy">here</a>. The other major difference is the memory layout. In scull, each device is a linked list of structures, each of which points to a memory area of 4MB at most, though an array of a 1000 pointers, each pointing to a memory area of 4000 bytes. In vichy, each structure in the linked list making up the device points to just one memory area of 4000 bytes. These changes necessitated a few changes in the actual code, but they are small and cosmetic. Which is ok, I think. As a learner, it is a good confidence boost to make small changes to a project and learn by debugging all the issues you run into. This way you can learn the technology, and gain some actual coding experience.</p>
-
-<p><sup>*</sup>Note: On newer kernels (I’m running 5.19.0-rc3), scull hits compilations errors, mostly due to a deprecated method. The errors can be fixed with these patches</p>
-<ul>
-  <li>main.c: https://gist.github.com/arunvijayshankar/213e4dc0442ad3f4cd2b9785abc878a7</li>
-  <li>pipe.c: https://gist.github.com/arunvijayshankar/1cd5a2672fe540e196e9c27d163b0407</li>
-  <li>access.c: https://gist.github.com/arunvijayshankar/ae12566ac20707eb43afdf3e3d05a570</li>
-</ul>
+<p>Contributing to an open source project (or any project, really) has been a goal of mine ever since I started learning programming in earnest. It was really rewarding to go from dreaming about making a contribution, to actually doing it. A small part of me still cannot believe I did it. I owe a huge shoutout to James Munns <a href="https://twitter.com/bitshiftmask">(@bitshiftmask)</a> for encouraging me to just give it try when I expressed my desire to help out with this issue, but confessed that I wasn’t sure if I knew enough to do it. With this under my belt, I feel a lot more confident about my skills, and I am rearing to take on more projects and tasks. Next up is writing a networking driver for mnemOS using smoltcp, a TCP/IP stack for embedded/bare-metal rust projects. I plan to work on this in conjunction with continuing my learning journey in embedded systems.</p>
 
 </div>
 
