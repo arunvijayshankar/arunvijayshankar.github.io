@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KLNXCRJB2P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KLNXCRJB2P');
+</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Powers of a permutation matrix - Part 1 - Arktos kai Mennos</title>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Powers of a permutation matrix - Part 1 | Arktos kai Mennos</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Powers of a permutation matrix - Part 1" />
+<meta name="author" content="Arun" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I came across this problem while working through the MITOCW course on Linear Algebra. The lectures are interesting in of themselves, but I got completely sidetracked when I started on this problem:" />
+<meta property="og:description" content="I came across this problem while working through the MITOCW course on Linear Algebra. The lectures are interesting in of themselves, but I got completely sidetracked when I started on this problem:" />
+<link rel="canonical" href="/archive/powers-of-permutation-matrices-pt1/" />
+<meta property="og:url" content="/archive/powers-of-permutation-matrices-pt1/" />
+<meta property="og:site_name" content="Arktos kai Mennos" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-09-21T00:00:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Powers of a permutation matrix - Part 1" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2023-09-21T00:00:00-07:00","datePublished":"2023-09-21T00:00:00-07:00","description":"I came across this problem while working through the MITOCW course on Linear Algebra. The lectures are interesting in of themselves, but I got completely sidetracked when I started on this problem:","headline":"Powers of a permutation matrix - Part 1","mainEntityOfPage":{"@type":"WebPage","@id":"/archive/powers-of-permutation-matrices-pt1/"},"url":"/archive/powers-of-permutation-matrices-pt1/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=b6b4ef4dcdd9f62a08d3a900b32a55cfc00fcda5">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="/">Arktos kai Mennos</a></h1>
+        <nav>
+          <ul class="nav-links">
+          <li><a href="/" >Home</a></li>  | <li><a href="/about" >About</a></li> | <li><a href="/archive" >Archive</a></li>  | <li><a href="/contact" >Contact</a></li>
+          </ul>
+        </nav>
+        
+
+        <p>Arun Vijayshankar's blog</p>
+
+        
+        <p class="view"><a href="https://github.com/arunvijayshankar/arunvijayshankar.github.io">View the Project on GitHub <small>arunvijayshankar/arunvijayshankar.github.io</small></a></p>
+        
+
+        
+
+        <h2>Tags</h2>
+
+
+
+  
+  
+  <a href="/tag/programming"><nobr>programming</nobr></a>
+
+  
+  
+  <a href="/tag/rust"><nobr>rust</nobr></a>
+
+  
+  
+  <a href="/tag/python"><nobr>python</nobr></a>
+
+  
+  
+  <a href="/tag/networking"><nobr>networking</nobr></a>
+
+  
+  
+  <a href="/tag/embedded"><nobr>embedded</nobr></a>
+
+  
+  
+  <a href="/tag/linux"><nobr>linux</nobr></a>
+
+  
+  
+  <a href="/tag/device-drivers"><nobr>device-drivers</nobr></a>
+
+  
+  
+  <a href="/tag/cpp"><nobr>cpp</nobr></a>
+
+  
+  
+  <a href="/tag/c"><nobr>c</nobr></a>
+
+  
+  
+  <a href="/tag/vpn"><nobr>vpn</nobr></a>
+
+  
+  
+  <a href="/tag/ssh"><nobr>ssh</nobr></a>
+
+  
+  
+  <a href="/tag/permutations"><nobr>permutations</nobr></a>
+
+  
+  
+  <a href="/tag/mathematics"><nobr>mathematics</nobr></a>
+
+  
+  
+  <a href="/tag/linearalgebra"><nobr>linearalgebra</nobr></a>
+
+  
+  
+  <a href="/tag/digital-circuits"><nobr>digital-circuits</nobr></a>
+
+
+        
+        
+        
+      </header>
+      <section>
+
+      
+<div class="post">
+
+  <h1 class="post-title">Powers of a permutation matrix - Part 1</h1>
+  Published on <span class="post-date">21 Sep 2023</span>, under: 
+  <span class="post-tags">
+    &nbsp;|
+    
+      
+      <a class="no-underline" href="/tag/mathematics"><nobr> mathematics |</nobr>&nbsp;</a>    
+    
+      
+      <a class="no-underline" href="/tag/linearalgebra"><nobr> linearalgebra |</nobr>&nbsp;</a>    
+    
+      
+      <a class="no-underline" href="/tag/permutations"><nobr> permutations |</nobr>&nbsp;</a>    
+    
+    &nbsp;
+  </span>
+  <p></p>
+  <p>I came across this problem while working through the MITOCW course on <a href="https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/ax-b-and-the-four-subspaces/transposes-permutations-vector-spaces/">Linear Algebra</a>. The lectures are interesting in of themselves, but I got completely sidetracked when I started on this problem:</p>
+
+<p><img src="/assets/images/post12/strang_problem.png" alt="" /></p>
+
+<p>This got me wondering if, given a permutation matrix <em>P</em>, we’d always be able to find a <em>k</em>, such that <em>P</em><sup><em>k</em></sup> = <em>I</em>, where <em>I</em> is the identity matrix. Equivalently, I wondered if, given a permutation of <em>n</em> objects, one can always recover the initial arrangement by successfully performing the same permutation over and over again. That is, if there is always a <em>k</em>, such that <em>p</em><sup><em>k</em></sup> = <em>e</em> for a given permutation <em>p</em>.</p>
+
+<p>It turns out that the answer is that there is! Given any permutation of <em>n</em> objects, you can recover the original arrangement by performing the same permutation on the object a specific number of times. The minimum number of times the permutation is to be repeated for a given permutation, depends on the internal structure of the permutation.</p>
+
+<p>To prove this, we have to first recognize that every permutation has atleast one cycle. A cycle is a permutation such that if you start with one element and track its position  as the permutation is repeatedly applied, it eventually returns to its original position. As an example consider this simple collection of four objects <em>( a, b, c, d )</em>. If we apply the following permutation: <em>a -&gt; b, b -&gt; c, c -&gt; d, and d -&gt; a</em> (call this permutation <em>p</em>), and track the position of <em>c</em>, we have <em>( d, a, b,</em> <strong>c</strong> <em>)</em>. Applying the permutation again, i.e., <em>p</em><sup><em>2</em></sup>, we get <em>(</em> <strong>c,</strong> <em>d, a, b )</em>. One more application (<em>p</em><sup><em>3</em></sup>) gets us to <em>( b,</em> <strong>c,</strong> <em>d, a )</em>, and finally <em>p</em><sup><em>4</em></sup> gives <em>( a, b,</em> <strong>c,</strong> <em>d )</em> and we see that <em>c</em>, as well as the other elements, has returned to its starting position.</p>
+
+<p>So why is it true that a permutation will have atleast one cycle? To understand this, consider a permutation on <em>n</em> objects where a subset of the objects have changed positions. If no elements have changed position, then each element can thought of as being in a cycle of size 1. If more than one object has changed positions after the permutation has been applied, any one object in the subset will have moved to the position occupied by another object which will in turn have moved to a different position. For a finite subset of objects, this means that the position occupied by the initial object will now be occupied by a different object in the subset. If we suppose that this permutation does not have a cycle, it implies that the first object will never return to it’s orginal position no matter how many times the permutation is applied. This can only happen if the first object never reaches the position of the last object (which moves to the first position upon first application of the permutation). But this can only happen if the first object never reaches the position of the second-to-last object, as so on, until we are forced to conclude that the first object can never even reach the second position, implying that it did not move. This contradicts the statement that all objects in the subset changed positions. So the only way out is to admit that this the subset is in a cycle and that the size of the cycle is the number of elements in the subset.</p>
+
+<p>In Part 2, we will explore some specific permutations that are composed of simple cycles, and see what happens when the permuation is applied repeatedly to a set of objects.</p>
+
+</div>
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/arunvijayshankar">arunvijayshankar</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>

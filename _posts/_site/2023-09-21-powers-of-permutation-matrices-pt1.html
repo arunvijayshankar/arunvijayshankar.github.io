@@ -1,0 +1,9 @@
+<p>I came across this problem while working through the MITOCW course on Linear Algebra [link]. The lectures are interesting in of themselves, but I got completely sidetracked when I started on this problem:</p>
+
+<p>[Link to problem image]</p>
+
+<p>This got me wondering if, given a permutation matrix <em>P</em>, we’d always be able to find a <em>k</em>, such that <em>P^k^</em> = <em>I</em>. Equivalently, I wondered if, given a permutation of <em>n</em> objects, one can always recover the initial arrangement by successfully performing the same permutation over and over again.</p>
+
+<p>It turns out that the answer is that you can! Given any permutation of <em>n</em> objects, you can recover the original arrangement by performing the same permutation on the object a specific number of times. The minimum number of times the permutation is to be repeated for a given permutation, depends on the internal structure of the permutation itself.</p>
+
+<p>To prove this, we have to first recognize that every permutation has atleast one cycle. A cycle is a permutation such that if you start with one element and track its position  as the permutation is repeatedly applied, it eventually returns to it’s original position. As an example consider this simple collection of four objects <em>( a, b, c, d )</em>. If we apply the following permutation: <em>a -&gt; b, b -&gt; c, c -&gt; d, and d -&gt; a</em> (call this permutation <em>p</em>), and track the position of <em>c</em>, we have <em>( d, a, b,</em> <strong>c</strong> <em>)</em>. Applying the permutation again, i.e., <em>p^2^</em>, we get <em>(</em> <strong>c,</strong> <em>d, a, b )</em>. One more application (<em>p^3^</em>) gets us to <em>( b,</em> <strong>c,</strong> <em>d, a )</em>, and finally <em>p^4^</em> gives <em>( a, b,</em> <strong>c,</strong> <em>d )</em> and we see that <em>c</em>, as well as the other elements, has returned to its starting position.</p>

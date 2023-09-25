@@ -21,17 +21,17 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Arun Vijayshankar’s blog" />
 <meta property="og:description" content="Arun Vijayshankar’s blog" />
-<link rel="canonical" href="http://localhost:4000/" />
-<meta property="og:url" content="http://localhost:4000/" />
+<link rel="canonical" href="/" />
+<meta property="og:url" content="/" />
 <meta property="og:site_name" content="Arktos kai Mennos" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Arktos:" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"Arun Vijayshankar’s blog","headline":"Arktos:","name":"Arktos kai Mennos","url":"http://localhost:4000/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","description":"Arun Vijayshankar’s blog","headline":"Arktos:","name":"Arktos kai Mennos","url":"/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=057c1177987ca65a10dcd059a502c059bebfde77">
+    <link rel="stylesheet" href="/assets/css/style.css?v=b6b4ef4dcdd9f62a08d3a900b32a55cfc00fcda5">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -60,7 +60,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1><a href="http://localhost:4000/">Arktos kai Mennos</a></h1>
+        <h1><a href="/">Arktos kai Mennos</a></h1>
 
         <nav>
         <ul class="nav-links">
@@ -128,6 +128,18 @@
 
   
   
+  <a href="/tag/permutations"><nobr>permutations</nobr></a>
+
+  
+  
+  <a href="/tag/mathematics"><nobr>mathematics</nobr></a>
+
+  
+  
+  <a href="/tag/linearalgebra"><nobr>linearalgebra</nobr></a>
+
+  
+  
   <a href="/tag/digital-circuits"><nobr>digital-circuits</nobr></a>
 
 
@@ -165,27 +177,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Run a command recursively in all subdirectories - Arktos kai Mennos</title>
+    <title>Powers of a permutation matrix - Part 1 - Arktos kai Mennos</title>
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Run a command recursively in all subdirectories | Arktos kai Mennos</title>
+<title>Powers of a permutation matrix - Part 1 | Arktos kai Mennos</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Run a command recursively in all subdirectories" />
+<meta property="og:title" content="Powers of a permutation matrix - Part 1" />
 <meta name="author" content="Arun" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Suppose you wish to run a linux command in the current working directory, and in all of its subdirectories recursively. For example, I discovered that sometimes, running ‘make modules_install’ compresses all the modules as a .xz file in the various subdirectories. I read that the kernel does not care if a module is compressed, it can load the module in any case, but I did not know that at the time. I initially considered running “xz –decompress “ on every .xz file, but there are simply too many subsystem and driver directories, and it would extremely tedious. So I wrote a little script to do it:" />
-<meta property="og:description" content="Suppose you wish to run a linux command in the current working directory, and in all of its subdirectories recursively. For example, I discovered that sometimes, running ‘make modules_install’ compresses all the modules as a .xz file in the various subdirectories. I read that the kernel does not care if a module is compressed, it can load the module in any case, but I did not know that at the time. I initially considered running “xz –decompress “ on every .xz file, but there are simply too many subsystem and driver directories, and it would extremely tedious. So I wrote a little script to do it:" />
-<link rel="canonical" href="http://localhost:4000/archive/run-a-command-recursively-in-all-subdirectories/" />
-<meta property="og:url" content="http://localhost:4000/archive/run-a-command-recursively-in-all-subdirectories/" />
+<meta name="description" content="I came across this problem while working through the MITOCW course on Linear Algebra. The lectures are interesting in of themselves, but I got completely sidetracked when I started on this problem:" />
+<meta property="og:description" content="I came across this problem while working through the MITOCW course on Linear Algebra. The lectures are interesting in of themselves, but I got completely sidetracked when I started on this problem:" />
+<link rel="canonical" href="/archive/powers-of-permutation-matrices-pt1/" />
+<meta property="og:url" content="/archive/powers-of-permutation-matrices-pt1/" />
 <meta property="og:site_name" content="Arktos kai Mennos" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-12-23T00:00:00-08:00" />
+<meta property="article:published_time" content="2023-09-21T00:00:00-07:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Run a command recursively in all subdirectories" />
+<meta property="twitter:title" content="Powers of a permutation matrix - Part 1" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2022-12-23T00:00:00-08:00","datePublished":"2022-12-23T00:00:00-08:00","description":"Suppose you wish to run a linux command in the current working directory, and in all of its subdirectories recursively. For example, I discovered that sometimes, running ‘make modules_install’ compresses all the modules as a .xz file in the various subdirectories. I read that the kernel does not care if a module is compressed, it can load the module in any case, but I did not know that at the time. I initially considered running “xz –decompress “ on every .xz file, but there are simply too many subsystem and driver directories, and it would extremely tedious. So I wrote a little script to do it:","headline":"Run a command recursively in all subdirectories","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/archive/run-a-command-recursively-in-all-subdirectories/"},"url":"http://localhost:4000/archive/run-a-command-recursively-in-all-subdirectories/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2023-09-21T00:00:00-07:00","datePublished":"2023-09-21T00:00:00-07:00","description":"I came across this problem while working through the MITOCW course on Linear Algebra. The lectures are interesting in of themselves, but I got completely sidetracked when I started on this problem:","headline":"Powers of a permutation matrix - Part 1","mainEntityOfPage":{"@type":"WebPage","@id":"/archive/powers-of-permutation-matrices-pt1/"},"url":"/archive/powers-of-permutation-matrices-pt1/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=057c1177987ca65a10dcd059a502c059bebfde77">
+    <link rel="stylesheet" href="/assets/css/style.css?v=b6b4ef4dcdd9f62a08d3a900b32a55cfc00fcda5">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -204,7 +216,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1><a href="http://localhost:4000/">Arktos kai Mennos</a></h1>
+        <h1><a href="/">Arktos kai Mennos</a></h1>
         <nav>
           <ul class="nav-links">
           <li><a href="/" >Home</a></li>  | <li><a href="/about" >About</a></li> | <li><a href="/archive" >Archive</a></li>  | <li><a href="/contact" >Contact</a></li>
@@ -267,6 +279,208 @@
   
   
   <a href="/tag/ssh"><nobr>ssh</nobr></a>
+
+  
+  
+  <a href="/tag/permutations"><nobr>permutations</nobr></a>
+
+  
+  
+  <a href="/tag/mathematics"><nobr>mathematics</nobr></a>
+
+  
+  
+  <a href="/tag/linearalgebra"><nobr>linearalgebra</nobr></a>
+
+  
+  
+  <a href="/tag/digital-circuits"><nobr>digital-circuits</nobr></a>
+
+
+        
+        
+        
+      </header>
+      <section>
+
+      
+<div class="post">
+
+  <h1 class="post-title">Powers of a permutation matrix - Part 1</h1>
+  Published on <span class="post-date">21 Sep 2023</span>, under: 
+  <span class="post-tags">
+    &nbsp;|
+    
+      
+      <a class="no-underline" href="/tag/mathematics"><nobr> mathematics |</nobr>&nbsp;</a>    
+    
+      
+      <a class="no-underline" href="/tag/linearalgebra"><nobr> linearalgebra |</nobr>&nbsp;</a>    
+    
+      
+      <a class="no-underline" href="/tag/permutations"><nobr> permutations |</nobr>&nbsp;</a>    
+    
+    &nbsp;
+  </span>
+  <p></p>
+  <p>I came across this problem while working through the MITOCW course on <a href="https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/ax-b-and-the-four-subspaces/transposes-permutations-vector-spaces/">Linear Algebra</a>. The lectures are interesting in of themselves, but I got completely sidetracked when I started on this problem:</p>
+
+<p><img src="/assets/images/post12/strang_problem.png" alt="" /></p>
+
+<p>This got me wondering if, given a permutation matrix <em>P</em>, we’d always be able to find a <em>k</em>, such that <em>P</em><sup><em>k</em></sup> = <em>I</em>, where <em>I</em> is the identity matrix. Equivalently, I wondered if, given a permutation of <em>n</em> objects, one can always recover the initial arrangement by successfully performing the same permutation over and over again. That is, if there is always a <em>k</em>, such that <em>p</em><sup><em>k</em></sup> = <em>e</em> for a given permutation <em>p</em>.</p>
+
+<p>It turns out that the answer is that there is! Given any permutation of <em>n</em> objects, you can recover the original arrangement by performing the same permutation on the object a specific number of times. The minimum number of times the permutation is to be repeated for a given permutation, depends on the internal structure of the permutation.</p>
+
+<p>To prove this, we have to first recognize that every permutation has atleast one cycle. A cycle is a permutation such that if you start with one element and track its position  as the permutation is repeatedly applied, it eventually returns to its original position. As an example consider this simple collection of four objects <em>( a, b, c, d )</em>. If we apply the following permutation: <em>a -&gt; b, b -&gt; c, c -&gt; d, and d -&gt; a</em> (call this permutation <em>p</em>), and track the position of <em>c</em>, we have <em>( d, a, b,</em> <strong>c</strong> <em>)</em>. Applying the permutation again, i.e., <em>p</em><sup><em>2</em></sup>, we get <em>(</em> <strong>c,</strong> <em>d, a, b )</em>. One more application (<em>p</em><sup><em>3</em></sup>) gets us to <em>( b,</em> <strong>c,</strong> <em>d, a )</em>, and finally <em>p</em><sup><em>4</em></sup> gives <em>( a, b,</em> <strong>c,</strong> <em>d )</em> and we see that <em>c</em>, as well as the other elements, has returned to its starting position.</p>
+
+<p>So why is it true that a permutation will have atleast one cycle? To understand this, consider a permutation on <em>n</em> objects where a subset of the objects have changed positions. If no elements have changed position, then each element can thought of as being in a cycle of size 1. If more than one object has changed positions after the permutation has been applied, any one object in the subset will have moved to the position occupied by another object which will in turn have moved to a different position. For a finite subset of objects, this means that the position occupied by the initial object will now be occupied by a different object in the subset. If we suppose that this permutation does not have a cycle, it implies that the first object will never return to it’s orginal position no matter how many times the permutation is applied. This can only happen if the first object never reaches the position of the last object (which moves to the first position upon first application of the permutation). But this can only happen if the first object never reaches the position of the second-to-last object, as so on, until we are forced to conclude that the first object can never even reach the second position, implying that it did not move. This contradicts the statement that all objects in the subset changed positions. So the only way out is to admit that this the subset is in a cycle and that the size of the cycle is the number of elements in the subset.</p>
+
+<p>In Part 2, we will explore some specific permutations that are composed of simple cycles, and see what happens when the permuation is applied repeatedly to a set of objects.</p>
+
+</div>
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/arunvijayshankar">arunvijayshankar</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>
+
+      
+        <!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KLNXCRJB2P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KLNXCRJB2P');
+</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Run a command recursively in all subdirectories - Arktos kai Mennos</title>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Run a command recursively in all subdirectories | Arktos kai Mennos</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Run a command recursively in all subdirectories" />
+<meta name="author" content="Arun" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Suppose you wish to run a linux command in the current working directory, and in all of its subdirectories recursively. For example, I discovered that sometimes, running ‘make modules_install’ compresses all the modules as a .xz file in the various subdirectories. I read that the kernel does not care if a module is compressed, it can load the module in any case, but I did not know that at the time. I initially considered running “xz –decompress “ on every .xz file, but there are simply too many subsystem and driver directories, and it would extremely tedious. So I wrote a little script to do it:" />
+<meta property="og:description" content="Suppose you wish to run a linux command in the current working directory, and in all of its subdirectories recursively. For example, I discovered that sometimes, running ‘make modules_install’ compresses all the modules as a .xz file in the various subdirectories. I read that the kernel does not care if a module is compressed, it can load the module in any case, but I did not know that at the time. I initially considered running “xz –decompress “ on every .xz file, but there are simply too many subsystem and driver directories, and it would extremely tedious. So I wrote a little script to do it:" />
+<link rel="canonical" href="/archive/run-a-command-recursively-in-all-subdirectories/" />
+<meta property="og:url" content="/archive/run-a-command-recursively-in-all-subdirectories/" />
+<meta property="og:site_name" content="Arktos kai Mennos" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-12-23T00:00:00-08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Run a command recursively in all subdirectories" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2022-12-23T00:00:00-08:00","datePublished":"2022-12-23T00:00:00-08:00","description":"Suppose you wish to run a linux command in the current working directory, and in all of its subdirectories recursively. For example, I discovered that sometimes, running ‘make modules_install’ compresses all the modules as a .xz file in the various subdirectories. I read that the kernel does not care if a module is compressed, it can load the module in any case, but I did not know that at the time. I initially considered running “xz –decompress “ on every .xz file, but there are simply too many subsystem and driver directories, and it would extremely tedious. So I wrote a little script to do it:","headline":"Run a command recursively in all subdirectories","mainEntityOfPage":{"@type":"WebPage","@id":"/archive/run-a-command-recursively-in-all-subdirectories/"},"url":"/archive/run-a-command-recursively-in-all-subdirectories/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=b6b4ef4dcdd9f62a08d3a900b32a55cfc00fcda5">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="/">Arktos kai Mennos</a></h1>
+        <nav>
+          <ul class="nav-links">
+          <li><a href="/" >Home</a></li>  | <li><a href="/about" >About</a></li> | <li><a href="/archive" >Archive</a></li>  | <li><a href="/contact" >Contact</a></li>
+          </ul>
+        </nav>
+        
+
+        <p>Arun Vijayshankar's blog</p>
+
+        
+        <p class="view"><a href="https://github.com/arunvijayshankar/arunvijayshankar.github.io">View the Project on GitHub <small>arunvijayshankar/arunvijayshankar.github.io</small></a></p>
+        
+
+        
+
+        <h2>Tags</h2>
+
+
+
+  
+  
+  <a href="/tag/programming"><nobr>programming</nobr></a>
+
+  
+  
+  <a href="/tag/rust"><nobr>rust</nobr></a>
+
+  
+  
+  <a href="/tag/python"><nobr>python</nobr></a>
+
+  
+  
+  <a href="/tag/networking"><nobr>networking</nobr></a>
+
+  
+  
+  <a href="/tag/embedded"><nobr>embedded</nobr></a>
+
+  
+  
+  <a href="/tag/linux"><nobr>linux</nobr></a>
+
+  
+  
+  <a href="/tag/device-drivers"><nobr>device-drivers</nobr></a>
+
+  
+  
+  <a href="/tag/cpp"><nobr>cpp</nobr></a>
+
+  
+  
+  <a href="/tag/c"><nobr>c</nobr></a>
+
+  
+  
+  <a href="/tag/vpn"><nobr>vpn</nobr></a>
+
+  
+  
+  <a href="/tag/ssh"><nobr>ssh</nobr></a>
+
+  
+  
+  <a href="/tag/permutations"><nobr>permutations</nobr></a>
+
+  
+  
+  <a href="/tag/mathematics"><nobr>mathematics</nobr></a>
+
+  
+  
+  <a href="/tag/linearalgebra"><nobr>linearalgebra</nobr></a>
 
   
   
@@ -419,18 +633,18 @@ if __name__ == "__main__":
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="A couple of weeks ago, I came across this equation for a two channel multiplexer in a book on x86 Assembly" />
 <meta property="og:description" content="A couple of weeks ago, I came across this equation for a two channel multiplexer in a book on x86 Assembly" />
-<link rel="canonical" href="http://localhost:4000/archive/a-simple-two-channel-multiplexer/" />
-<meta property="og:url" content="http://localhost:4000/archive/a-simple-two-channel-multiplexer/" />
+<link rel="canonical" href="/archive/a-simple-two-channel-multiplexer/" />
+<meta property="og:url" content="/archive/a-simple-two-channel-multiplexer/" />
 <meta property="og:site_name" content="Arktos kai Mennos" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-11-29T00:00:00-08:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="A simple two channel multiplexer" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2022-11-29T00:00:00-08:00","datePublished":"2022-11-29T00:00:00-08:00","description":"A couple of weeks ago, I came across this equation for a two channel multiplexer in a book on x86 Assembly","headline":"A simple two channel multiplexer","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/archive/a-simple-two-channel-multiplexer/"},"url":"http://localhost:4000/archive/a-simple-two-channel-multiplexer/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2022-11-29T00:00:00-08:00","datePublished":"2022-11-29T00:00:00-08:00","description":"A couple of weeks ago, I came across this equation for a two channel multiplexer in a book on x86 Assembly","headline":"A simple two channel multiplexer","mainEntityOfPage":{"@type":"WebPage","@id":"/archive/a-simple-two-channel-multiplexer/"},"url":"/archive/a-simple-two-channel-multiplexer/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=057c1177987ca65a10dcd059a502c059bebfde77">
+    <link rel="stylesheet" href="/assets/css/style.css?v=b6b4ef4dcdd9f62a08d3a900b32a55cfc00fcda5">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -449,7 +663,7 @@ if __name__ == "__main__":
   <body>
     <div class="wrapper">
       <header>
-        <h1><a href="http://localhost:4000/">Arktos kai Mennos</a></h1>
+        <h1><a href="/">Arktos kai Mennos</a></h1>
         <nav>
           <ul class="nav-links">
           <li><a href="/" >Home</a></li>  | <li><a href="/about" >About</a></li> | <li><a href="/archive" >Archive</a></li>  | <li><a href="/contact" >Contact</a></li>
@@ -512,6 +726,18 @@ if __name__ == "__main__":
   
   
   <a href="/tag/ssh"><nobr>ssh</nobr></a>
+
+  
+  
+  <a href="/tag/permutations"><nobr>permutations</nobr></a>
+
+  
+  
+  <a href="/tag/mathematics"><nobr>mathematics</nobr></a>
+
+  
+  
+  <a href="/tag/linearalgebra"><nobr>linearalgebra</nobr></a>
 
   
   
@@ -558,183 +784,6 @@ if __name__ == "__main__":
 
 <p><img src="/assets/images/post10/demo_final_gif.gif" alt="" /></p>
 
-
-</div>
-
-      </section>
-      <footer>
-        
-        <p>This project is maintained by <a href="https://github.com/arunvijayshankar">arunvijayshankar</a></p>
-        
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="/assets/js/scale.fix.js"></script>
-  </body>
-</html>
-
-      
-        <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KLNXCRJB2P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KLNXCRJB2P');
-</script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>An embedded graphics framebuf driver for mnemOS - Arktos kai Mennos</title>
-<!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>An embedded graphics framebuf driver for mnemOS | Arktos kai Mennos</title>
-<meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="An embedded graphics framebuf driver for mnemOS" />
-<meta name="author" content="Arun" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Recently, I wrote a graphics framebuffer driver using the embedded-graphics crate. The driver was written for mnemOS, an operating system written in Rust. This contributions marks many firsts for me; first contribution to an OSS project, first piece of embedded software written, first driver written. The driver it self is quite simple. We use embedded-graphics-simulator to create a GUI window to display objects/text on. The driver then gives the user a chunk of heap memory onto which an object is drawn. ‘Draw’ is a trait in embedded-graphics where, given a collection of pixels each with a color and coordinate (the object), each pixel’s colour and coordinate (for 8bpp images) is stored in one byte of memory. The entire object can then be stored in a heap array." />
-<meta property="og:description" content="Recently, I wrote a graphics framebuffer driver using the embedded-graphics crate. The driver was written for mnemOS, an operating system written in Rust. This contributions marks many firsts for me; first contribution to an OSS project, first piece of embedded software written, first driver written. The driver it self is quite simple. We use embedded-graphics-simulator to create a GUI window to display objects/text on. The driver then gives the user a chunk of heap memory onto which an object is drawn. ‘Draw’ is a trait in embedded-graphics where, given a collection of pixels each with a color and coordinate (the object), each pixel’s colour and coordinate (for 8bpp images) is stored in one byte of memory. The entire object can then be stored in a heap array." />
-<link rel="canonical" href="http://localhost:4000/archive/an-embedded-graphics-framebuf-driver/" />
-<meta property="og:url" content="http://localhost:4000/archive/an-embedded-graphics-framebuf-driver/" />
-<meta property="og:site_name" content="Arktos kai Mennos" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-08-05T00:00:00-07:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="An embedded graphics framebuf driver for mnemOS" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2022-08-05T00:00:00-07:00","datePublished":"2022-08-05T00:00:00-07:00","description":"Recently, I wrote a graphics framebuffer driver using the embedded-graphics crate. The driver was written for mnemOS, an operating system written in Rust. This contributions marks many firsts for me; first contribution to an OSS project, first piece of embedded software written, first driver written. The driver it self is quite simple. We use embedded-graphics-simulator to create a GUI window to display objects/text on. The driver then gives the user a chunk of heap memory onto which an object is drawn. ‘Draw’ is a trait in embedded-graphics where, given a collection of pixels each with a color and coordinate (the object), each pixel’s colour and coordinate (for 8bpp images) is stored in one byte of memory. The entire object can then be stored in a heap array.","headline":"An embedded graphics framebuf driver for mnemOS","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/archive/an-embedded-graphics-framebuf-driver/"},"url":"http://localhost:4000/archive/an-embedded-graphics-framebuf-driver/"}</script>
-<!-- End Jekyll SEO tag -->
-
-    <link rel="stylesheet" href="/assets/css/style.css?v=057c1177987ca65a10dcd059a502c059bebfde77">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
-    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
-
-<!-- Setup Google Analytics -->
-
-
-
-<!-- You can set your favicon here -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
-
-<!-- end custom head snippets -->
-
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1><a href="http://localhost:4000/">Arktos kai Mennos</a></h1>
-        <nav>
-          <ul class="nav-links">
-          <li><a href="/" >Home</a></li>  | <li><a href="/about" >About</a></li> | <li><a href="/archive" >Archive</a></li>  | <li><a href="/contact" >Contact</a></li>
-          </ul>
-        </nav>
-        
-
-        <p>Arun Vijayshankar's blog</p>
-
-        
-        <p class="view"><a href="https://github.com/arunvijayshankar/arunvijayshankar.github.io">View the Project on GitHub <small>arunvijayshankar/arunvijayshankar.github.io</small></a></p>
-        
-
-        
-
-        <h2>Tags</h2>
-
-
-
-  
-  
-  <a href="/tag/programming"><nobr>programming</nobr></a>
-
-  
-  
-  <a href="/tag/rust"><nobr>rust</nobr></a>
-
-  
-  
-  <a href="/tag/python"><nobr>python</nobr></a>
-
-  
-  
-  <a href="/tag/networking"><nobr>networking</nobr></a>
-
-  
-  
-  <a href="/tag/embedded"><nobr>embedded</nobr></a>
-
-  
-  
-  <a href="/tag/linux"><nobr>linux</nobr></a>
-
-  
-  
-  <a href="/tag/device-drivers"><nobr>device-drivers</nobr></a>
-
-  
-  
-  <a href="/tag/cpp"><nobr>cpp</nobr></a>
-
-  
-  
-  <a href="/tag/c"><nobr>c</nobr></a>
-
-  
-  
-  <a href="/tag/vpn"><nobr>vpn</nobr></a>
-
-  
-  
-  <a href="/tag/ssh"><nobr>ssh</nobr></a>
-
-  
-  
-  <a href="/tag/digital-circuits"><nobr>digital-circuits</nobr></a>
-
-
-        
-        
-        
-      </header>
-      <section>
-
-      
-<div class="post">
-
-  <h1 class="post-title">An embedded graphics framebuf driver for mnemOS</h1>
-  Published on <span class="post-date">05 Aug 2022</span>, under: 
-  <span class="post-tags">
-    &nbsp;|
-    
-      
-      <a class="no-underline" href="/tag/programming"><nobr> programming |</nobr>&nbsp;</a>    
-    
-      
-      <a class="no-underline" href="/tag/embedded"><nobr> embedded |</nobr>&nbsp;</a>    
-    
-      
-      <a class="no-underline" href="/tag/device-drivers"><nobr> device-drivers |</nobr>&nbsp;</a>    
-    
-      
-      <a class="no-underline" href="/tag/rust"><nobr> rust |</nobr>&nbsp;</a>    
-    
-    &nbsp;
-  </span>
-  <p></p>
-  <p>Recently, I wrote a graphics framebuffer driver using the <a href="https://docs.rs/embedded-graphics/latest/embedded_graphics/">embedded-graphics crate</a>. The driver was written for <a href="https://mnemos-dev.jamesmunns.com/book/intro.html">mnemOS</a>, an operating system written in Rust. This contributions marks many firsts for me; first contribution to an OSS project, first piece of embedded software written, first driver written. The driver it self is quite simple. We use <a href="https://docs.rs/embedded-graphics-simulator/latest/embedded_graphics_simulator/">embedded-graphics-simulator</a> to create a GUI window to display objects/text on. The driver then gives the user a chunk of heap memory onto which an object is drawn. ‘Draw’ is a trait in embedded-graphics where, given a collection of pixels each with a color and coordinate (the object), each pixel’s colour and coordinate (for 8bpp images) is stored in one byte of memory. The entire object can then be stored in a heap array.</p>
-
-<p><img src="/assets/images/post9/2022-08-05-21-40-33.png" alt="" /></p>
-
-<p>Once the object has been drawn onto the chunk of memory, it can then be passed to the e-g-simulator window where it is displayed. However, as the e-g-simulator window only takes a ‘SimulatorDisplay’ object as an argument, the driver converts the raw bytes into an ‘image’, which can be passed back to user space and displayed on the window. If we are using a physical display, like a simple OLED display, the raw bytes can be sent over a suitable interface like SPI or I2C. Here is a sample what it looks like on the e-g-simulator:</p>
-
-<p><img src="/assets/gifs/Screencast_from_07-27-2022_11_23_56_AM_AdobeExpress.gif" alt="" /></p>
-
-<p>Contributing to an open source project (or any project, really) has been a goal of mine ever since I started learning programming in earnest. It was really rewarding to go from dreaming about making a contribution, to actually doing it. A small part of me still cannot believe I did it. I owe a huge shoutout to James Munns <a href="https://twitter.com/bitshiftmask">(@bitshiftmask)</a> for encouraging me to just give it try when I expressed my desire to help out with this issue, but confessed that I wasn’t sure if I knew enough to do it. With this under my belt, I feel a lot more confident about my skills, and I am rearing to take on more projects and tasks. Next up is writing a networking driver for mnemOS using smoltcp, a TCP/IP stack for embedded/bare-metal rust projects. I plan to work on this in conjunction with continuing my learning journey in embedded systems.</p>
 
 </div>
 
