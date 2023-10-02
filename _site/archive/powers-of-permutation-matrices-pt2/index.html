@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KLNXCRJB2P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KLNXCRJB2P');
+</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Powers of a permutation matrix - Part 2 - Arktos kai Mennos</title>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Powers of a permutation matrix - Part 2 | Arktos kai Mennos</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Powers of a permutation matrix - Part 2" />
+<meta name="author" content="Arun" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In Part 1, we saw how every permutation has at least one cycle, and that the size of the cycle is the number of elements in the cycle. If we now consider a permutation that is one big cycle of all the elements in our set, then we can easily see that if we apply the same permutation n times, n being the number of elements in the set, all elements return to the positions with which they started out. So pn = e for such a permutation, where once again, e is the identity." />
+<meta property="og:description" content="In Part 1, we saw how every permutation has at least one cycle, and that the size of the cycle is the number of elements in the cycle. If we now consider a permutation that is one big cycle of all the elements in our set, then we can easily see that if we apply the same permutation n times, n being the number of elements in the set, all elements return to the positions with which they started out. So pn = e for such a permutation, where once again, e is the identity." />
+<link rel="canonical" href="/archive/powers-of-permutation-matrices-pt2/" />
+<meta property="og:url" content="/archive/powers-of-permutation-matrices-pt2/" />
+<meta property="og:site_name" content="Arktos kai Mennos" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-10-01T00:00:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Powers of a permutation matrix - Part 2" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2023-10-01T00:00:00-07:00","datePublished":"2023-10-01T00:00:00-07:00","description":"In Part 1, we saw how every permutation has at least one cycle, and that the size of the cycle is the number of elements in the cycle. If we now consider a permutation that is one big cycle of all the elements in our set, then we can easily see that if we apply the same permutation n times, n being the number of elements in the set, all elements return to the positions with which they started out. So pn = e for such a permutation, where once again, e is the identity.","headline":"Powers of a permutation matrix - Part 2","mainEntityOfPage":{"@type":"WebPage","@id":"/archive/powers-of-permutation-matrices-pt2/"},"url":"/archive/powers-of-permutation-matrices-pt2/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=7ffcce5a50521adcddf25fadb4ddd9fc3f9d6144">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="/">Arktos kai Mennos</a></h1>
+        <nav>
+          <ul class="nav-links">
+          <li><a href="/" >Home</a></li>  | <li><a href="/about" >About</a></li> | <li><a href="/archive" >Archive</a></li>  | <li><a href="/contact" >Contact</a></li>
+          </ul>
+        </nav>
+        
+
+        <p>Arun Vijayshankar's blog</p>
+
+        
+        <p class="view"><a href="https://github.com/arunvijayshankar/arunvijayshankar.github.io">View the Project on GitHub <small>arunvijayshankar/arunvijayshankar.github.io</small></a></p>
+        
+
+        
+
+        <h2>Tags</h2>
+
+
+
+  
+  
+  <a href="/tag/programming"><nobr>programming</nobr></a>
+
+  
+  
+  <a href="/tag/rust"><nobr>rust</nobr></a>
+
+  
+  
+  <a href="/tag/python"><nobr>python</nobr></a>
+
+  
+  
+  <a href="/tag/networking"><nobr>networking</nobr></a>
+
+  
+  
+  <a href="/tag/embedded"><nobr>embedded</nobr></a>
+
+  
+  
+  <a href="/tag/permutations"><nobr>permutations</nobr></a>
+
+  
+  
+  <a href="/tag/mathematics"><nobr>mathematics</nobr></a>
+
+  
+  
+  <a href="/tag/linux"><nobr>linux</nobr></a>
+
+  
+  
+  <a href="/tag/linearalgebra"><nobr>linearalgebra</nobr></a>
+
+  
+  
+  <a href="/tag/device-drivers"><nobr>device-drivers</nobr></a>
+
+  
+  
+  <a href="/tag/cpp"><nobr>cpp</nobr></a>
+
+  
+  
+  <a href="/tag/c"><nobr>c</nobr></a>
+
+  
+  
+  <a href="/tag/vpn"><nobr>vpn</nobr></a>
+
+  
+  
+  <a href="/tag/ssh"><nobr>ssh</nobr></a>
+
+  
+  
+  <a href="/tag/digital-circuits"><nobr>digital-circuits</nobr></a>
+
+
+        
+        
+        
+      </header>
+      <section>
+
+      
+<div class="post">
+
+  <h1 class="post-title">Powers of a permutation matrix - Part 2</h1>
+  Published on <span class="post-date">01 Oct 2023</span>, under: 
+  <span class="post-tags">
+    &nbsp;|
+    
+      
+      <a class="no-underline" href="/tag/mathematics"><nobr> mathematics |</nobr>&nbsp;</a>    
+    
+      
+      <a class="no-underline" href="/tag/linearalgebra"><nobr> linearalgebra |</nobr>&nbsp;</a>    
+    
+      
+      <a class="no-underline" href="/tag/permutations"><nobr> permutations |</nobr>&nbsp;</a>    
+    
+    &nbsp;
+  </span>
+  <p></p>
+  <p>In <a href="https://arunvijayshankar.github.io/archive/powers-of-permutation-matrices-pt1/">Part 1</a>, we saw how every permutation has at least one cycle, and that the size of the cycle is the number of elements in the cycle. If we now consider a permutation that is one big cycle of all the elements in our set, then we can easily see that if we apply the same permutation <em>n</em> times, <em>n</em> being the number of elements in the set, all elements return to the positions with which they started out. So <em>p</em><sup><em>n</em></sup> = <em>e</em> for such a permutation, where once again, <em>e</em> is the identity.</p>
+
+<p>But what about permutations that are not just one cycle of all elements? What if the permutation consists of a combinations of cycles of different cycles and/or fixed points (elements that remain fixed in their positions upon application of a permutation are called fixed points). To explore this further, let us consider a couple of specific examples.</p>
+
+<ol>
+	<li> The permutation is one in which two elements in the set switch places, the rest are fixed points - In this case, there is one cycle of size two, and the rest are fixed points, so they are all in cycles of size one. So if we apply the permutation for a second time, both elements that switched places return to their original position, and the rest will have remained in the same position with which they started out. So if <em>p</em> denotes this particular permutation, then <em>p</em><sup>2</sup> = 2 </li>
+	<li>The permutation consists of two cycles of size <em>k<sub>1</sub></em> and <em>k<sub>2</sub></em> respectively - Here, we immediately see that the first cycle with return to its starting arrangement after <em>k<sub>1</sub></em> applications of the permutation and the second cycle will return to its starting arrangement after <em>k<sub>2</sub></em> applications. To calculate how many applications of the permutation are needed for both cycles to return to the starting configuration, notice that either cycle will return to the start when the permutation is applied <em>mk</em> times, where <em>m</em> is a positive integer. So this means that if the permutation is applied <em>k<sub>1</sub>k<sub>2</sub></em> times, both cycles will have returned to their original positions (notice that if <em>k<sub>2</sub></em> = <em>qk<sub>1</sub></em> then both cycles will return to the starting positions after just <em>k<sub>2</sub></em> applications of the permutation). That is, <em>p<sup>k<sub>1</sub>k<sub>2</sub></sup></em> = <em>e</em></li> 
+</ol>
+
+<p>Let’s stop here for now, and in Part 3 let’s explore permutations that are a little more complex, and finally try and nail down the answer for any generic permutation.</p>
+
+</div>
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/arunvijayshankar">arunvijayshankar</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>
