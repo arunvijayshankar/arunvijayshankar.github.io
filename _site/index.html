@@ -31,7 +31,7 @@
 {"@context":"https://schema.org","@type":"WebSite","description":"Arun Vijayshankar’s blog","headline":"Arktos:","name":"Arktos kai Mennos","url":"/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=7291e25d98f99edf2d18a874076761ff5e1c5c5f">
+    <link rel="stylesheet" href="/assets/css/style.css?v=fdf6972269cc3d16de23de63637c67a2410c3e04">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -100,15 +100,15 @@
 
   
   
+  <a href="/tag/mathematics"><nobr>mathematics</nobr></a>
+
+  
+  
   <a href="/tag/embedded"><nobr>embedded</nobr></a>
 
   
   
   <a href="/tag/permutations"><nobr>permutations</nobr></a>
-
-  
-  
-  <a href="/tag/mathematics"><nobr>mathematics</nobr></a>
 
   
   
@@ -140,7 +140,15 @@
 
   
   
+  <a href="/tag/settheory"><nobr>settheory</nobr></a>
+
+  
+  
   <a href="/tag/digital-circuits"><nobr>digital-circuits</nobr></a>
+
+  
+  
+  <a href="/tag/counting"><nobr>counting</nobr></a>
 
 
 
@@ -177,27 +185,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Powers of a permutation matrix - Part 2 - Arktos kai Mennos</title>
+    <title>Order of the Power Set - Arktos kai Mennos</title>
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Powers of a permutation matrix - Part 2 | Arktos kai Mennos</title>
+<title>Order of the Power Set | Arktos kai Mennos</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Powers of a permutation matrix - Part 2" />
+<meta property="og:title" content="Order of the Power Set" />
 <meta name="author" content="Arun" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="In Part 1, we saw how every permutation has at least one cycle, and that the size of the cycle is the number of elements in the cycle. If we now consider a permutation that is one big cycle of all the elements in our set, then we can easily see that if we apply the same permutation n times, n being the number of elements in the set, all elements return to the positions with which they started out. So pn = e for such a permutation, where once again, e is the identity." />
-<meta property="og:description" content="In Part 1, we saw how every permutation has at least one cycle, and that the size of the cycle is the number of elements in the cycle. If we now consider a permutation that is one big cycle of all the elements in our set, then we can easily see that if we apply the same permutation n times, n being the number of elements in the set, all elements return to the positions with which they started out. So pn = e for such a permutation, where once again, e is the identity." />
-<link rel="canonical" href="/archive/powers-of-permutation-matrices-pt2/" />
-<meta property="og:url" content="/archive/powers-of-permutation-matrices-pt2/" />
+<meta name="description" content="Here are two ways to determine the number of elements in the Power set of a finite set of objects. The set of all subsets of a set is called a power set, and the number of all the elements in a given set is called its order. Consider the following set S = {a, b, c}. The order of this set is 3, and its power set is P(S) = {O, {a}, {b}, {c}, {a, b}, {a, c}, {b, c}, S}. Notice that the power set contains all subsets of S, including S, and the empty set O. We can see that P(S) has 8 elements, so its order is 8. If you carried out a similar exercize for a set S’ = {a, b, c, d}, we will find that its order is 16. It looks like the order of a the power set of a set with n elements is 2n." />
+<meta property="og:description" content="Here are two ways to determine the number of elements in the Power set of a finite set of objects. The set of all subsets of a set is called a power set, and the number of all the elements in a given set is called its order. Consider the following set S = {a, b, c}. The order of this set is 3, and its power set is P(S) = {O, {a}, {b}, {c}, {a, b}, {a, c}, {b, c}, S}. Notice that the power set contains all subsets of S, including S, and the empty set O. We can see that P(S) has 8 elements, so its order is 8. If you carried out a similar exercize for a set S’ = {a, b, c, d}, we will find that its order is 16. It looks like the order of a the power set of a set with n elements is 2n." />
+<link rel="canonical" href="/archive/order-of-power-set/" />
+<meta property="og:url" content="/archive/order-of-power-set/" />
 <meta property="og:site_name" content="Arktos kai Mennos" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-10-01T00:00:00-07:00" />
+<meta property="article:published_time" content="2023-10-10T00:00:00-07:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Powers of a permutation matrix - Part 2" />
+<meta property="twitter:title" content="Order of the Power Set" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2023-10-01T00:00:00-07:00","datePublished":"2023-10-01T00:00:00-07:00","description":"In Part 1, we saw how every permutation has at least one cycle, and that the size of the cycle is the number of elements in the cycle. If we now consider a permutation that is one big cycle of all the elements in our set, then we can easily see that if we apply the same permutation n times, n being the number of elements in the set, all elements return to the positions with which they started out. So pn = e for such a permutation, where once again, e is the identity.","headline":"Powers of a permutation matrix - Part 2","mainEntityOfPage":{"@type":"WebPage","@id":"/archive/powers-of-permutation-matrices-pt2/"},"url":"/archive/powers-of-permutation-matrices-pt2/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2023-10-10T00:00:00-07:00","datePublished":"2023-10-10T00:00:00-07:00","description":"Here are two ways to determine the number of elements in the Power set of a finite set of objects. The set of all subsets of a set is called a power set, and the number of all the elements in a given set is called its order. Consider the following set S = {a, b, c}. The order of this set is 3, and its power set is P(S) = {O, {a}, {b}, {c}, {a, b}, {a, c}, {b, c}, S}. Notice that the power set contains all subsets of S, including S, and the empty set O. We can see that P(S) has 8 elements, so its order is 8. If you carried out a similar exercize for a set S’ = {a, b, c, d}, we will find that its order is 16. It looks like the order of a the power set of a set with n elements is 2n.","headline":"Order of the Power Set","mainEntityOfPage":{"@type":"WebPage","@id":"/archive/order-of-power-set/"},"url":"/archive/order-of-power-set/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=7291e25d98f99edf2d18a874076761ff5e1c5c5f">
+    <link rel="stylesheet" href="/assets/css/style.css?v=fdf6972269cc3d16de23de63637c67a2410c3e04">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -254,15 +262,15 @@
 
   
   
+  <a href="/tag/mathematics"><nobr>mathematics</nobr></a>
+
+  
+  
   <a href="/tag/embedded"><nobr>embedded</nobr></a>
 
   
   
   <a href="/tag/permutations"><nobr>permutations</nobr></a>
-
-  
-  
-  <a href="/tag/mathematics"><nobr>mathematics</nobr></a>
 
   
   
@@ -294,7 +302,237 @@
 
   
   
+  <a href="/tag/settheory"><nobr>settheory</nobr></a>
+
+  
+  
   <a href="/tag/digital-circuits"><nobr>digital-circuits</nobr></a>
+
+  
+  
+  <a href="/tag/counting"><nobr>counting</nobr></a>
+
+
+        
+        
+        
+      </header>
+      <section>
+
+      
+<div class="post">
+
+  <h1 class="post-title">Order of the Power Set</h1>
+  Published on <span class="post-date">10 Oct 2023</span>, under: 
+  <span class="post-tags">
+    &nbsp;|
+    
+      
+      <a class="no-underline" href="/tag/mathematics"><nobr> mathematics |</nobr>&nbsp;</a>    
+    
+      
+      <a class="no-underline" href="/tag/counting"><nobr> counting |</nobr>&nbsp;</a>    
+    
+      
+      <a class="no-underline" href="/tag/settheory"><nobr> settheory |</nobr>&nbsp;</a>    
+    
+    &nbsp;
+  </span>
+  <p></p>
+  <p>Here are two ways to determine the number of elements in the Power set of a finite set of objects. The set of all subsets of a set is called a power set, and the number of all the elements in a given set is called its order. Consider the following set <em>S = {a, b, c}</em>. The order of this set is 3, and its power set is <em>P(S) = {O, {a}, {b}, {c}, {a, b}, {a, c}, {b, c}, S}</em>. Notice that the power set contains all subsets of <em>S</em>, including <em>S</em>, and the empty set <em>O</em>. We can see that <em>P(S)</em> has 8 elements, so its order is 8. If you carried out a similar exercize for a set <em>S’ = {a, b, c, d}</em>, we will find that its order is 16. It looks like the order of a the power set of a set with <em>n</em> elements is <em>2</em><sup><em>n</em></sup>.</p>
+
+<p>We can show that this is actually true. Let’s prove it in two ways. First let’s use mathematical induction, which is intuitive and clean, but a little dry IMO. Next, let’s show that it is true by just counting the elements (kind of). This is a lot more fun, and it’s nice to see how a couple of things come together to solve the problem.</p>
+
+<p>But first let’s do induction. Notice that if a set <em>S</em> is empty, it has <em>n = 0</em> elements. The power set, <em>P(S)</em>, then only has one element - the empty set (which is also the entire set <em>S</em>). So the order of the power set is 1, and <em>2</em><sup><em>0</em></sup> = <em>1</em>, so the base case is true. Now let’s assume that it is true for the power set of a set with <em>n</em> elements. So the power set of a set with <em>n</em> elements would have order <em>2</em><sup><em>n</em></sup>. Let’s denote the elements of the power sets as <em>S</em><sub><em>1</em></sub>, <em>S</em><sub><em>2</em></sub>, …, <em>S</em><sub><em>m</em></sub>, where <em>m</em> = <em>2</em><sup><em>n</em></sup>. Now consider adding one more element to <em>S</em>, bringing the number of elements contained by it to <em>n+1</em>. Adding this additional element to <em>S</em> creates a whole bunch of new subsets, and we have to determine how many new subsets are created and add it to <em>2</em><sup><em>n</em></sup>, to find the order of the new power set of <em>S</em>. Notice that all the new subsets of <em>S</em> can be created by adding the new element to each of the subsets of <em>S</em> with <em>n</em> elements.</p>
+
+<p>For example, if <em>S</em> = <em>{a, b}</em>, then <em>P(S)</em> = <em>{O, {a}, {b}, S}</em>. If we add a third element, <em>c</em>, to this set, then we get the new subsets -</p>
+
+<p><img src="/assets/images/post14/new_sets.png" alt="" /></p>
+
+<p>Essentially, by adding an additional element to <em>S</em>, we are adding one additional subset to every subset in power set of the original set. So we have two times as many elements in the power set of a set with <em>n+1</em> elements, as in the power set of one with <em>n</em> elements. That is, the order of the power set of a set with <em>n+1</em> elements is <em>2</em> x <em>2</em><sup><em>n</em></sup> = <em>2</em><sup><em>n+1</em></sup>, and we are done.</p>
+
+<p>Now let’s do it the fun way. Notice that we can determine the number of subsets of a set with <em>n</em> elements but counting the number of subsets with 0 elements (the empty set), the number of subsets with 1 element (these are called singletons, there are <em>n</em> of them), with 2 elements and so on, up to the number of subsets with <em>n</em> elements (there’s one such subset - the entire set), and then adding them all up. To do this, let’s find the number of subsets with <em>k</em> elements. This is equivalent to the number of ways of choosing <em>k</em> objects from a collection of <em>n</em> objects. We know that this is</p>
+
+<p><img src="/assets/images/post14/nCk_new.png" alt="" /></p>
+
+<p>Now we have to sum the number of subsets with <em>k</em> elements from <em>k</em> = <em>0</em> to <em>k</em> = <em>n</em>. That is, the order of the power set is</p>
+
+<p><img src="/assets/images/post14/order.png" alt="" /></p>
+
+<p>All that is left to do is evaluating the sum on the right hand side of the above equation. It looks a little intimidating, and trying to evaluate it by expanding the sum and adding all the terms will turn out to be quite an effort. So maybe there’s another way. Notice that the sum looks remarkably similar to the sum in the binomial theorem:</p>
+
+<p><img src="/assets/images/post14/binom_thm.png" alt="" /></p>
+
+<p>In fact if we set <em>x</em> = <em>y</em> = <em>1</em> in the binomial theorem, the sum will be the same as the sum in our expression for the order of the power set,</p>
+
+<p><img src="/assets/images/post14/binom_mod.png" alt="" /></p>
+
+<p>and</p>
+
+<p><img src="/assets/images/post14/xplusy.png" alt="" /></p>
+
+<p>which means</p>
+
+<p><img src="/assets/images/post14/final.png" alt="" /></p>
+
+<p>and we’re done!</p>
+
+</div>
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/arunvijayshankar">arunvijayshankar</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>
+
+      
+        <!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KLNXCRJB2P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KLNXCRJB2P');
+</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Powers of a permutation matrix - Part 2 - Arktos kai Mennos</title>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Powers of a permutation matrix - Part 2 | Arktos kai Mennos</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Powers of a permutation matrix - Part 2" />
+<meta name="author" content="Arun" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In Part 1, we saw how every permutation has at least one cycle, and that the size of the cycle is the number of elements in the cycle. If we now consider a permutation that is one big cycle of all the elements in our set, then we can easily see that if we apply the same permutation n times, n being the number of elements in the set, all elements return to the positions with which they started out. So pn = e for such a permutation, where once again, e is the identity." />
+<meta property="og:description" content="In Part 1, we saw how every permutation has at least one cycle, and that the size of the cycle is the number of elements in the cycle. If we now consider a permutation that is one big cycle of all the elements in our set, then we can easily see that if we apply the same permutation n times, n being the number of elements in the set, all elements return to the positions with which they started out. So pn = e for such a permutation, where once again, e is the identity." />
+<link rel="canonical" href="/archive/powers-of-permutation-matrices-pt2/" />
+<meta property="og:url" content="/archive/powers-of-permutation-matrices-pt2/" />
+<meta property="og:site_name" content="Arktos kai Mennos" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-10-01T00:00:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Powers of a permutation matrix - Part 2" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2023-10-01T00:00:00-07:00","datePublished":"2023-10-01T00:00:00-07:00","description":"In Part 1, we saw how every permutation has at least one cycle, and that the size of the cycle is the number of elements in the cycle. If we now consider a permutation that is one big cycle of all the elements in our set, then we can easily see that if we apply the same permutation n times, n being the number of elements in the set, all elements return to the positions with which they started out. So pn = e for such a permutation, where once again, e is the identity.","headline":"Powers of a permutation matrix - Part 2","mainEntityOfPage":{"@type":"WebPage","@id":"/archive/powers-of-permutation-matrices-pt2/"},"url":"/archive/powers-of-permutation-matrices-pt2/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=fdf6972269cc3d16de23de63637c67a2410c3e04">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="/">Arktos kai Mennos</a></h1>
+        <nav>
+          <ul class="nav-links">
+          <li><a href="/" >Home</a></li>  | <li><a href="/about" >About</a></li> | <li><a href="/archive" >Archive</a></li>  | <li><a href="/contact" >Contact</a></li>
+          </ul>
+        </nav>
+        
+
+        <p>Arun Vijayshankar's blog</p>
+
+        
+        <p class="view"><a href="https://github.com/arunvijayshankar/arunvijayshankar.github.io">View the Project on GitHub <small>arunvijayshankar/arunvijayshankar.github.io</small></a></p>
+        
+
+        
+
+        <h2>Tags</h2>
+
+
+
+  
+  
+  <a href="/tag/programming"><nobr>programming</nobr></a>
+
+  
+  
+  <a href="/tag/rust"><nobr>rust</nobr></a>
+
+  
+  
+  <a href="/tag/python"><nobr>python</nobr></a>
+
+  
+  
+  <a href="/tag/networking"><nobr>networking</nobr></a>
+
+  
+  
+  <a href="/tag/mathematics"><nobr>mathematics</nobr></a>
+
+  
+  
+  <a href="/tag/embedded"><nobr>embedded</nobr></a>
+
+  
+  
+  <a href="/tag/permutations"><nobr>permutations</nobr></a>
+
+  
+  
+  <a href="/tag/linux"><nobr>linux</nobr></a>
+
+  
+  
+  <a href="/tag/linearalgebra"><nobr>linearalgebra</nobr></a>
+
+  
+  
+  <a href="/tag/device-drivers"><nobr>device-drivers</nobr></a>
+
+  
+  
+  <a href="/tag/cpp"><nobr>cpp</nobr></a>
+
+  
+  
+  <a href="/tag/c"><nobr>c</nobr></a>
+
+  
+  
+  <a href="/tag/vpn"><nobr>vpn</nobr></a>
+
+  
+  
+  <a href="/tag/ssh"><nobr>ssh</nobr></a>
+
+  
+  
+  <a href="/tag/settheory"><nobr>settheory</nobr></a>
+
+  
+  
+  <a href="/tag/digital-circuits"><nobr>digital-circuits</nobr></a>
+
+  
+  
+  <a href="/tag/counting"><nobr>counting</nobr></a>
 
 
         
@@ -384,7 +622,7 @@
 {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2023-09-21T00:00:00-07:00","datePublished":"2023-09-21T00:00:00-07:00","description":"I came across this problem while working through the MITOCW course on Linear Algebra. The lectures are interesting in of themselves, but I got completely sidetracked when I started on this problem:","headline":"Powers of a permutation matrix - Part 1","mainEntityOfPage":{"@type":"WebPage","@id":"/archive/powers-of-permutation-matrices-pt1/"},"url":"/archive/powers-of-permutation-matrices-pt1/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=7291e25d98f99edf2d18a874076761ff5e1c5c5f">
+    <link rel="stylesheet" href="/assets/css/style.css?v=fdf6972269cc3d16de23de63637c67a2410c3e04">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -441,15 +679,15 @@
 
   
   
+  <a href="/tag/mathematics"><nobr>mathematics</nobr></a>
+
+  
+  
   <a href="/tag/embedded"><nobr>embedded</nobr></a>
 
   
   
   <a href="/tag/permutations"><nobr>permutations</nobr></a>
-
-  
-  
-  <a href="/tag/mathematics"><nobr>mathematics</nobr></a>
 
   
   
@@ -481,7 +719,15 @@
 
   
   
+  <a href="/tag/settheory"><nobr>settheory</nobr></a>
+
+  
+  
   <a href="/tag/digital-circuits"><nobr>digital-circuits</nobr></a>
+
+  
+  
+  <a href="/tag/counting"><nobr>counting</nobr></a>
 
 
         
@@ -523,263 +769,6 @@
 <p>So why is it true that a permutation will have atleast one cycle? To understand this, consider a permutation on <em>n</em> objects where a subset of the objects have changed positions. If no elements have changed position, then each element can thought of as being in a cycle of size 1. If more than one object has changed positions after the permutation has been applied, any one object in the subset will have moved to the position occupied by another object which will in turn have moved to a different position. For a finite subset of objects, this means that the position occupied by the initial object will now be occupied by a different object in the subset. If we suppose that this permutation does not have a cycle, it implies that the first object will never return to it’s orginal position no matter how many times the permutation is applied. This can only happen if the first object never reaches the position of the last object (which moves to the first position upon first application of the permutation). But this can only happen if the first object never reaches the position of the second-to-last object, as so on, until we are forced to conclude that the first object can never even reach the second position, implying that it did not move. This contradicts the statement that all objects in the subset changed positions. So the only way out is to admit that this the subset is in a cycle and that the size of the cycle is the number of elements in the subset.</p>
 
 <p>In <a href="https://arunvijayshankar.github.io/archive/powers-of-permutation-matrices-pt2/">Part 2</a>, we will explore some specific permutations that are composed of simple cycles, and see what happens when the permuation is applied repeatedly to a set of objects.</p>
-
-</div>
-
-      </section>
-      <footer>
-        
-        <p>This project is maintained by <a href="https://github.com/arunvijayshankar">arunvijayshankar</a></p>
-        
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="/assets/js/scale.fix.js"></script>
-  </body>
-</html>
-
-      
-        <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KLNXCRJB2P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KLNXCRJB2P');
-</script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Run a command recursively in all subdirectories - Arktos kai Mennos</title>
-<!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Run a command recursively in all subdirectories | Arktos kai Mennos</title>
-<meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Run a command recursively in all subdirectories" />
-<meta name="author" content="Arun" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Suppose you wish to run a linux command in the current working directory, and in all of its subdirectories recursively. For example, I discovered that sometimes, running ‘make modules_install’ compresses all the modules as a .xz file in the various subdirectories. I read that the kernel does not care if a module is compressed, it can load the module in any case, but I did not know that at the time. I initially considered running “xz –decompress “ on every .xz file, but there are simply too many subsystem and driver directories, and it would extremely tedious. So I wrote a little script to do it:" />
-<meta property="og:description" content="Suppose you wish to run a linux command in the current working directory, and in all of its subdirectories recursively. For example, I discovered that sometimes, running ‘make modules_install’ compresses all the modules as a .xz file in the various subdirectories. I read that the kernel does not care if a module is compressed, it can load the module in any case, but I did not know that at the time. I initially considered running “xz –decompress “ on every .xz file, but there are simply too many subsystem and driver directories, and it would extremely tedious. So I wrote a little script to do it:" />
-<link rel="canonical" href="/archive/run-a-command-recursively-in-all-subdirectories/" />
-<meta property="og:url" content="/archive/run-a-command-recursively-in-all-subdirectories/" />
-<meta property="og:site_name" content="Arktos kai Mennos" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-12-23T00:00:00-08:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Run a command recursively in all subdirectories" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2022-12-23T00:00:00-08:00","datePublished":"2022-12-23T00:00:00-08:00","description":"Suppose you wish to run a linux command in the current working directory, and in all of its subdirectories recursively. For example, I discovered that sometimes, running ‘make modules_install’ compresses all the modules as a .xz file in the various subdirectories. I read that the kernel does not care if a module is compressed, it can load the module in any case, but I did not know that at the time. I initially considered running “xz –decompress “ on every .xz file, but there are simply too many subsystem and driver directories, and it would extremely tedious. So I wrote a little script to do it:","headline":"Run a command recursively in all subdirectories","mainEntityOfPage":{"@type":"WebPage","@id":"/archive/run-a-command-recursively-in-all-subdirectories/"},"url":"/archive/run-a-command-recursively-in-all-subdirectories/"}</script>
-<!-- End Jekyll SEO tag -->
-
-    <link rel="stylesheet" href="/assets/css/style.css?v=7291e25d98f99edf2d18a874076761ff5e1c5c5f">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
-    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
-
-<!-- Setup Google Analytics -->
-
-
-
-<!-- You can set your favicon here -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
-
-<!-- end custom head snippets -->
-
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1><a href="/">Arktos kai Mennos</a></h1>
-        <nav>
-          <ul class="nav-links">
-          <li><a href="/" >Home</a></li>  | <li><a href="/about" >About</a></li> | <li><a href="/archive" >Archive</a></li>  | <li><a href="/contact" >Contact</a></li>
-          </ul>
-        </nav>
-        
-
-        <p>Arun Vijayshankar's blog</p>
-
-        
-        <p class="view"><a href="https://github.com/arunvijayshankar/arunvijayshankar.github.io">View the Project on GitHub <small>arunvijayshankar/arunvijayshankar.github.io</small></a></p>
-        
-
-        
-
-        <h2>Tags</h2>
-
-
-
-  
-  
-  <a href="/tag/programming"><nobr>programming</nobr></a>
-
-  
-  
-  <a href="/tag/rust"><nobr>rust</nobr></a>
-
-  
-  
-  <a href="/tag/python"><nobr>python</nobr></a>
-
-  
-  
-  <a href="/tag/networking"><nobr>networking</nobr></a>
-
-  
-  
-  <a href="/tag/embedded"><nobr>embedded</nobr></a>
-
-  
-  
-  <a href="/tag/permutations"><nobr>permutations</nobr></a>
-
-  
-  
-  <a href="/tag/mathematics"><nobr>mathematics</nobr></a>
-
-  
-  
-  <a href="/tag/linux"><nobr>linux</nobr></a>
-
-  
-  
-  <a href="/tag/linearalgebra"><nobr>linearalgebra</nobr></a>
-
-  
-  
-  <a href="/tag/device-drivers"><nobr>device-drivers</nobr></a>
-
-  
-  
-  <a href="/tag/cpp"><nobr>cpp</nobr></a>
-
-  
-  
-  <a href="/tag/c"><nobr>c</nobr></a>
-
-  
-  
-  <a href="/tag/vpn"><nobr>vpn</nobr></a>
-
-  
-  
-  <a href="/tag/ssh"><nobr>ssh</nobr></a>
-
-  
-  
-  <a href="/tag/digital-circuits"><nobr>digital-circuits</nobr></a>
-
-
-        
-        
-        
-      </header>
-      <section>
-
-      
-<div class="post">
-
-  <h1 class="post-title">Run a command recursively in all subdirectories</h1>
-  Published on <span class="post-date">23 Dec 2022</span>, under: 
-  <span class="post-tags">
-    &nbsp;|
-    
-      
-      <a class="no-underline" href="/tag/programming"><nobr> programming |</nobr>&nbsp;</a>    
-    
-      
-      <a class="no-underline" href="/tag/python"><nobr> python |</nobr>&nbsp;</a>    
-    
-      
-      <a class="no-underline" href="/tag/linux"><nobr> linux |</nobr>&nbsp;</a>    
-    
-    &nbsp;
-  </span>
-  <p></p>
-  <p>Suppose you wish to run a linux command in the current working directory, and in all of its subdirectories recursively. For example, I discovered that sometimes, running ‘make modules_install’ compresses all the modules as a .xz file in the various subdirectories. I read that the kernel does not care if a module is compressed, it can load the module in any case, but I did not know that at the time. I initially considered running “xz –decompress “ on every .xz file, but there are simply too many subsystem and driver directories, and it would extremely tedious. So I wrote a little script to do it:</p>
-
-<p><a href="https://gist.github.com/arunvijayshankar/a61fb0cd840f86e5f9ad4d4132497bf9">run_cmd.py</a></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-"""
-* Script to run a system command recursively in every subdirectory 
-* in a directory, including the current working directory
-* Usage: run_cmd.py -[si] -c &lt;command-to-run&gt;
-*
-* Options:
-*   -i 
-*       Interactive mode. Prompts user to choose whether or not to 
-*       run the command in a directory
-*   -s
-*       Skips the command for the working directory
-*   -c
-*       Command to be run
-*
-* Example: $python run_cmd.py -s -c &lt;command-to-run&gt;
-* This will run 'ls -l &gt; contents.txt' in every subdirectory in the tree
-* recursively, but will not run it in the working directory
-*
-* Author: Arun Vijayshankar
-"""
-
-import getopt
-import os
-import sys
-
-def recursive_run_cmd_inter(root, cmd):
-    for file in os.listdir(root):
-        d = os.path.join(root, file)
-        if os.path.isdir(d):
-            os.chdir(d)
-            run = input("Do you want to run " + cmd + " in: \n" + os.getcwd() + " [Y/No]")
-            if str(run).upper() in ['Y', 'YES']:
-                print("running " + cmd + " in: " + os.getcwd())
-                os.system(cmd)
-            recursive_run_cmd_inter(d, cmd)
-
-def recursive_run_cmd(root, cmd):
-    for file in os.listdir(root):
-        d = os.path.join(root, file)
-        if os.path.isdir(d):
-            os.chdir(d)
-            print("running " + cmd + " in: " + os.getcwd())
-            os.system(cmd)
-            recursive_run_cmd(d, cmd)
-            
-def entry():
-    argv = sys.argv[1:]
-    try:
-        options, args = getopt.getopt(argv, "s:i:c", [])
-    except:
-        print("Usage: run_cmd.py -[si] -c '&lt;command-to-be-run&gt;'")
-
-    root = os.getcwd()
-    cmd = args[0]
-    print(cmd)
-
-    if '-i' in options[0]:
-        recursive_run_cmd_inter(root, cmd)
-    if '-s' in options[0]:
-        if '-i' in options[0]:
-            recursive_run_cmd_inter(root, cmd)
-        else:
-            recursive_run_cmd(root, cmd)
-    else:
-        os.chdir(root)
-        print("running " + cmd + " in: " + os.getcwd())
-        os.system(cmd)
-        recursive_run_cmd(root, cmd)
-
-if __name__ == "__main__":
-    entry()
-
-</code></pre></div></div>
-
-<p>I tested it out on Ubuntu 20.04, and it seems to work. An addition that could be made is maybe the script can take a list of directory in which to run the command and run it in those only. I mightget around to doing this someday very soon.</p>
 
 </div>
 
