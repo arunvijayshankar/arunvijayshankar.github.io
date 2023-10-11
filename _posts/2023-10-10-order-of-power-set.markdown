@@ -17,7 +17,7 @@ For example, if *S* = *{a, b}*, then *P(S)* = *{O, {a}, {b}, S}*. If we add a th
 
 Essentially, by adding an additional element to *S*, we are adding one additional subset to every subset in power set of the original set. So we have two times as many elements in the power set of a set with *n+1* elements, as in the power set of one with *n* elements. That is, the order of the power set of a set with *n+1* elements is *2* x *2*<sup>*n*</sup> = *2*<sup>*n+1*</sup>, and we are done.
 
-Now let's do it the fun way. Notice that we can determine the number of subsets of a set with *n* elements but counting the number of subsets with 0 elements (the empty set), the number of subsets with 1 element (these are called singletons, there are *n* of them), with 2 elements and so on, up to the number of subsets with *n* elements (there's one such subset - the entire set), and then adding them all up. To do this, let's find the number of subsets with *k* elements. This is equivalent to the number of ways of choosing *k* objects from a collection of *n* objects. We know that this is 
+Now let's do it the fun way. Notice that we can determine the number of subsets of a set with *n* elements by counting the number of subsets with 0 elements (the empty set), the number of subsets with 1 element (these are called singletons, there are *n* of them), with 2 elements and so on, up to the number of subsets with *n* elements (there's one such subset - the entire set), and then adding them all up. To do this, let's find the number of subsets with *k* elements. This is equivalent to the number of ways of choosing *k* objects from a collection of *n* objects. We know that this is 
 
 ![](/assets/images/post14/nCk_new.png)
 
@@ -25,7 +25,7 @@ Now we have to sum the number of subsets with *k* elements from *k* = *0* to *k*
 
 ![](/assets/images/post14/order.png)
 
-All that is left to do is evaluating the sum on the right hand side of the above equation. It looks a little intimidating, and trying to evaluate it by expanding the sum and adding all the terms will turn out to be quite an effort. So maybe there's another way. Notice that the sum looks remarkably similar to the sum in the binomial theorem:
+All that is left to do is to evaluate this sum. It looks a little intimidating, and trying to evaluate it by expanding the sum and adding all the terms will turn out to be quite an effort. So maybe there's another way. Notice that the sum looks remarkably similar to the sum in the binomial theorem:
 
 ![](/assets/images/post14/binom_thm.png) 
 
