@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KLNXCRJB2P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KLNXCRJB2P');
+</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Powers of a permutation matrix - Part 3 - Arktos kai Mennos</title>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Powers of a permutation matrix - Part 3 | Arktos kai Mennos</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Powers of a permutation matrix - Part 3" />
+<meta name="author" content="Arun" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In Part 2, we saw how permutations consisting of simple cycles always return to their original configurations. Now let’s consider a permutation p, consisting of m number of cycles, with sizes k1, k2, … km, such that" />
+<meta property="og:description" content="In Part 2, we saw how permutations consisting of simple cycles always return to their original configurations. Now let’s consider a permutation p, consisting of m number of cycles, with sizes k1, k2, … km, such that" />
+<link rel="canonical" href="/archive/powers-of-permutation-matrices-pt3/" />
+<meta property="og:url" content="/archive/powers-of-permutation-matrices-pt3/" />
+<meta property="og:site_name" content="Arktos kai Mennos" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-11-22T00:00:00-08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Powers of a permutation matrix - Part 3" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2023-11-22T00:00:00-08:00","datePublished":"2023-11-22T00:00:00-08:00","description":"In Part 2, we saw how permutations consisting of simple cycles always return to their original configurations. Now let’s consider a permutation p, consisting of m number of cycles, with sizes k1, k2, … km, such that","headline":"Powers of a permutation matrix - Part 3","mainEntityOfPage":{"@type":"WebPage","@id":"/archive/powers-of-permutation-matrices-pt3/"},"url":"/archive/powers-of-permutation-matrices-pt3/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=ecacf4e4fedfc8b5ae277fb3ccf39ab8e41bcf2b">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="/">Arktos kai Mennos</a></h1>
+        <nav>
+          <ul class="nav-links">
+          <li><a href="/" >Home</a></li>  | <li><a href="/about" >About</a></li> | <li><a href="/archive" >Archive</a></li>  | <li><a href="/contact" >Contact</a></li>
+          </ul>
+        </nav>
+        
+
+        <p>Arun Vijayshankar's blog</p>
+
+        
+        <p class="view"><a href="https://github.com/arunvijayshankar/arunvijayshankar.github.io">View the Project on GitHub <small>arunvijayshankar/arunvijayshankar.github.io</small></a></p>
+        
+
+        
+
+        <h2>Tags</h2>
+
+
+
+  
+  
+  <a href="/tag/programming"><nobr>programming</nobr></a>
+
+  
+  
+  <a href="/tag/mathematics"><nobr>mathematics</nobr></a>
+
+  
+  
+  <a href="/tag/rust"><nobr>rust</nobr></a>
+
+  
+  
+  <a href="/tag/python"><nobr>python</nobr></a>
+
+  
+  
+  <a href="/tag/permutations"><nobr>permutations</nobr></a>
+
+  
+  
+  <a href="/tag/networking"><nobr>networking</nobr></a>
+
+  
+  
+  <a href="/tag/linearalgebra"><nobr>linearalgebra</nobr></a>
+
+  
+  
+  <a href="/tag/embedded"><nobr>embedded</nobr></a>
+
+  
+  
+  <a href="/tag/linux"><nobr>linux</nobr></a>
+
+  
+  
+  <a href="/tag/device-drivers"><nobr>device-drivers</nobr></a>
+
+  
+  
+  <a href="/tag/cpp"><nobr>cpp</nobr></a>
+
+  
+  
+  <a href="/tag/c"><nobr>c</nobr></a>
+
+  
+  
+  <a href="/tag/vpn"><nobr>vpn</nobr></a>
+
+  
+  
+  <a href="/tag/ssh"><nobr>ssh</nobr></a>
+
+  
+  
+  <a href="/tag/settheory"><nobr>settheory</nobr></a>
+
+  
+  
+  <a href="/tag/digital-circuits"><nobr>digital-circuits</nobr></a>
+
+  
+  
+  <a href="/tag/counting"><nobr>counting</nobr></a>
+
+
+        
+        
+        
+      </header>
+      <section>
+
+      
+<div class="post">
+
+  <h1 class="post-title">Powers of a permutation matrix - Part 3</h1>
+  Published on <span class="post-date">22 Nov 2023</span>, under: 
+  <span class="post-tags">
+    &nbsp;|
+    
+      
+      <a class="no-underline" href="/tag/mathematics"><nobr> mathematics |</nobr>&nbsp;</a>    
+    
+      
+      <a class="no-underline" href="/tag/linearalgebra"><nobr> linearalgebra |</nobr>&nbsp;</a>    
+    
+      
+      <a class="no-underline" href="/tag/permutations"><nobr> permutations |</nobr>&nbsp;</a>    
+    
+    &nbsp;
+  </span>
+  <p></p>
+  <p>In <a href="https://arunvijayshankar.github.io/archive/powers-of-permutation-matrices-pt2/">Part 2</a>, we saw how permutations consisting of simple cycles always return to their original configurations. Now let’s consider a permutation <em>p</em>, consisting of <em>m</em> number of cycles, with sizes <em>k<sub>1</sub>, k<sub>2</sub>, … k<sub>m</sub></em>, such that</p>
+
+<p><img src="/assets/images/post15/sum.png" alt="" /></p>
+
+<p>and no two cycles are of the same length. For such a permutation we have</p>
+
+<p><img src="/assets/images/post15/pwr_prod.png" alt="" /></p>
+
+<p>since any cycle will return to it’s original position at the <em>q</em> times <em>k</em>th application of <em>p</em> (where <em>k</em> is the length of the cycle), which means that all cycles in the permutation will return to their original positions when the permutation is applied</p>
+
+<p><img src="/assets/images/post15/prod.png" alt="" /></p>
+
+<p>times.</p>
+
+<p>But what if the cycles are not all of the cycles are of different lengths? In that case we only need to consider the unique lengths among the various cycle lengths. That is, if the permutation consists of one 2-cycle, three 5-cycles, two 3-cycles, and two 7-cycles, then the permutation will return to it’s initial configuration at the 2 x 5 x 7 x 3  = 210th application of the permutation. This is easy to see becuase if there are <em>l</em> cycles of length <em>k</em>, all of them will return to their starting configuration at every <em>k</em>th application of the permutation. (Once again I’m ignoring situations where one cycle is a of a length that is a multiple of another cycles length, since the other cycle will in any case return to it’s original position when the larger cycle returns to it’s original position. The thing it would impact is the smallest number <em>N</em> such that <em>p<sup>N</sup> = e</em>. I’m not sure how to go about tackling that.</p>
+
+<p>One question remains - Can all permutations be represented as collections of cycles. To see why the answer is yes, consider that any permutation has at least one cycle. Let’s assume that a permutationhas m cycles, with fixed points being cycles of length 1. Now imagine that there are some elements in the set being permuted that do not belong to either of the m cycles. If we now apply the permutation to just these points, then either they retain their positions, making them fixed points which is a contradiction, or they do move to different positions, implying that there is a cycle of size at least two, which is also a contradiction. This means that every permutation has to be composed of cycles.</p>
+
+<p>One last note - I posted about powers of permutations on reddit, and a user asked if anything can be said about <em>p<sup>n!</sup></em> where <em>n</em> is the number of elements being permuted. Since the lengths of the cycles that make up any permutation will always be lesser than or equal to the number of elements in the set, <em>n!</em> will include all the cycle lengths in the product. So <em>p<sup>n!</sup></em> will also be the identity. So there was a much simpler way to show that such a number exists. But it is not necessarily the <em>smallest</em> number such that <em>p<sup>N</sup></em> is the identity. I am fairly confident that the smallest number <em>N</em> with this property is the least common multiple of <em>(n, n-1, n-2, …, 1)</em> but I don’t know how to prove it.</p>
+
+
+</div>
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/arunvijayshankar">arunvijayshankar</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>

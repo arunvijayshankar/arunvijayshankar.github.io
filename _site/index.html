@@ -31,7 +31,7 @@
 {"@context":"https://schema.org","@type":"WebSite","description":"Arun Vijayshankar’s blog","headline":"Arktos:","name":"Arktos kai Mennos","url":"/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=fdf6972269cc3d16de23de63637c67a2410c3e04">
+    <link rel="stylesheet" href="/assets/css/style.css?v=ecacf4e4fedfc8b5ae277fb3ccf39ab8e41bcf2b">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -88,6 +88,10 @@
 
   
   
+  <a href="/tag/mathematics"><nobr>mathematics</nobr></a>
+
+  
+  
   <a href="/tag/rust"><nobr>rust</nobr></a>
 
   
@@ -96,11 +100,15 @@
 
   
   
+  <a href="/tag/permutations"><nobr>permutations</nobr></a>
+
+  
+  
   <a href="/tag/networking"><nobr>networking</nobr></a>
 
   
   
-  <a href="/tag/mathematics"><nobr>mathematics</nobr></a>
+  <a href="/tag/linearalgebra"><nobr>linearalgebra</nobr></a>
 
   
   
@@ -108,15 +116,7 @@
 
   
   
-  <a href="/tag/permutations"><nobr>permutations</nobr></a>
-
-  
-  
   <a href="/tag/linux"><nobr>linux</nobr></a>
-
-  
-  
-  <a href="/tag/linearalgebra"><nobr>linearalgebra</nobr></a>
 
   
   
@@ -185,27 +185,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Order of the Power Set - Arktos kai Mennos</title>
+    <title>Powers of a permutation matrix - Part 3 - Arktos kai Mennos</title>
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Order of the Power Set | Arktos kai Mennos</title>
+<title>Powers of a permutation matrix - Part 3 | Arktos kai Mennos</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Order of the Power Set" />
+<meta property="og:title" content="Powers of a permutation matrix - Part 3" />
 <meta name="author" content="Arun" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Here are two ways to determine the number of elements in the Power set of a finite set of objects. The set of all subsets of a set is called a power set, and the number of all the elements in a given set is called its order. Consider the following set S = {a, b, c}. The order of this set is 3, and its power set is P(S) = {O, {a}, {b}, {c}, {a, b}, {a, c}, {b, c}, S}. Notice that the power set contains all subsets of S, including S, and the empty set O. We can see that P(S) has 8 elements, so its order is 8. If you carried out a similar exercize for a set S’ = {a, b, c, d}, we will find that its order is 16. It looks like the order of a the power set of a set with n elements is 2n." />
-<meta property="og:description" content="Here are two ways to determine the number of elements in the Power set of a finite set of objects. The set of all subsets of a set is called a power set, and the number of all the elements in a given set is called its order. Consider the following set S = {a, b, c}. The order of this set is 3, and its power set is P(S) = {O, {a}, {b}, {c}, {a, b}, {a, c}, {b, c}, S}. Notice that the power set contains all subsets of S, including S, and the empty set O. We can see that P(S) has 8 elements, so its order is 8. If you carried out a similar exercize for a set S’ = {a, b, c, d}, we will find that its order is 16. It looks like the order of a the power set of a set with n elements is 2n." />
-<link rel="canonical" href="/archive/order-of-power-set/" />
-<meta property="og:url" content="/archive/order-of-power-set/" />
+<meta name="description" content="In Part 2, we saw how permutations consisting of simple cycles always return to their original configurations. Now let’s consider a permutation p, consisting of m number of cycles, with sizes k1, k2, … km, such that" />
+<meta property="og:description" content="In Part 2, we saw how permutations consisting of simple cycles always return to their original configurations. Now let’s consider a permutation p, consisting of m number of cycles, with sizes k1, k2, … km, such that" />
+<link rel="canonical" href="/archive/powers-of-permutation-matrices-pt3/" />
+<meta property="og:url" content="/archive/powers-of-permutation-matrices-pt3/" />
 <meta property="og:site_name" content="Arktos kai Mennos" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-10-10T00:00:00-07:00" />
+<meta property="article:published_time" content="2023-11-22T00:00:00-08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Order of the Power Set" />
+<meta property="twitter:title" content="Powers of a permutation matrix - Part 3" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2023-10-10T00:00:00-07:00","datePublished":"2023-10-10T00:00:00-07:00","description":"Here are two ways to determine the number of elements in the Power set of a finite set of objects. The set of all subsets of a set is called a power set, and the number of all the elements in a given set is called its order. Consider the following set S = {a, b, c}. The order of this set is 3, and its power set is P(S) = {O, {a}, {b}, {c}, {a, b}, {a, c}, {b, c}, S}. Notice that the power set contains all subsets of S, including S, and the empty set O. We can see that P(S) has 8 elements, so its order is 8. If you carried out a similar exercize for a set S’ = {a, b, c, d}, we will find that its order is 16. It looks like the order of a the power set of a set with n elements is 2n.","headline":"Order of the Power Set","mainEntityOfPage":{"@type":"WebPage","@id":"/archive/order-of-power-set/"},"url":"/archive/order-of-power-set/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2023-11-22T00:00:00-08:00","datePublished":"2023-11-22T00:00:00-08:00","description":"In Part 2, we saw how permutations consisting of simple cycles always return to their original configurations. Now let’s consider a permutation p, consisting of m number of cycles, with sizes k1, k2, … km, such that","headline":"Powers of a permutation matrix - Part 3","mainEntityOfPage":{"@type":"WebPage","@id":"/archive/powers-of-permutation-matrices-pt3/"},"url":"/archive/powers-of-permutation-matrices-pt3/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=fdf6972269cc3d16de23de63637c67a2410c3e04">
+    <link rel="stylesheet" href="/assets/css/style.css?v=ecacf4e4fedfc8b5ae277fb3ccf39ab8e41bcf2b">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -250,6 +250,10 @@
 
   
   
+  <a href="/tag/mathematics"><nobr>mathematics</nobr></a>
+
+  
+  
   <a href="/tag/rust"><nobr>rust</nobr></a>
 
   
@@ -258,11 +262,15 @@
 
   
   
+  <a href="/tag/permutations"><nobr>permutations</nobr></a>
+
+  
+  
   <a href="/tag/networking"><nobr>networking</nobr></a>
 
   
   
-  <a href="/tag/mathematics"><nobr>mathematics</nobr></a>
+  <a href="/tag/linearalgebra"><nobr>linearalgebra</nobr></a>
 
   
   
@@ -270,15 +278,212 @@
 
   
   
-  <a href="/tag/permutations"><nobr>permutations</nobr></a>
-
-  
-  
   <a href="/tag/linux"><nobr>linux</nobr></a>
 
   
   
+  <a href="/tag/device-drivers"><nobr>device-drivers</nobr></a>
+
+  
+  
+  <a href="/tag/cpp"><nobr>cpp</nobr></a>
+
+  
+  
+  <a href="/tag/c"><nobr>c</nobr></a>
+
+  
+  
+  <a href="/tag/vpn"><nobr>vpn</nobr></a>
+
+  
+  
+  <a href="/tag/ssh"><nobr>ssh</nobr></a>
+
+  
+  
+  <a href="/tag/settheory"><nobr>settheory</nobr></a>
+
+  
+  
+  <a href="/tag/digital-circuits"><nobr>digital-circuits</nobr></a>
+
+  
+  
+  <a href="/tag/counting"><nobr>counting</nobr></a>
+
+
+        
+        
+        
+      </header>
+      <section>
+
+      
+<div class="post">
+
+  <h1 class="post-title">Powers of a permutation matrix - Part 3</h1>
+  Published on <span class="post-date">22 Nov 2023</span>, under: 
+  <span class="post-tags">
+    &nbsp;|
+    
+      
+      <a class="no-underline" href="/tag/mathematics"><nobr> mathematics |</nobr>&nbsp;</a>    
+    
+      
+      <a class="no-underline" href="/tag/linearalgebra"><nobr> linearalgebra |</nobr>&nbsp;</a>    
+    
+      
+      <a class="no-underline" href="/tag/permutations"><nobr> permutations |</nobr>&nbsp;</a>    
+    
+    &nbsp;
+  </span>
+  <p></p>
+  <p>In <a href="https://arunvijayshankar.github.io/archive/powers-of-permutation-matrices-pt2/">Part 2</a>, we saw how permutations consisting of simple cycles always return to their original configurations. Now let’s consider a permutation <em>p</em>, consisting of <em>m</em> number of cycles, with sizes <em>k<sub>1</sub>, k<sub>2</sub>, … k<sub>m</sub></em>, such that</p>
+
+<p><img src="/assets/images/post15/sum.png" alt="" /></p>
+
+<p>and no two cycles are of the same length. For such a permutation we have</p>
+
+<p><img src="/assets/images/post15/pwr_prod.png" alt="" /></p>
+
+<p>since any cycle will return to it’s original position at the <em>q</em> times <em>k</em>th application of <em>p</em> (where <em>k</em> is the length of the cycle), which means that all cycles in the permutation will return to their original positions when the permutation is applied</p>
+
+<p><img src="/assets/images/post15/prod.png" alt="" /></p>
+
+<p>times.</p>
+
+<p>But what if the cycles are not all of the cycles are of different lengths? In that case we only need to consider the unique lengths among the various cycle lengths. That is, if the permutation consists of one 2-cycle, three 5-cycles, two 3-cycles, and two 7-cycles, then the permutation will return to it’s initial configuration at the 2 x 5 x 7 x 3  = 210th application of the permutation. This is easy to see becuase if there are <em>l</em> cycles of length <em>k</em>, all of them will return to their starting configuration at every <em>k</em>th application of the permutation. (Once again I’m ignoring situations where one cycle is a of a length that is a multiple of another cycles length, since the other cycle will in any case return to it’s original position when the larger cycle returns to it’s original position. The thing it would impact is the smallest number <em>N</em> such that <em>p<sup>N</sup> = e</em>. I’m not sure how to go about tackling that.</p>
+
+<p>One question remains - Can all permutations be represented as collections of cycles. To see why the answer is yes, consider that any permutation has at least one cycle. Let’s assume that a permutationhas m cycles, with fixed points being cycles of length 1. Now imagine that there are some elements in the set being permuted that do not belong to either of the m cycles. If we now apply the permutation to just these points, then either they retain their positions, making them fixed points which is a contradiction, or they do move to different positions, implying that there is a cycle of size at least two, which is also a contradiction. This means that every permutation has to be composed of cycles.</p>
+
+<p>One last note - I posted about powers of permutations on reddit, and a user asked if anything can be said about <em>p<sup>n!</sup></em> where <em>n</em> is the number of elements being permuted. Since the lengths of the cycles that make up any permutation will always be lesser than or equal to the number of elements in the set, <em>n!</em> will include all the cycle lengths in the product. So <em>p<sup>n!</sup></em> will also be the identity. So there was a much simpler way to show that such a number exists. But it is not necessarily the <em>smallest</em> number such that <em>p<sup>N</sup></em> is the identity. I am fairly confident that the smallest number <em>N</em> with this property is the least common multiple of <em>(n, n-1, n-2, …, 1)</em> but I don’t know how to prove it.</p>
+
+
+</div>
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/arunvijayshankar">arunvijayshankar</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>
+
+      
+        <!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KLNXCRJB2P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KLNXCRJB2P');
+</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Order of the Power Set - Arktos kai Mennos</title>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Order of the Power Set | Arktos kai Mennos</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Order of the Power Set" />
+<meta name="author" content="Arun" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Here are two ways to determine the number of elements in the Power set of a finite set of objects. The set of all subsets of a set is called a power set, and the number of all the elements in a given set is called its order. Consider the following set S = {a, b, c}. The order of this set is 3, and its power set is P(S) = {O, {a}, {b}, {c}, {a, b}, {a, c}, {b, c}, S}. Notice that the power set contains all subsets of S, including S, and the empty set O. We can see that P(S) has 8 elements, so its order is 8. If you carried out a similar exercize for a set S’ = {a, b, c, d}, we will find that its order is 16. It looks like the order of a the power set of a set with n elements is 2n." />
+<meta property="og:description" content="Here are two ways to determine the number of elements in the Power set of a finite set of objects. The set of all subsets of a set is called a power set, and the number of all the elements in a given set is called its order. Consider the following set S = {a, b, c}. The order of this set is 3, and its power set is P(S) = {O, {a}, {b}, {c}, {a, b}, {a, c}, {b, c}, S}. Notice that the power set contains all subsets of S, including S, and the empty set O. We can see that P(S) has 8 elements, so its order is 8. If you carried out a similar exercize for a set S’ = {a, b, c, d}, we will find that its order is 16. It looks like the order of a the power set of a set with n elements is 2n." />
+<link rel="canonical" href="/archive/order-of-power-set/" />
+<meta property="og:url" content="/archive/order-of-power-set/" />
+<meta property="og:site_name" content="Arktos kai Mennos" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-10-10T00:00:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Order of the Power Set" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2023-10-10T00:00:00-07:00","datePublished":"2023-10-10T00:00:00-07:00","description":"Here are two ways to determine the number of elements in the Power set of a finite set of objects. The set of all subsets of a set is called a power set, and the number of all the elements in a given set is called its order. Consider the following set S = {a, b, c}. The order of this set is 3, and its power set is P(S) = {O, {a}, {b}, {c}, {a, b}, {a, c}, {b, c}, S}. Notice that the power set contains all subsets of S, including S, and the empty set O. We can see that P(S) has 8 elements, so its order is 8. If you carried out a similar exercize for a set S’ = {a, b, c, d}, we will find that its order is 16. It looks like the order of a the power set of a set with n elements is 2n.","headline":"Order of the Power Set","mainEntityOfPage":{"@type":"WebPage","@id":"/archive/order-of-power-set/"},"url":"/archive/order-of-power-set/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=ecacf4e4fedfc8b5ae277fb3ccf39ab8e41bcf2b">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="/">Arktos kai Mennos</a></h1>
+        <nav>
+          <ul class="nav-links">
+          <li><a href="/" >Home</a></li>  | <li><a href="/about" >About</a></li> | <li><a href="/archive" >Archive</a></li>  | <li><a href="/contact" >Contact</a></li>
+          </ul>
+        </nav>
+        
+
+        <p>Arun Vijayshankar's blog</p>
+
+        
+        <p class="view"><a href="https://github.com/arunvijayshankar/arunvijayshankar.github.io">View the Project on GitHub <small>arunvijayshankar/arunvijayshankar.github.io</small></a></p>
+        
+
+        
+
+        <h2>Tags</h2>
+
+
+
+  
+  
+  <a href="/tag/programming"><nobr>programming</nobr></a>
+
+  
+  
+  <a href="/tag/mathematics"><nobr>mathematics</nobr></a>
+
+  
+  
+  <a href="/tag/rust"><nobr>rust</nobr></a>
+
+  
+  
+  <a href="/tag/python"><nobr>python</nobr></a>
+
+  
+  
+  <a href="/tag/permutations"><nobr>permutations</nobr></a>
+
+  
+  
+  <a href="/tag/networking"><nobr>networking</nobr></a>
+
+  
+  
   <a href="/tag/linearalgebra"><nobr>linearalgebra</nobr></a>
+
+  
+  
+  <a href="/tag/embedded"><nobr>embedded</nobr></a>
+
+  
+  
+  <a href="/tag/linux"><nobr>linux</nobr></a>
 
   
   
@@ -351,7 +556,7 @@
 
 <p>Essentially, by adding an additional element to <em>S</em>, we are adding one additional subset to every subset in power set of the original set. So we have two times as many elements in the power set of a set with <em>n+1</em> elements, as in the power set of one with <em>n</em> elements. That is, the order of the power set of a set with <em>n+1</em> elements is <em>2</em> x <em>2</em><sup><em>n</em></sup> = <em>2</em><sup><em>n+1</em></sup>, and we are done.</p>
 
-<p>Now let’s do it the fun way. Notice that we can determine the number of subsets of a set with <em>n</em> elements but counting the number of subsets with 0 elements (the empty set), the number of subsets with 1 element (these are called singletons, there are <em>n</em> of them), with 2 elements and so on, up to the number of subsets with <em>n</em> elements (there’s one such subset - the entire set), and then adding them all up. To do this, let’s find the number of subsets with <em>k</em> elements. This is equivalent to the number of ways of choosing <em>k</em> objects from a collection of <em>n</em> objects. We know that this is</p>
+<p>Now let’s do it the fun way. Notice that we can determine the number of subsets of a set with <em>n</em> elements by counting the number of subsets with 0 elements (the empty set), the number of subsets with 1 element (these are called singletons, there are <em>n</em> of them), with 2 elements and so on, up to the number of subsets with <em>n</em> elements (there’s one such subset - the entire set), and then adding them all up. To do this, let’s find the number of subsets with <em>k</em> elements. This is equivalent to the number of ways of choosing <em>k</em> objects from a collection of <em>n</em> objects. We know that this is</p>
 
 <p><img src="/assets/images/post14/nCk_new.png" alt="" /></p>
 
@@ -359,7 +564,7 @@
 
 <p><img src="/assets/images/post14/order.png" alt="" /></p>
 
-<p>All that is left to do is evaluating the sum on the right hand side of the above equation. It looks a little intimidating, and trying to evaluate it by expanding the sum and adding all the terms will turn out to be quite an effort. So maybe there’s another way. Notice that the sum looks remarkably similar to the sum in the binomial theorem:</p>
+<p>All that is left to do is to evaluate this sum. It looks a little intimidating, and trying to evaluate it by expanding the sum and adding all the terms will turn out to be quite an effort. So maybe there’s another way. Notice that the sum looks remarkably similar to the sum in the binomial theorem:</p>
 
 <p><img src="/assets/images/post14/binom_thm.png" alt="" /></p>
 
@@ -427,7 +632,7 @@
 {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2023-10-01T00:00:00-07:00","datePublished":"2023-10-01T00:00:00-07:00","description":"In Part 1, we saw how every permutation has at least one cycle, and that the size of the cycle is the number of elements in the cycle. If we now consider a permutation that is one big cycle of all the elements in our set, then we can easily see that if we apply the same permutation n times, n being the number of elements in the set, all elements return to the positions with which they started out. So pn = e for such a permutation, where once again, e is the identity.","headline":"Powers of a permutation matrix - Part 2","mainEntityOfPage":{"@type":"WebPage","@id":"/archive/powers-of-permutation-matrices-pt2/"},"url":"/archive/powers-of-permutation-matrices-pt2/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=fdf6972269cc3d16de23de63637c67a2410c3e04">
+    <link rel="stylesheet" href="/assets/css/style.css?v=ecacf4e4fedfc8b5ae277fb3ccf39ab8e41bcf2b">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -472,6 +677,10 @@
 
   
   
+  <a href="/tag/mathematics"><nobr>mathematics</nobr></a>
+
+  
+  
   <a href="/tag/rust"><nobr>rust</nobr></a>
 
   
@@ -480,11 +689,15 @@
 
   
   
+  <a href="/tag/permutations"><nobr>permutations</nobr></a>
+
+  
+  
   <a href="/tag/networking"><nobr>networking</nobr></a>
 
   
   
-  <a href="/tag/mathematics"><nobr>mathematics</nobr></a>
+  <a href="/tag/linearalgebra"><nobr>linearalgebra</nobr></a>
 
   
   
@@ -492,15 +705,7 @@
 
   
   
-  <a href="/tag/permutations"><nobr>permutations</nobr></a>
-
-  
-  
   <a href="/tag/linux"><nobr>linux</nobr></a>
-
-  
-  
-  <a href="/tag/linearalgebra"><nobr>linearalgebra</nobr></a>
 
   
   
@@ -571,204 +776,6 @@
 </ol>
 
 <p>Let’s stop here for now, and in Part 3 let’s explore permutations that are a little more complex, and finally try and nail down the answer for any generic permutation.</p>
-
-</div>
-
-      </section>
-      <footer>
-        
-        <p>This project is maintained by <a href="https://github.com/arunvijayshankar">arunvijayshankar</a></p>
-        
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="/assets/js/scale.fix.js"></script>
-  </body>
-</html>
-
-      
-        <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KLNXCRJB2P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KLNXCRJB2P');
-</script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Powers of a permutation matrix - Part 1 - Arktos kai Mennos</title>
-<!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Powers of a permutation matrix - Part 1 | Arktos kai Mennos</title>
-<meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Powers of a permutation matrix - Part 1" />
-<meta name="author" content="Arun" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="I came across this problem while working through the MITOCW course on Linear Algebra. The lectures are interesting in of themselves, but I got completely sidetracked when I started on this problem:" />
-<meta property="og:description" content="I came across this problem while working through the MITOCW course on Linear Algebra. The lectures are interesting in of themselves, but I got completely sidetracked when I started on this problem:" />
-<link rel="canonical" href="/archive/powers-of-permutation-matrices-pt1/" />
-<meta property="og:url" content="/archive/powers-of-permutation-matrices-pt1/" />
-<meta property="og:site_name" content="Arktos kai Mennos" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-09-21T00:00:00-07:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Powers of a permutation matrix - Part 1" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2023-09-21T00:00:00-07:00","datePublished":"2023-09-21T00:00:00-07:00","description":"I came across this problem while working through the MITOCW course on Linear Algebra. The lectures are interesting in of themselves, but I got completely sidetracked when I started on this problem:","headline":"Powers of a permutation matrix - Part 1","mainEntityOfPage":{"@type":"WebPage","@id":"/archive/powers-of-permutation-matrices-pt1/"},"url":"/archive/powers-of-permutation-matrices-pt1/"}</script>
-<!-- End Jekyll SEO tag -->
-
-    <link rel="stylesheet" href="/assets/css/style.css?v=fdf6972269cc3d16de23de63637c67a2410c3e04">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
-    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
-
-<!-- Setup Google Analytics -->
-
-
-
-<!-- You can set your favicon here -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
-
-<!-- end custom head snippets -->
-
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1><a href="/">Arktos kai Mennos</a></h1>
-        <nav>
-          <ul class="nav-links">
-          <li><a href="/" >Home</a></li>  | <li><a href="/about" >About</a></li> | <li><a href="/archive" >Archive</a></li>  | <li><a href="/contact" >Contact</a></li>
-          </ul>
-        </nav>
-        
-
-        <p>Arun Vijayshankar's blog</p>
-
-        
-        <p class="view"><a href="https://github.com/arunvijayshankar/arunvijayshankar.github.io">View the Project on GitHub <small>arunvijayshankar/arunvijayshankar.github.io</small></a></p>
-        
-
-        
-
-        <h2>Tags</h2>
-
-
-
-  
-  
-  <a href="/tag/programming"><nobr>programming</nobr></a>
-
-  
-  
-  <a href="/tag/rust"><nobr>rust</nobr></a>
-
-  
-  
-  <a href="/tag/python"><nobr>python</nobr></a>
-
-  
-  
-  <a href="/tag/networking"><nobr>networking</nobr></a>
-
-  
-  
-  <a href="/tag/mathematics"><nobr>mathematics</nobr></a>
-
-  
-  
-  <a href="/tag/embedded"><nobr>embedded</nobr></a>
-
-  
-  
-  <a href="/tag/permutations"><nobr>permutations</nobr></a>
-
-  
-  
-  <a href="/tag/linux"><nobr>linux</nobr></a>
-
-  
-  
-  <a href="/tag/linearalgebra"><nobr>linearalgebra</nobr></a>
-
-  
-  
-  <a href="/tag/device-drivers"><nobr>device-drivers</nobr></a>
-
-  
-  
-  <a href="/tag/cpp"><nobr>cpp</nobr></a>
-
-  
-  
-  <a href="/tag/c"><nobr>c</nobr></a>
-
-  
-  
-  <a href="/tag/vpn"><nobr>vpn</nobr></a>
-
-  
-  
-  <a href="/tag/ssh"><nobr>ssh</nobr></a>
-
-  
-  
-  <a href="/tag/settheory"><nobr>settheory</nobr></a>
-
-  
-  
-  <a href="/tag/digital-circuits"><nobr>digital-circuits</nobr></a>
-
-  
-  
-  <a href="/tag/counting"><nobr>counting</nobr></a>
-
-
-        
-        
-        
-      </header>
-      <section>
-
-      
-<div class="post">
-
-  <h1 class="post-title">Powers of a permutation matrix - Part 1</h1>
-  Published on <span class="post-date">21 Sep 2023</span>, under: 
-  <span class="post-tags">
-    &nbsp;|
-    
-      
-      <a class="no-underline" href="/tag/mathematics"><nobr> mathematics |</nobr>&nbsp;</a>    
-    
-      
-      <a class="no-underline" href="/tag/linearalgebra"><nobr> linearalgebra |</nobr>&nbsp;</a>    
-    
-      
-      <a class="no-underline" href="/tag/permutations"><nobr> permutations |</nobr>&nbsp;</a>    
-    
-    &nbsp;
-  </span>
-  <p></p>
-  <p>I came across this problem while working through the MITOCW course on <a href="https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/ax-b-and-the-four-subspaces/transposes-permutations-vector-spaces/">Linear Algebra</a>. The lectures are interesting in of themselves, but I got completely sidetracked when I started on this problem:</p>
-
-<p><img src="/assets/images/post12/strang_problem.png" alt="" /></p>
-
-<p>This got me wondering if, given a permutation matrix <em>P</em>, we’d always be able to find a <em>k</em>, such that <em>P</em><sup><em>k</em></sup> = <em>I</em>, where <em>I</em> is the identity matrix. Equivalently, I wondered if, given a permutation of <em>n</em> objects, one can always recover the initial arrangement by successfully performing the same permutation over and over again. That is, if there is always a <em>k</em>, such that <em>p</em><sup><em>k</em></sup> = <em>e</em> (where <em>e</em> is the identity, a permutation that leaves the arrangement of objects unchanged) for a given permutation <em>p</em>.</p>
-
-<p>It turns out that the answer is that there is! Given any permutation of <em>n</em> objects, you can recover the original arrangement by performing the same permutation on the object a specific number of times. The minimum number of times the permutation is to be repeated for a given permutation, depends on the internal structure of the permutation.</p>
-
-<p>To prove this, we have to first recognize that every permutation has atleast one cycle. A cycle is a permutation such that if you start with one element and track its position  as the permutation is repeatedly applied, it eventually returns to its original position. As an example consider this simple collection of four objects <em>( a, b, c, d )</em>. If we apply the following permutation: <em>a -&gt; b, b -&gt; c, c -&gt; d, and d -&gt; a</em> (call this permutation <em>p</em>), and track the position of <em>c</em>, we have <em>( d, a, b,</em> <strong>c</strong> <em>)</em>. Applying the permutation again, i.e., <em>p</em><sup><em>2</em></sup>, we get <em>(</em> <strong>c,</strong> <em>d, a, b )</em>. One more application (<em>p</em><sup><em>3</em></sup>) gets us to <em>( b,</em> <strong>c,</strong> <em>d, a )</em>, and finally <em>p</em><sup><em>4</em></sup> gives <em>( a, b,</em> <strong>c,</strong> <em>d )</em> and we see that <em>c</em>, as well as the other elements, has returned to its starting position.</p>
-
-<p>So why is it true that a permutation will have atleast one cycle? To understand this, consider a permutation on <em>n</em> objects where a subset of the objects have changed positions. If no elements have changed position, then each element can thought of as being in a cycle of size 1. If more than one object has changed positions after the permutation has been applied, any one object in the subset will have moved to the position occupied by another object which will in turn have moved to a different position. For a finite subset of objects, this means that the position occupied by the initial object will now be occupied by a different object in the subset. If we suppose that this permutation does not have a cycle, it implies that the first object will never return to it’s orginal position no matter how many times the permutation is applied. This can only happen if the first object never reaches the position of the last object (which moves to the first position upon first application of the permutation). But this can only happen if the first object never reaches the position of the second-to-last object, as so on, until we are forced to conclude that the first object can never even reach the second position, implying that it did not move. This contradicts the statement that all objects in the subset changed positions. So the only way out is to admit that this the subset is in a cycle and that the size of the cycle is the number of elements in the subset.</p>
-
-<p>In <a href="https://arunvijayshankar.github.io/archive/powers-of-permutation-matrices-pt2/">Part 2</a>, we will explore some specific permutations that are composed of simple cycles, and see what happens when the permuation is applied repeatedly to a set of objects.</p>
 
 </div>
 

@@ -33,7 +33,7 @@
 {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2023-10-10T00:00:00-07:00","datePublished":"2023-10-10T00:00:00-07:00","description":"Here are two ways to determine the number of elements in the Power set of a finite set of objects. The set of all subsets of a set is called a power set, and the number of all the elements in a given set is called its order. Consider the following set S = {a, b, c}. The order of this set is 3, and its power set is P(S) = {O, {a}, {b}, {c}, {a, b}, {a, c}, {b, c}, S}. Notice that the power set contains all subsets of S, including S, and the empty set O. We can see that P(S) has 8 elements, so its order is 8. If you carried out a similar exercize for a set S’ = {a, b, c, d}, we will find that its order is 16. It looks like the order of a the power set of a set with n elements is 2n.","headline":"Order of the Power Set","mainEntityOfPage":{"@type":"WebPage","@id":"/archive/order-of-power-set/"},"url":"/archive/order-of-power-set/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=fdf6972269cc3d16de23de63637c67a2410c3e04">
+    <link rel="stylesheet" href="/assets/css/style.css?v=ecacf4e4fedfc8b5ae277fb3ccf39ab8e41bcf2b">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -78,6 +78,10 @@
 
   
   
+  <a href="/tag/mathematics"><nobr>mathematics</nobr></a>
+
+  
+  
   <a href="/tag/rust"><nobr>rust</nobr></a>
 
   
@@ -86,11 +90,15 @@
 
   
   
+  <a href="/tag/permutations"><nobr>permutations</nobr></a>
+
+  
+  
   <a href="/tag/networking"><nobr>networking</nobr></a>
 
   
   
-  <a href="/tag/mathematics"><nobr>mathematics</nobr></a>
+  <a href="/tag/linearalgebra"><nobr>linearalgebra</nobr></a>
 
   
   
@@ -98,15 +106,7 @@
 
   
   
-  <a href="/tag/permutations"><nobr>permutations</nobr></a>
-
-  
-  
   <a href="/tag/linux"><nobr>linux</nobr></a>
-
-  
-  
-  <a href="/tag/linearalgebra"><nobr>linearalgebra</nobr></a>
 
   
   
@@ -179,7 +179,7 @@
 
 <p>Essentially, by adding an additional element to <em>S</em>, we are adding one additional subset to every subset in power set of the original set. So we have two times as many elements in the power set of a set with <em>n+1</em> elements, as in the power set of one with <em>n</em> elements. That is, the order of the power set of a set with <em>n+1</em> elements is <em>2</em> x <em>2</em><sup><em>n</em></sup> = <em>2</em><sup><em>n+1</em></sup>, and we are done.</p>
 
-<p>Now let’s do it the fun way. Notice that we can determine the number of subsets of a set with <em>n</em> elements but counting the number of subsets with 0 elements (the empty set), the number of subsets with 1 element (these are called singletons, there are <em>n</em> of them), with 2 elements and so on, up to the number of subsets with <em>n</em> elements (there’s one such subset - the entire set), and then adding them all up. To do this, let’s find the number of subsets with <em>k</em> elements. This is equivalent to the number of ways of choosing <em>k</em> objects from a collection of <em>n</em> objects. We know that this is</p>
+<p>Now let’s do it the fun way. Notice that we can determine the number of subsets of a set with <em>n</em> elements by counting the number of subsets with 0 elements (the empty set), the number of subsets with 1 element (these are called singletons, there are <em>n</em> of them), with 2 elements and so on, up to the number of subsets with <em>n</em> elements (there’s one such subset - the entire set), and then adding them all up. To do this, let’s find the number of subsets with <em>k</em> elements. This is equivalent to the number of ways of choosing <em>k</em> objects from a collection of <em>n</em> objects. We know that this is</p>
 
 <p><img src="/assets/images/post14/nCk_new.png" alt="" /></p>
 
@@ -187,7 +187,7 @@
 
 <p><img src="/assets/images/post14/order.png" alt="" /></p>
 
-<p>All that is left to do is evaluating the sum on the right hand side of the above equation. It looks a little intimidating, and trying to evaluate it by expanding the sum and adding all the terms will turn out to be quite an effort. So maybe there’s another way. Notice that the sum looks remarkably similar to the sum in the binomial theorem:</p>
+<p>All that is left to do is to evaluate this sum. It looks a little intimidating, and trying to evaluate it by expanding the sum and adding all the terms will turn out to be quite an effort. So maybe there’s another way. Notice that the sum looks remarkably similar to the sum in the binomial theorem:</p>
 
 <p><img src="/assets/images/post14/binom_thm.png" alt="" /></p>
 
