@@ -33,7 +33,7 @@
 {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Arun"},"dateModified":"2023-11-22T00:00:00-08:00","datePublished":"2023-11-22T00:00:00-08:00","description":"In Part 2, we saw how permutations consisting of simple cycles always return to their original configurations. Now let’s consider a permutation p, consisting of m number of cycles, with sizes k1, k2, … km, such that","headline":"Powers of a permutation matrix - Part 3","mainEntityOfPage":{"@type":"WebPage","@id":"/archive/powers-of-permutation-matrices-pt3/"},"url":"/archive/powers-of-permutation-matrices-pt3/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=ecacf4e4fedfc8b5ae277fb3ccf39ab8e41bcf2b">
+    <link rel="stylesheet" href="/assets/css/style.css?v=fd86b3d7a8c62b196eed0d7fcd202e9f60cf1242">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -134,6 +134,10 @@
 
   
   
+  <a href="/tag/mindfulness"><nobr>mindfulness</nobr></a>
+
+  
+  
   <a href="/tag/digital-circuits"><nobr>digital-circuits</nobr></a>
 
   
@@ -181,7 +185,7 @@
 
 <p>times.</p>
 
-<p>But what if the cycles are not all of the cycles are of different lengths? In that case we only need to consider the unique lengths among the various cycle lengths. That is, if the permutation consists of one 2-cycle, three 5-cycles, two 3-cycles, and two 7-cycles, then the permutation will return to it’s initial configuration at the 2 x 5 x 7 x 3  = 210th application of the permutation. This is easy to see becuase if there are <em>l</em> cycles of length <em>k</em>, all of them will return to their starting configuration at every <em>k</em>th application of the permutation. (Once again I’m ignoring situations where one cycle is a of a length that is a multiple of another cycles length, since the other cycle will in any case return to it’s original position when the larger cycle returns to it’s original position. The thing it would impact is the smallest number <em>N</em> such that <em>p<sup>N</sup> = e</em>. I’m not sure how to go about tackling that.</p>
+<p>But what if the cycles are not all of the cycles are of different lengths? In that case we only need to consider the unique lengths among the various cycle lengths. That is, if the permutation consists of one 2-cycle, three 5-cycles, two 3-cycles, and two 7-cycles, then the permutation will return to it’s initial configuration at the 2 x 5 x 7 x 3  = 210th application of the permutation. This is easy to see becuase if there are <em>l</em> cycles of length <em>k</em>, all of them will return to their starting configuration at every <em>k</em>th application of the permutation. Once again I’m ignoring situations where one cycle is a of a length that is a multiple of another cycles length, since the other cycle will in any case return to it’s original position when the larger cycle returns to it’s original position. The thing it would impact is the smallest number <em>N</em> such that <em>p<sup>N</sup> = e</em>. I’m not sure how to go about tackling that.</p>
 
 <p>One question remains - Can all permutations be represented as collections of cycles. To see why the answer is yes, consider that any permutation has at least one cycle. Let’s assume that a permutationhas m cycles, with fixed points being cycles of length 1. Now imagine that there are some elements in the set being permuted that do not belong to either of the m cycles. If we now apply the permutation to just these points, then either they retain their positions, making them fixed points which is a contradiction, or they do move to different positions, implying that there is a cycle of size at least two, which is also a contradiction. This means that every permutation has to be composed of cycles.</p>
 

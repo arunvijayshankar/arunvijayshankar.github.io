@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2023-11-22T15:49:57-08:00</updated><id>/feed.xml</id><title type="html">Arktos kai Mennos</title><subtitle>Arun Vijayshankar&apos;s blog</subtitle><entry><title type="html">Powers of a permutation matrix - Part 3</title><link href="/archive/powers-of-permutation-matrices-pt3/" rel="alternate" type="text/html" title="Powers of a permutation matrix - Part 3" /><published>2023-11-22T00:00:00-08:00</published><updated>2023-11-22T00:00:00-08:00</updated><id>/archive/powers-of-permutation-matrices-pt3</id><content type="html" xml:base="/archive/powers-of-permutation-matrices-pt3/">&lt;p&gt;In &lt;a href=&quot;https://arunvijayshankar.github.io/archive/powers-of-permutation-matrices-pt2/&quot;&gt;Part 2&lt;/a&gt;, we saw how permutations consisting of simple cycles always return to their original configurations. Now let’s consider a permutation &lt;em&gt;p&lt;/em&gt;, consisting of &lt;em&gt;m&lt;/em&gt; number of cycles, with sizes &lt;em&gt;k&lt;sub&gt;1&lt;/sub&gt;, k&lt;sub&gt;2&lt;/sub&gt;, … k&lt;sub&gt;m&lt;/sub&gt;&lt;/em&gt;, such that&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2023-11-28T13:53:54-08:00</updated><id>/feed.xml</id><title type="html">Arktos kai Mennos</title><subtitle>Arun Vijayshankar&apos;s blog</subtitle><entry><title type="html">Problem solving and mindfulness</title><link href="/archive/problem-solving-and-mindfulness/" rel="alternate" type="text/html" title="Problem solving and mindfulness" /><published>2023-11-28T00:00:00-08:00</published><updated>2023-11-28T00:00:00-08:00</updated><id>/archive/problem-solving-and-mindfulness</id><content type="html" xml:base="/archive/problem-solving-and-mindfulness/">&lt;p&gt;I wanted to write a little something about a change I noticed in the way I usually respond when I find myself unable to find a solution to a problem. A few weeks ago I was trying to solve this problem&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/post16/prob.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After working on it off and on for a few days, I hit upon the key idea that solved it just as I was falling asleep.&lt;/p&gt;
+
+&lt;p&gt;I don’t think it’s a very tough problem, however I had quite some trouble cracking it. Luckily there was a hint, and I was able to make some progress, but I got stuck soon after. I started to feel a familiar sense of frustration and a strong desire to give up and look the solution up. In the not so very distant past, I would have succumbed and looked the solution up, and then immediately felt insecure about it.&lt;/p&gt;
+
+&lt;p&gt;This time, I told myself that I should put it away for the day and give it another shot later. I started working on it again the next day, when a different approach suggested itself and I was able to go a little further. This surprised me because my usual practice is to try the same thing over and over again and then get frustrated when it doesn’t work. Eventually, when the intrusive thoughts, “It’s hopeless”, “I told you, you’re horrible at math”, “stop fooling yourself”, inevitably won, I would give up and be depressed for a while.&lt;/p&gt;
+
+&lt;p&gt;Recently however, I am noticing that I have been able to avoid this mental road block. It’s not that the thoughts aren’t there, they are ever present, but I’ve been getting better at keeping at it even with the circling negativity. I have observed that if I acknowledge the negative thought (or just ignore it) and try again, more often than not, I find the solution to the problem, or I think of a different approach to finding it. It almost feels like the I had the answer all along, but I couldn’t find it because of all the cacophony in my head. But if I take a moment to relax, maybe do the 4x4 breaths technique, I find the way forward.&lt;/p&gt;
+
+&lt;p&gt;Another factor is the complete lack of time pressure. I have no assignment deadlines, or timed exams where I have to solve problems in a finite amount of time. I’m doing this as a hobby, and I can take all the time I need. Without all the anxiety to finish in time, it’s a lot easier to think of alternative approaches to problem solving. Sure, sometimes I feel insecure about spending whole days to solve a relatively simple problem, but hey, instead of giving up and feeling sad about it, I’m finding answers and feeling a sense of joy and accomplishment.&lt;/p&gt;</content><author><name>Arun</name></author><category term="mathematics" /><category term="mindfulness" /><summary type="html">I wanted to write a little something about a change I noticed in the way I usually respond when I find myself unable to find a solution to a problem. A few weeks ago I was trying to solve this problem</summary></entry><entry><title type="html">Powers of a permutation matrix - Part 3</title><link href="/archive/powers-of-permutation-matrices-pt3/" rel="alternate" type="text/html" title="Powers of a permutation matrix - Part 3" /><published>2023-11-22T00:00:00-08:00</published><updated>2023-11-22T00:00:00-08:00</updated><id>/archive/powers-of-permutation-matrices-pt3</id><content type="html" xml:base="/archive/powers-of-permutation-matrices-pt3/">&lt;p&gt;In &lt;a href=&quot;https://arunvijayshankar.github.io/archive/powers-of-permutation-matrices-pt2/&quot;&gt;Part 2&lt;/a&gt;, we saw how permutations consisting of simple cycles always return to their original configurations. Now let’s consider a permutation &lt;em&gt;p&lt;/em&gt;, consisting of &lt;em&gt;m&lt;/em&gt; number of cycles, with sizes &lt;em&gt;k&lt;sub&gt;1&lt;/sub&gt;, k&lt;sub&gt;2&lt;/sub&gt;, … k&lt;sub&gt;m&lt;/sub&gt;&lt;/em&gt;, such that&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/post15/sum.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -12,7 +24,7 @@
 
 &lt;p&gt;times.&lt;/p&gt;
 
-&lt;p&gt;But what if the cycles are not all of the cycles are of different lengths? In that case we only need to consider the unique lengths among the various cycle lengths. That is, if the permutation consists of one 2-cycle, three 5-cycles, two 3-cycles, and two 7-cycles, then the permutation will return to it’s initial configuration at the 2 x 5 x 7 x 3  = 210th application of the permutation. This is easy to see becuase if there are &lt;em&gt;l&lt;/em&gt; cycles of length &lt;em&gt;k&lt;/em&gt;, all of them will return to their starting configuration at every &lt;em&gt;k&lt;/em&gt;th application of the permutation. (Once again I’m ignoring situations where one cycle is a of a length that is a multiple of another cycles length, since the other cycle will in any case return to it’s original position when the larger cycle returns to it’s original position. The thing it would impact is the smallest number &lt;em&gt;N&lt;/em&gt; such that &lt;em&gt;p&lt;sup&gt;N&lt;/sup&gt; = e&lt;/em&gt;. I’m not sure how to go about tackling that.&lt;/p&gt;
+&lt;p&gt;But what if the cycles are not all of the cycles are of different lengths? In that case we only need to consider the unique lengths among the various cycle lengths. That is, if the permutation consists of one 2-cycle, three 5-cycles, two 3-cycles, and two 7-cycles, then the permutation will return to it’s initial configuration at the 2 x 5 x 7 x 3  = 210th application of the permutation. This is easy to see becuase if there are &lt;em&gt;l&lt;/em&gt; cycles of length &lt;em&gt;k&lt;/em&gt;, all of them will return to their starting configuration at every &lt;em&gt;k&lt;/em&gt;th application of the permutation. Once again I’m ignoring situations where one cycle is a of a length that is a multiple of another cycles length, since the other cycle will in any case return to it’s original position when the larger cycle returns to it’s original position. The thing it would impact is the smallest number &lt;em&gt;N&lt;/em&gt; such that &lt;em&gt;p&lt;sup&gt;N&lt;/sup&gt; = e&lt;/em&gt;. I’m not sure how to go about tackling that.&lt;/p&gt;
 
 &lt;p&gt;One question remains - Can all permutations be represented as collections of cycles. To see why the answer is yes, consider that any permutation has at least one cycle. Let’s assume that a permutationhas m cycles, with fixed points being cycles of length 1. Now imagine that there are some elements in the set being permuted that do not belong to either of the m cycles. If we now apply the permutation to just these points, then either they retain their positions, making them fixed points which is a contradiction, or they do move to different positions, implying that there is a cycle of size at least two, which is also a contradiction. This means that every permutation has to be composed of cycles.&lt;/p&gt;
 
@@ -318,62 +330,4 @@ function implemented in scull is called. The user can of course, write their own
 
 &lt;p&gt;Build system benchmarks&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/post7/x86_bench.png&quot; alt=&quot;Build system (x86_64) Benchmarks&quot; /&gt;&lt;/p&gt;</content><author><name>Arun</name></author><category term="programming" /><category term="c" /><category term="cpp" /><category term="embedded" /><summary type="html">I have been using a BeagleBoard-xM as a target for the recepies in the book Embedded Programming with Modern C++ Cookbook, and here are a few of the interesting things I’ve come across:</summary></entry><entry><title type="html">Reading the System Timer on Beagleboard XM</title><link href="/archive/reading-sync-timer-beagleboard-xm/" rel="alternate" type="text/html" title="Reading the System Timer on Beagleboard XM" /><published>2022-06-10T00:00:00-07:00</published><updated>2022-06-10T00:00:00-07:00</updated><id>/archive/reading-sync-timer-beagleboard-xm</id><content type="html" xml:base="/archive/reading-sync-timer-beagleboard-xm/">&lt;p&gt;One of the exercises in the book ‘Embedded Programming with Modern C++ Cookbook’ is to read the System Timer on a RaspberryPi. The system timer peripheral on a raspberry pi provides a 64 bit free running counter that increments with every clock tick. Although the book uses QEMU to run a rPi emulator as the target for the programs, I have been using a Beagleboard XM as the target. So far, there have been some changes, but no significant differences in code for the raspberry pi vs the beagleboard. I assumed that reading the system timer would be no different. This was of course, not the case. For a beginner like myself, it was quite challenging to get it working on the bbxm.&lt;/p&gt;
-
-&lt;p&gt;The book starts off by hard coding the base address of the rPi system timer, and a struct to store the two 32 bit sections of the timer:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;constexpr uint32_t kTimerBase = 0x3F003000;
-
-struct SystemTimer {
-  uint32_t CS;
-  uint32_t counter_lo;
-  uint32_t counter_hi;
-};
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The sync timer address is then mapped using mmap as a shared map and cast as a struct pointer to read the value into counter_lo and counter_hi, which are added together to get the actual timer value.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int memfd = open(&quot;/dev/mem&quot;, O_RDWR | O_SYNC);
-
-SystemTimer *timer = (SystemTimer*)mmap(NULL, sizeof(SystemTimer),
-PROT_READ|PROT_WRITE, MAP_SHARED,
-memfd, kTimerBase);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;I knew that it was unlikely that the timer base address will be the same on the bbxm, so the first challenge was to find the right address. I looked for the AM37 manual online, and it turns out that Texas Instruments will let you download it if you register an account with them. So now I have a TI developer account. Oh, and the manual. The manual listed the Sync Timer base address of the 32 kHz clock as 0x48320000, and that the register was 32 bits long. I made the changes, and compiled the build. But when I ran it, the program would only print out one value&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;System timer: 64
-System timer: 64
-System timer: 64
-System timer: 64
-System timer: 64
-System timer: 64
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;It looked as if the timer was not updating with every clock tick. My first suspicion was that address was wrong somehow, or that the mapping was not correct. I spent a considerable amount of time trying to get to the bottom of that, all to no avail. The address was as noted in the manual, and there did not seem to be anything wrong with the mapping. So I did the only thing I could think of, and reached out to the good folks on the internet. One person suggested that maybe the timer was not enabled. This seemed like a plausible root cause, so I went back to the manual and started digging to find out how to check if the timer is disabled. I did find the timer controls, but I honestly did not really understand it. But what I did accidentally discover was that even though the base address for the sync timer on the bbxm is 0x48320000, the actual value of the timer is stored at a 0x0010 offset!&lt;/p&gt;
-
-&lt;p&gt;So I dutifully changed the address to 0x48320010, re-compiled, and ran it. I hit a Bus Error. What is a bus error now? I asked my browser, which said that it was a hardware error, letting the OS know that CPU cannot access the memory that the process is trying to access. So I was back to some issue with the address. I was convinced that the physical address was correct this time, so maybe there was something wrong with the virtual address? After some more scouring of the internet, I found this &lt;a href=&quot;https://bakhi.github.io/devmem/&quot;&gt;post&lt;/a&gt;. Reading through it, I finally understood that mmap was creating a new mapping in the virtual address space starting at the physical address we specify in the mmap call. For some reason that I don’t still understand, providing the physical address + the offset to mmap was returning a bad virtual address. But maybe mapping the timer base address first, and then adding the offset might fix it? I tried this, and it worked! The value updated by ~400 units everytime I ran the binary. I also understood why the program was not updating when I ran it with just the base address. The first 4 bytes of the Sync Timer stored just the timer version. I was just reading this constant over and over again. But after first mapping the base physical address and adding the offset, the program read the actual timer value everytime. Here is the entire program (minus error checking):&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;constexpr uint32_t kTimerBase = 0x48320000;
-constexpr uint32_t timer_offset = 0x0010; 
-
-
-int main() {
-    int memfd = open(&quot;/dev/mem&quot;, O_RDWR | O_SYNC);
-
-    void *map_base = mmap(NULL, sizeof(uint32_t),
-    PROT_READ | PROT_WRITE, MAP_SHARED,
-    memfd, kTimerBase);
-
-    uint32_t *timer = (uint32_t *)((char *)map_base + timer_offset);
-
-    for (int i = 0; i &amp;lt; 10; i++) {
-        std::cout &amp;lt;&amp;lt; &quot;System timer: &quot; &amp;lt;&amp;lt; *timer;
-        std::cout &amp;lt;&amp;lt; std::endl;
-        std::this_thread::sleep_for(std::chrono::milliseconds(10));
-    }
-    return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;As an aside, the program as specified in the book, did not run correctly on the rPi emulator either. But once I made the offset changes above to the code, it read the timer value correctly on every run.&lt;/p&gt;</content><author><name>Arun</name></author><category term="programming" /><category term="cpp" /><category term="embedded" /><summary type="html">One of the exercises in the book ‘Embedded Programming with Modern C++ Cookbook’ is to read the System Timer on a RaspberryPi. The system timer peripheral on a raspberry pi provides a 64 bit free running counter that increments with every clock tick. Although the book uses QEMU to run a rPi emulator as the target for the programs, I have been using a Beagleboard XM as the target. So far, there have been some changes, but no significant differences in code for the raspberry pi vs the beagleboard. I assumed that reading the system timer would be no different. This was of course, not the case. For a beginner like myself, it was quite challenging to get it working on the bbxm.</summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/assets/images/post7/x86_bench.png&quot; alt=&quot;Build system (x86_64) Benchmarks&quot; /&gt;&lt;/p&gt;</content><author><name>Arun</name></author><category term="programming" /><category term="c" /><category term="cpp" /><category term="embedded" /><summary type="html">I have been using a BeagleBoard-xM as a target for the recepies in the book Embedded Programming with Modern C++ Cookbook, and here are a few of the interesting things I’ve come across:</summary></entry></feed>
