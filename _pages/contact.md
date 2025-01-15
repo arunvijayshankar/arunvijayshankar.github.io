@@ -6,8 +6,8 @@ permalink: /contact
 
 ## Contact
 
-- Twitter:
-    - [@UnseenAsterisk](https://twitter.com/UnseenAsterisk)
+- Bluesky:
+    - [@aroon.bsky.social](https://bsky.app/profile/aroon.bsky.social)
 - Github:
     - [arunvijayshankar](https://github.com/arunvijayshankar/)
 - Email:
