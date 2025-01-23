@@ -53,7 +53,7 @@ Now it is clear that
 
 ![](/assets/images/post17/series-ex4-form3.png)
 
-Here too, we have a nice simple formula without any special cases. As an added bonus, this series also converges (to see why, observe that the series of partial sums increases, the *n*th partial sum is bounded above by *2(n+1)*, and an increasing series that is bounded always converges). To find the sum to which the series converges, we will let *S* represent the sum. Since *x<sub>n</sub> = (n + 1) / 2<sup>n-1</sup> = (n / 2<sup>n-1</sup>) + (1 / 2<sup>n-1</sup>)*, we have
+Here too, we have a nice simple formula without any special cases. As an added bonus, this series also converges (to see why, observe that the series of partial sums increases, the *n*th partial sum is bounded above, and an increasing series that is bounded always converges). To find the sum to which the series converges, we will let *S* represent the sum. Since *x<sub>n</sub> = (n + 1) / 2<sup>n-1</sup> = (n / 2<sup>n-1</sup>) + (1 / 2<sup>n-1</sup>)*, we have
 
 ![](/assets/images/post17/series-ex4-form4.png)
 
