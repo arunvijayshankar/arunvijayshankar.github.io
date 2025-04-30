@@ -11,4 +11,4 @@ permalink: /contact
 - Github:
     - [arunvijayshankar](https://github.com/arunvijayshankar/)
 - Email:
-    - arunvijayshankar@gmail.com
+    - arunayyer@proton.me
